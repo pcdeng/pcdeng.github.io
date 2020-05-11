@@ -1,1 +1,124 @@
-<!DOCTYPE html><html><head><meta charset=utf-8><meta http-equiv=X-UA-Compatible content="IE=edge"><meta name=viewport content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,viewport-fit=cover"><link rel=icon href=/favicon.ico><title>修正能量館</title><link href=/css/chunk-013b5c8e.eed71cdd.css rel=prefetch><link href=/css/chunk-06fa5afe.6a8e3b6f.css rel=prefetch><link href=/css/chunk-0b4536de.25eb0c4c.css rel=prefetch><link href=/css/chunk-0e5513d4.903d2dce.css rel=prefetch><link href=/css/chunk-135d62b1.348f8317.css rel=prefetch><link href=/css/chunk-1f1f1ec3.5e8b5836.css rel=prefetch><link href=/css/chunk-21ded3fc.1fc0fd32.css rel=prefetch><link href=/css/chunk-23a0beb4.3f4b6042.css rel=prefetch><link href=/css/chunk-254238d9.2c756344.css rel=prefetch><link href=/css/chunk-2c4ec250.5c4ce57c.css rel=prefetch><link href=/css/chunk-2c64e5af.8f59056b.css rel=prefetch><link href=/css/chunk-46a7ff1b.cc186b21.css rel=prefetch><link href=/css/chunk-6a27bcbc.509fb699.css rel=prefetch><link href=/css/chunk-6acbde47.9770c7bf.css rel=prefetch><link href=/css/chunk-6d03ee81.1c0160b5.css rel=prefetch><link href=/css/chunk-6d9311e2.052807aa.css rel=prefetch><link href=/css/chunk-6d99bc6e.291a185d.css rel=prefetch><link href=/css/chunk-7d6e6315.5dcf1924.css rel=prefetch><link href=/css/chunk-8a1d3164.c928ae6d.css rel=prefetch><link href=/css/chunk-b179fe8e.7299a4fa.css rel=prefetch><link href=/css/chunk-b72bbc1c.b959b386.css rel=prefetch><link href=/css/chunk-ba7cfd44.aa0cca50.css rel=prefetch><link href=/css/chunk-d5d82254.2672342d.css rel=prefetch><link href=/css/chunk-fdde25a4.aa0cca50.css rel=prefetch><link href=/js/chunk-013b5c8e.8ea350a6.js rel=prefetch><link href=/js/chunk-06fa5afe.e6e441ee.js rel=prefetch><link href=/js/chunk-0b4536de.bca3def4.js rel=prefetch><link href=/js/chunk-0e5513d4.fbae2c62.js rel=prefetch><link href=/js/chunk-135d62b1.63d7281b.js rel=prefetch><link href=/js/chunk-1f1f1ec3.5dce8c69.js rel=prefetch><link href=/js/chunk-21ded3fc.d546e597.js rel=prefetch><link href=/js/chunk-23a0beb4.5f4590a0.js rel=prefetch><link href=/js/chunk-254238d9.9b79675a.js rel=prefetch><link href=/js/chunk-2c4ec250.c30ff6b8.js rel=prefetch><link href=/js/chunk-2c64e5af.d7648634.js rel=prefetch><link href=/js/chunk-46a7ff1b.c3d69713.js rel=prefetch><link href=/js/chunk-6a27bcbc.2fed6b23.js rel=prefetch><link href=/js/chunk-6acbde47.0f5eab5d.js rel=prefetch><link href=/js/chunk-6d03ee81.f9b6670c.js rel=prefetch><link href=/js/chunk-6d9311e2.9d88bace.js rel=prefetch><link href=/js/chunk-6d99bc6e.db600e50.js rel=prefetch><link href=/js/chunk-7d6e6315.fad2506c.js rel=prefetch><link href=/js/chunk-8a1d3164.6093b37d.js rel=prefetch><link href=/js/chunk-b179fe8e.9d0386ab.js rel=prefetch><link href=/js/chunk-b72bbc1c.9aff7c71.js rel=prefetch><link href=/js/chunk-ba7cfd44.f376e81a.js rel=prefetch><link href=/js/chunk-d5d82254.32787c2b.js rel=prefetch><link href=/js/chunk-fdde25a4.f310b3e2.js rel=prefetch><link href=/css/app.9ad0a4ef.css rel=preload as=style><link href=/js/app.1ae14a77.js rel=preload as=script><link href=/js/chunk-vendors.91da0a57.js rel=preload as=script><link href=/css/app.9ad0a4ef.css rel=stylesheet></head><body><div id=app></div><script src=/js/chunk-vendors.91da0a57.js></script><script src=/js/app.1ae14a77.js></script></body></html>
+<!doctype html>
+<html lang="zh">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <meta name="description" content="Isotope 例子">
+
+  <title>Isotope 例子</title>
+  <link rel="stylesheet" href="./index.css">
+</head>
+<body>
+  <div class="action-bar">
+    <div class="actions">
+      <button class="action todo" id="a">ToDo</button>
+      <button class="action doing" id="b">Doing</button>
+      <button class="action done" id="c">Done</button>
+      <button class="action" id="reset">重置</button>
+    </div>
+    <span class="total">总数: <span id="total">0</span></span>
+  </div>
+ 
+  <div class="floors" id="zones">
+    <div class="item floor-header">Floor1</div>
+    <div class="item floor1 room1 done">Room1</div>
+    <div class="item floor1 room2 todo">Room2</div>
+    <div class="item floor1 room3 doing">Room3</div>
+    <div class="item floor1 room4 done">Room4</div>
+    <div class="item line"></div>
+
+    <div class="item floor-header">Floor2</div>
+    <div class="item floor2 room1 todo">Room1</div>
+    <div class="item floor2 room2 doing">Room2</div>
+    <div class="item floor2 room3 doing">Room3</div>
+    <div class="item floor2 room4 done">Room4</div>
+    <div class="item floor2 room5 todo">Room5</div>
+    <div class="item floor2 room6 todo">Room6</div>
+    <div class="item floor2 room7 doing">Room7</div>
+    <div class="item floor2 room8 doing">Room8</div>
+    <div class="item floor2 room9 doing">Room9</div>
+    <div class="item floor2 room10 doing">Room10</div>
+    <div class="item floor2 room11 doing">Room11</div>
+    <div class="item floor2 room12 doing">Room12</div>
+    <div class="item floor2 room13 doing">Room13</div>
+    <div class="item floor2 room14 doing">Room14</div>
+    <div class="item floor2 room15 doing">Room15</div>
+    <div class="item floor2 room16 doing">Room16</div>
+    <div class="item floor2 room17 doing">Room17</div>
+    <div class="item floor2 room18 todo">Room18</div>
+    <div class="item floor2 room19 done">Room19</div>
+    <div class="item floor2 room20 todo">Room20</div>
+    <div class="item line"></div>
+
+    <div class="item floor-header">Floor3</div>
+    <div class="item floor3 room1 doing">Room1</div>
+    <div class="item floor3 room2 doing">Room2</div>
+    <div class="item floor3 room3 todo">Room3</div>
+    <div class="item floor3 room4 todo">Room4</div>
+    <div class="item floor3 room1 todo">Room1</div>
+    <div class="item floor3 room2 todo">Room2</div>
+    <div class="item floor3 room3 todo">Room3</div>
+    <div class="item floor3 room4 todo">Room4</div>
+    <div class="item floor3 room1 todo">Room1</div>
+    <div class="item floor3 room2 todo">Room2</div>
+    <div class="item floor3 room3 done">Room3</div>
+    <div class="item floor3 room4 done">Room4</div>
+    <div class="item floor3 room1 done">Room1</div>
+    <div class="item floor3 room2 done">Room2</div>
+    <div class="item floor3 room3 todo">Room3</div>
+    <div class="item floor3 room4 doing">Room4</div>
+    <div class="item floor3 room1 doing">Room1</div>
+    <div class="item floor3 room2 doing">Room2</div>
+    <div class="item floor3 room3 doing">Room3</div>
+    <div class="item floor3 room4 doing">Room4</div>
+    <div class="item line"></div>
+  </div>
+
+  <script src="./isotope.pkgd.js"></script>
+  <script type="text/javascript">
+    const iso = new Isotope('#zones', {
+      itemSelector: '.item',
+      layoutMode: 'fitRows'
+    });
+
+    const aBtn = document.getElementById('a');
+    aBtn.addEventListener('click', () => {
+      iso.arrange({filter: '.floor-header, .line, .todo'})
+    });
+    const bBtn = document.getElementById('b');
+    bBtn.addEventListener('click', () => {
+      iso.arrange({filter: '.floor-header, .line, .doing'})
+    });
+    const cBtn = document.getElementById('c');
+    cBtn.addEventListener('click', () => {
+      iso.arrange({filter: '.floor-header, .line, .done'})
+    });
+    const resetBtn = document.getElementById('reset');
+    resetBtn.addEventListener('click', () => {
+      iso.arrange({filter: ''})
+    });
+    const totalEle = document.getElementById('total');
+
+    const items = iso.getFilteredItemElements();
+    totalEle.innerText = getItems(items).length;
+
+    iso.on('arrangeComplete', onArrange );
+
+    function onArrange(filteredItems) {
+      const items = getItems(filteredItems.map(item => item.element));
+      console.log(`arrange complete, filtered items length: ${items.length}`);
+      totalEle.innerText = items.length;
+    }
+
+    function getItems(filteredItems) {
+      const items = filteredItems.filter(ele => {
+        if (ele) {
+          return !(ele.className.includes('floor-header') || ele.className.includes('line'))
+        }
+        return false;
+      });
+      return items;
+    }
+  </script>
+</body>
+</html>
