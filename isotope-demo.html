@@ -1,124 +1,127 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="zh">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
-  <meta name="description" content="Isotope 例子">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="description" content="Isotope 例子" />
 
-  <title>Isotope 例子</title>
-  <link rel="stylesheet" href="./isotope-demo.css">
-</head>
-<body>
-  <div class="action-bar">
-    <div class="actions">
-      <button class="action todo" id="a">ToDo</button>
-      <button class="action doing" id="b">Doing</button>
-      <button class="action done" id="c">Done</button>
-      <button class="action" id="reset">重置</button>
+    <title>Isotope 例子</title>
+    <link rel="stylesheet" href="./isotope-demo.css" />
+  </head>
+  <body>
+    <div class="action-bar">
+      <div class="actions">
+        <button class="action todo" id="a">ToDo</button>
+        <button class="action doing" id="b">Doing</button>
+        <button class="action done" id="c">Done</button>
+        <button class="action" id="reset">重置</button>
+      </div>
+      <span class="total">总数: <span id="total">0</span></span>
     </div>
-    <span class="total">总数: <span id="total">0</span></span>
-  </div>
 
-  <div class="floors" id="zones">
-    <div class="item floor-header">Floor1</div>
-    <div class="item floor1 room1 done">Room1</div>
-    <div class="item floor1 room2 todo">Room2</div>
-    <div class="item floor1 room3 doing">Room3</div>
-    <div class="item floor1 room4 done">Room4</div>
-    <div class="item line"></div>
+    <div class="floors" id="zones">
+      <div class="item floor-header">Floor1</div>
+      <div class="item floor1 room1 done">Room1</div>
+      <div class="item floor1 room2 todo">Room2</div>
+      <div class="item floor1 room3 doing">Room3</div>
+      <div class="item floor1 room4 done">Room4</div>
+      <div class="item line"></div>
 
-    <div class="item floor-header">Floor2</div>
-    <div class="item floor2 room1 todo">Room1</div>
-    <div class="item floor2 room2 doing">Room2</div>
-    <div class="item floor2 room3 doing">Room3</div>
-    <div class="item floor2 room4 done">Room4</div>
-    <div class="item floor2 room5 todo">Room5</div>
-    <div class="item floor2 room6 todo">Room6</div>
-    <div class="item floor2 room7 doing">Room7</div>
-    <div class="item floor2 room8 doing">Room8</div>
-    <div class="item floor2 room9 doing">Room9</div>
-    <div class="item floor2 room10 doing">Room10</div>
-    <div class="item floor2 room11 doing">Room11</div>
-    <div class="item floor2 room12 doing">Room12</div>
-    <div class="item floor2 room13 doing">Room13</div>
-    <div class="item floor2 room14 doing">Room14</div>
-    <div class="item floor2 room15 doing">Room15</div>
-    <div class="item floor2 room16 doing">Room16</div>
-    <div class="item floor2 room17 doing">Room17</div>
-    <div class="item floor2 room18 todo">Room18</div>
-    <div class="item floor2 room19 done">Room19</div>
-    <div class="item floor2 room20 todo">Room20</div>
-    <div class="item line"></div>
+      <div class="item floor-header">Floor2</div>
+      <div class="item floor2 room1 todo">Room1</div>
+      <div class="item floor2 room2 doing">Room2</div>
+      <div class="item floor2 room3 doing">Room3</div>
+      <div class="item floor2 room4 done">Room4</div>
+      <div class="item floor2 room5 todo">Room5</div>
+      <div class="item floor2 room6 todo">Room6</div>
+      <div class="item floor2 room7 doing">Room7</div>
+      <div class="item floor2 room8 doing">Room8</div>
+      <div class="item floor2 room9 doing">Room9</div>
+      <div class="item floor2 room10 doing">Room10</div>
+      <div class="item floor2 room11 doing">Room11</div>
+      <div class="item floor2 room12 doing">Room12</div>
+      <div class="item floor2 room13 doing">Room13</div>
+      <div class="item floor2 room14 doing">Room14</div>
+      <div class="item floor2 room15 doing">Room15</div>
+      <div class="item floor2 room16 doing">Room16</div>
+      <div class="item floor2 room17 doing">Room17</div>
+      <div class="item floor2 room18 todo">Room18</div>
+      <div class="item floor2 room19 done">Room19</div>
+      <div class="item floor2 room20 todo">Room20</div>
+      <div class="item line"></div>
 
-    <div class="item floor-header">Floor3</div>
-    <div class="item floor3 room1 doing">Room1</div>
-    <div class="item floor3 room2 doing">Room2</div>
-    <div class="item floor3 room3 todo">Room3</div>
-    <div class="item floor3 room4 todo">Room4</div>
-    <div class="item floor3 room1 todo">Room1</div>
-    <div class="item floor3 room2 todo">Room2</div>
-    <div class="item floor3 room3 todo">Room3</div>
-    <div class="item floor3 room4 todo">Room4</div>
-    <div class="item floor3 room1 todo">Room1</div>
-    <div class="item floor3 room2 todo">Room2</div>
-    <div class="item floor3 room3 done">Room3</div>
-    <div class="item floor3 room4 done">Room4</div>
-    <div class="item floor3 room1 done">Room1</div>
-    <div class="item floor3 room2 done">Room2</div>
-    <div class="item floor3 room3 todo">Room3</div>
-    <div class="item floor3 room4 doing">Room4</div>
-    <div class="item floor3 room1 doing">Room1</div>
-    <div class="item floor3 room2 doing">Room2</div>
-    <div class="item floor3 room3 doing">Room3</div>
-    <div class="item floor3 room4 doing">Room4</div>
-    <div class="item line"></div>
-  </div>
+      <div class="item floor-header">Floor3</div>
+      <div class="item floor3 room1 doing">Room1</div>
+      <div class="item floor3 room2 doing">Room2</div>
+      <div class="item floor3 room3 todo">Room3</div>
+      <div class="item floor3 room4 todo">Room4</div>
+      <div class="item floor3 room1 todo">Room1</div>
+      <div class="item floor3 room2 todo">Room2</div>
+      <div class="item floor3 room3 todo">Room3</div>
+      <div class="item floor3 room4 todo">Room4</div>
+      <div class="item floor3 room1 todo">Room1</div>
+      <div class="item floor3 room2 todo">Room2</div>
+      <div class="item floor3 room3 done">Room3</div>
+      <div class="item floor3 room4 done">Room4</div>
+      <div class="item floor3 room1 done">Room1</div>
+      <div class="item floor3 room2 done">Room2</div>
+      <div class="item floor3 room3 todo">Room3</div>
+      <div class="item floor3 room4 doing">Room4</div>
+      <div class="item floor3 room1 doing">Room1</div>
+      <div class="item floor3 room2 doing">Room2</div>
+      <div class="item floor3 room3 doing">Room3</div>
+      <div class="item floor3 room4 doing">Room4</div>
+      <div class="item line"></div>
+    </div>
 
-  <script src="./isotope.pkgd.js"></script>
-  <script type="text/javascript">
-    const iso = new Isotope('#zones', {
-      itemSelector: '.item',
-      layoutMode: 'fitRows'
-    });
-
-    const aBtn = document.getElementById('a');
-    aBtn.addEventListener('click', () => {
-      iso.arrange({filter: '.floor-header, .line, .todo'})
-    });
-    const bBtn = document.getElementById('b');
-    bBtn.addEventListener('click', () => {
-      iso.arrange({filter: '.floor-header, .line, .doing'})
-    });
-    const cBtn = document.getElementById('c');
-    cBtn.addEventListener('click', () => {
-      iso.arrange({filter: '.floor-header, .line, .done'})
-    });
-    const resetBtn = document.getElementById('reset');
-    resetBtn.addEventListener('click', () => {
-      iso.arrange({filter: ''})
-    });
-    const totalEle = document.getElementById('total');
-
-    const items = iso.getFilteredItemElements();
-    totalEle.innerText = getItems(items).length;
-
-    iso.on('arrangeComplete', onArrange );
-
-    function onArrange(filteredItems) {
-      const items = getItems(filteredItems.map(item => item.element));
-      console.log(`arrange complete, filtered items length: ${items.length}`);
-      totalEle.innerText = items.length;
-    }
-
-    function getItems(filteredItems) {
-      const items = filteredItems.filter(ele => {
-        if (ele) {
-          return !(ele.className.includes('floor-header') || ele.className.includes('line'))
-        }
-        return false;
+    <script src="./isotope.pkgd.js"></script>
+    <script type="text/javascript">
+      const iso = new Isotope("#zones", {
+        itemSelector: ".item",
+        layoutMode: "fitRows",
       });
-      return items;
-    }
-  </script>
-</body>
+
+      const aBtn = document.getElementById("a");
+      aBtn.addEventListener("click", () => {
+        iso.arrange({ filter: ".floor-header, .line, .todo" });
+      });
+      const bBtn = document.getElementById("b");
+      bBtn.addEventListener("click", () => {
+        iso.arrange({ filter: ".floor-header, .line, .doing" });
+      });
+      const cBtn = document.getElementById("c");
+      cBtn.addEventListener("click", () => {
+        iso.arrange({ filter: ".floor-header, .line, .done" });
+      });
+      const resetBtn = document.getElementById("reset");
+      resetBtn.addEventListener("click", () => {
+        iso.arrange({ filter: "" });
+      });
+      const totalEle = document.getElementById("total");
+
+      const items = iso.getFilteredItemElements();
+      totalEle.innerText = getItems(items).length;
+
+      iso.on("arrangeComplete", onArrange);
+
+      function onArrange(filteredItems) {
+        const items = getItems(filteredItems.map((item) => item.element));
+        console.log(`arrange complete, filtered items length: ${items.length}`);
+        totalEle.innerText = items.length;
+      }
+
+      function getItems(filteredItems) {
+        const items = filteredItems.filter((ele) => {
+          if (ele) {
+            return !(
+              ele.className.includes("floor-header") ||
+              ele.className.includes("line")
+            );
+          }
+          return false;
+        });
+        return items;
+      }
+    </script>
+  </body>
 </html>
