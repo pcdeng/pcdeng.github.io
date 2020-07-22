@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Canvas Clock</title>
+    <style>
+      body {
+        background: linear-gradient(
+            180deg,
+            rgba(39, 204, 130, 1) 0%,
+            rgba(133, 231, 138, 1) 100%
+          )
+          no-repeat;
+        height: 100vh;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    </style>
+  </head>
+  <body>
+    <canvas id="clock" width="268" height="268"></canvas>
+    <script>
+      const canvas = document.getElementById("clock");
+      const context = canvas.getContext("2d");
+
+      var circle = {
+        x: canvas.width / 2,
+        y: canvas.height / 2,
+        radius: 132,
+      };
+
+      const TICK_PASSED_STYLE = "rgba(255, 255, 255, 0.4)";
+      const TICK_STROKE_STYLE = "#fff";
+      const TICK_WIDTH = 20;
+
+      let percent = 50;
+
+      // 绘制环外圈圆
+      function drawRingOuterCircle() {
+        context.strokeStyle = TRACKING_DIAL_STROKING_STYLE;
+        context.beginPath();
+        context.arc(circle.x, circle.y, circle.radius, 0, 2 * Math.PI, true);
+        context.stroke();
+      }
+
+      // 绘制刻度
+      function drawTicks() {
+        var radius = circle.radius;
+        var START_ANGLE = (3 * Math.PI) / 2; // 单位弧度
+        var ANGLE_MAX = (7 * Math.PI) / 2;
+        var ANGLE_DELTA = Math.PI / 50;
+
+        context.save();
+
+        for (
+          var angle = START_ANGLE, count = 0;
+          angle < ANGLE_MAX;
+          angle += ANGLE_DELTA, count += 1
+        ) {
+          drawTick(angle, radius, count);
+        }
+        context.restore();
+      }
+
+      function drawTick(angle, radius, count) {
+        var tickWidth = TICK_WIDTH;
+
+        context.beginPath();
+        context.moveTo(
+          circle.x + (radius - tickWidth) * Math.cos(angle),
+          circle.y + (radius - tickWidth) * Math.sin(angle)
+        );
+        context.lineTo(
+          circle.x + radius * Math.cos(angle),
+          circle.y + radius * Math.sin(angle)
+        );
+        context.strokeStyle =
+          count < percent ? TICK_PASSED_STYLE : TICK_STROKE_STYLE;
+        context.stroke();
+      }
+      drawTicks();
+    </script>
+  </body>
+</html>
