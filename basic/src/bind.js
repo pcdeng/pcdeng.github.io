@@ -6,20 +6,21 @@ this.x = 9;
 
 var module = {
   x: 81,
-  getX: function() {
+  getX: function () {
     return this.x;
-  }
+  },
+};
+
+function testBind() {
+  const a = module.getX();
+  log(a);
+
+  const getX = module.getX; // 获取 getX 引用
+
+  // 创建一个新函数，把 'this' 绑定到 module 对象
+  const boundGetX = getX.bind(module); // this 指向 global，在浏览器中 global 就是 window
+  log(boundGetX());
 }
-
-const a = module.getX();
-log(a);
-
-const getX = module.getX; // 获取 getX 引用
-
-// 创建一个新函数，把 'this' 绑定到 module 对象
-const boundGetX = getX.bind(module); // this 指向 global，在浏览器中 global 就是 window
-log(boundGetX());
-
 
 /**
  * 偏函数
@@ -28,9 +29,11 @@ function add(x, y) {
   return x + y;
 }
 
-const add3 = add.bind(null, 3); // 3 赋值了 x
-const result = add3(4);
-log(result);
+function testBindWithPredefinedArg() {
+  const add3 = add.bind(null, 3); // 3 赋值了 x
+  const result = add3(4);
+  log(result);
+}
 
 /**
  * 和 setTimeout 使用
@@ -41,27 +44,26 @@ function Demo() {
   log(this.petalCount);
 }
 
-Demo.prototype.walk = function() {
+Demo.prototype.walk = function () {
   setTimeout(this.open.bind(this), 1000);
-}
+};
 
-Demo.prototype.open = function() {
+Demo.prototype.open = function () {
   log(`${this.petalCount} open`);
-}
+};
 
-function testBind() {
+function testBindWithSetTimeout() {
   const d = new Demo(); // 实例化 Demo 类
   d.walk(); // 调用 walk 方法
 }
 
-
 /**
  * 快捷调用
  */
-var slice = Array.prototype.slice;
-slice.apply(arguments);
+// var slice = Array.prototype.slice;
+// slice.apply(arguments);
 
-// 与前一段代码的 "slice" 效果相同
-var unboundSlice = Array.prototype.slice;
-var slice = Function.prototype.apply.bind(unboundSlice); // -> slice.apply()
-slice(arguments);
+// // 与前一段代码的 "slice" 效果相同
+// var unboundSlice = Array.prototype.slice;
+// var slice = Function.prototype.apply.bind(unboundSlice); // -> slice.apply()
+// slice(arguments);
