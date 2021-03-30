@@ -46,19 +46,13 @@ function uniqueSet(inputArr = []) {
  * @param {*} inputArr
  * @returns
  */
-function uniqueArrayFromSet(inputArr = []) {
+export function uniqueArrayFromSet(inputArr = []) {
   let arr = Array.from(new Set(inputArr));
   return arr;
 }
 
-function testUniqueSet() {
+export function testUniqueSet() {
   let oldArr = [1, 2, 4, 6, 7, 9, 10, 1, 9, 90, 4];
   const newArr = uniqueSet(oldArr);
-  log(newArr);
-}
-
-function testUniqueArrayFromSet() {
-  let oldArr = [1, 2, 4, 6, 7, 9, 10, 1, 9, 90, 4];
-  const newArr = uniqueArrayFromSet(oldArr);
   log(newArr);
 }
