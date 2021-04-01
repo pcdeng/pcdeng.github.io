@@ -1,0 +1,801 @@
+{
+  "vmWare": {
+    "machine": {
+      "fields": [
+        "machineKey.key.deleted",
+        "host.last",
+        "memoryUsage.trend.last.max.min.sum.avg.trendMax.trendMin.trendSum.trendAvg",
+        "cpuUsage.trend.max.min.avg.last",
+        "status.last",
+        "guestStatus.last",
+        "powerState.last"
+      ],
+      "filter": [
+        "machineKey"
+      ]
+    }
+  },
+  "hyperV": {
+    "machine": {
+      "fields": [
+        "machineKey.key.deleted",
+        "host.last",
+        "status.last",
+        "heartbeatId.last.trend",
+        "heartbeat.last.trend",
+        "powerState.last",
+        "memoryWeight.trend.last.max.min.sum.avg.trendMax.trendMin.trendSum.trendAvg",
+        "memoryVirtualQuantity.trend.last.max.min.sum.avg.trendMax.trendMin.trendSum.trendAvg",
+        "memoryUsage.trend.last.max.min.sum.avg.trendMax.trendMin.trendSum.trendAvg",
+        "virtualProcessorCount.trend.last.max.min.sum.avg.trendMax.trendMin.trendSum.trendAvg",
+        "cpuWaitTimePerDispatch.trend.last.max.min.sum.avg.trendMax.trendMin.trendSum.trendAvg",
+        "overallCpuUsage.trend.last.max.min.sum.avg.trendMax.trendMin.trendSum.trendAvg",
+        "cpuPercentHyperVisorRunTime.trend.last.max.min.sum.avg.trendMax.trendMin.trendSum.trendAvg",
+        "memoryLimit.trend.last.max.min.sum.avg.trendMax.trendMin.trendSum.trendAvg",
+        "dynamicMemoryCurrentPressure.trend.last.max.min.sum.avg.trendMax.trendMin.trendSum.trendAvg",
+        "cpuPercentRemoteRunTime.trend.last.max.min.sum.avg.trendMax.trendMin.trendSum.trendAvg",
+        "timestampPerftime.trend.last.max.min.sum.avg.trendMax.trendMin.trendSum.trendAvg",
+        "frequencyPerfTime.trend.last.max.min.sum.avg.trendMax.trendMin.trendSum.trendAvg",
+        "frequencyPerfTime100ns.trend.last.max.min.sum.avg.trendMax.trendMin.trendSum.trendAvg",
+        "dynamicMemoryAveragePressure.trend.last.max.min.sum.avg.trendMax.trendMin.trendSum.trendAvg",
+        "perfTimeDelta.trend.last.max.min.sum.avg.trendMax.trendMin.trendSum.trendAvg",
+        "cpuPercentGuestRunTime.trend.last.max.min.sum.avg.trendMax.trendMin.trendSum.trendAvg",
+        "cpuWaitTimePerDispatchBase.trend.last.max.min.sum.avg.trendMax.trendMin.trendSum.trendAvg",
+        "memoryReservation.trend.last.max.min.sum.avg.trendMax.trendMin.trendSum.trendAvg",
+        "memoryTargetMemoryBuffer.trend.last.max.min.sum.avg.trendMax.trendMin.trendSum.trendAvg"
+      ],
+      "filter": [
+        "machineKey"
+      ]
+    }
+  },
+  "sqlServer": {
+    "session": {
+      "fields": [
+        "sessionKey.key.deleted",
+        "spid.last",
+        "useTemp.last",
+        "active.last",
+        "systemProcess.last",
+        "sqlUser.last",
+        "status.last",
+        "program.last",
+        "hostName.last",
+        "statementStartOffset.last",
+        "statementEndOffset.last",
+        "sqlHandle.last",
+        "dbName.last",
+        "queryHash.last",
+        "resourcePool.last",
+        "totalCpu.last",
+        "requestCpu.last",
+        "totalMemoryUsage.last",
+        "requestGrantedMemory.last",
+        "totalIo.last",
+        "requestLogicalReads.last",
+        "requestPhysicalReads.last",
+        "requestWrites.last",
+        "openTransactionsCount.last",
+        "sessionUpTime.last",
+        "currentAllocatedSize.last",
+        "userObjectsAllocated.last",
+        "userObjectsSize.last",
+        "waitingOn.last",
+        "currentWaitTime.last",
+        "internalObjectsAllocated.last",
+        "internalObjectsSize.last",
+        "userObjectsDeallocated.last",
+        "internalObjectsDeallocated.last",
+        "blockedBy.last",
+        "requestElapsedTime.last",
+        "lastCommand.last",
+        "cpuRate.last",
+        "ioRate.last",
+        "totalLogicalReads.last",
+        "totalPhysicalReads.last",
+        "totalWrites.last",
+        "lastWaitType.last",
+        "lastWaitResource.last",
+        "lastBatchTime.last",
+        "timeSinceLastBatch.last",
+        "hostProcess.last",
+        "netAddress.last",
+        "netLibrary.last",
+        "loginTime.last",
+        "requestId.last",
+        "planHandle.last",
+        "winDomain.last",
+        "winUser.last",
+        "sqlText.last",
+        "requestIo.last",
+        "requestStartTime.last",
+        "tempDbContentionPageId.last",
+        "tempDbContentionResourceType.last"
+      ],
+      "filter": [
+        "sessionKey",
+        "useTemp",
+        "active",
+        "systemProcess"
+      ]
+    },
+    "database": {
+      "fields": [
+        "databaseKey.key.deleted",
+        "alarms.alarmCounters.alarms.alarmCountersByFilter.alarmsByFilter",
+        "dbId.last",
+        "dbName.last",
+        "isAlwaysOn.last",
+        "isLogShipping.last",
+        "isMirror.last",
+        "status.last",
+        "availability.last",
+        "lastBackup.last",
+        "lastBackupDiffTime.last",
+        "lastBackupFullTime.last",
+        "lastBackupLogTime.last",
+        "collation.last",
+        "compatibilityLevel.last",
+        "recoveryModel.last",
+        "mirroringRecoveryRate.last.avg",
+        "mirroringSendRate.last.avg",
+        "mirroringTransactionsPerSec.last.avg",
+        "mirroringMirroringRole.last",
+        "mirroringMirroringState.last",
+        "mirroringPartner.last",
+        "mirroringTimeBehind.last",
+        "mirroringUnrestoredLogMb.last",
+        "mirroringUnsentLogMb.last",
+        "logShippingIsPrimary.last",
+        "logShippingIsSecondary.last",
+        "logShippingPrimaryId.last",
+        "logShippingPrimaryBackupCompression.last",
+        "logShippingPrimaryBackupDirectory.last",
+        "logShippingPrimaryBackupJobEnabled.last",
+        "logShippingPrimaryBackupJobId.last",
+        "logShippingPrimaryBackupRetention.last",
+        "logShippingPrimaryBackupShare.last",
+        "logShippingPrimaryBackupThreshold.last",
+        "logShippingPrimaryHistoryRetention.last",
+        "logShippingPrimaryLastBackupDate.last",
+        "logShippingPrimaryLastBackupFile.last",
+        "logShippingPrimaryMonitorServer.last",
+        "logShippingPrimaryMonitorServerSecurityMode.last",
+        "logShippingPrimaryPrimaryServer.last",
+        "logShippingPrimaryThresholdAlert.last",
+        "logShippingPrimaryThresholdAlertEnabled.last",
+        "logShippingSecondaryBackupSourceDirectory.last",
+        "logShippingSecondaryCopyJobEnabled.last",
+        "logShippingSecondaryHistoryRetention.last",
+        "logShippingSecondaryLastCopiedDate.last",
+        "logShippingSecondaryLastRestoredDate.last",
+        "logShippingSecondaryLastRestoredLatency.last",
+        "logShippingSecondaryMonitorServer.last",
+        "logShippingSecondaryPrimaryDatabase.last",
+        "logShippingSecondaryPrimaryServer.last",
+        "logShippingSecondaryRestoreDelay.last",
+        "logShippingSecondaryRestoreJobEnabled.last",
+        "logShippingSecondarySecondaryDatabase.last",
+        "logShippingSecondarySecondaryServer.last",
+        "isAutoShrinkOn.last",
+        "isAutoCreateStatsOn.last",
+        "isAutoUpdateStatsOn.last",
+        "isAutoUpdateStatsAsyncOn.last",
+        "isReadOnly.last",
+        "logReuseWait.last",
+        "dataSizeMb.last.avg.trend",
+        "logSizeMb.last.avg.trend",
+        "totalSizeMb.last.avg.trend",
+        "logUsedMb.last.avg.trend",
+        "dataUsedMb.last.avg.trend",
+        "logUsedPct.last.avg.trend",
+        "dataUsedPct.last.avg.trend",
+        "logFreeMb.last.avg.trend",
+        "dataFreeMb.last.avg.trend",
+        "tableCount.last",
+        "fileGroupCount.last",
+        "disks.last",
+        "growthRate.last.avg",
+        "timeToFull.last",
+        "resourcePoolName.last",
+        "xtpEnabled.last",
+        "poolConsumptionPercentage.last.avg.trend",
+        "poolAllocated.last.avg.trend",
+        "poolUsed.last.avg.trend",
+        "totalAllocatedTables.last.avg.trend",
+        "totalAllocatedIndexes.last.avg.trend",
+        "totalAllocatedSystem.last.avg.trend",
+        "totalUsedTables.last.avg.trend",
+        "totalUsedIndexes.last.avg.trend",
+        "totalUsedSystem.last.avg.trend",
+        "transactionsRate.last.avg.trendAvg",
+        "logCacheHitRate.last.avg.trendAvg",
+        "bcpThroughputRate.last.avg.trendAvg",
+        "backupThroughputRate.last.avg.trendAvg",
+        "dbccScanBytesRate.last.avg.trendAvg",
+        "logFlushesRate.last.avg.trendAvg",
+        "logFlushWaitTime.last.avg.trendAvg",
+        "logGrowthsRate.last.avg.trendAvg",
+        "logShrinksRate.last.avg.trendAvg",
+        "logTruncationsRate.last.avg.trendAvg",
+        "virtualLogFilesCount.last.trend"
+      ],
+      "filter": [
+        "databaseKey"
+      ]
+    },
+    "clusterGroup": {
+      "fields": [
+        "clusterGroupKey.key.deleted",
+        "name.last",
+        "status.last",
+        "clusterNodeName.last",
+        "preferredOwners.last",
+        "severity.last"
+      ],
+      "filter": [
+        "clusterGroupKey",
+        "clusterNodeName"
+      ]
+    },
+    "clusterNode": {
+      "fields": [
+        "clusterNodeKey.key.deleted",
+        "name.last",
+        "status.last",
+        "severity.last"
+      ],
+      "filter": [
+        "clusterNodeKey"
+      ]
+    },
+    "clusterResource": {
+      "fields": [
+        "clusterResourceKey.key.deleted",
+        "name.last",
+        "status.last",
+        "clusterGroupKey.last",
+        "clusterNodeName.last"
+      ],
+      "filter": [
+        "clusterResourceKey",
+        "clusterGroupKey"
+      ]
+    },
+    "table": {
+      "fields": [
+        "tableKey.key.deleted",
+        "reservedPages.last.trend",
+        "rows.last.trend",
+        "reservedKb.last.trend",
+        "freeKb.last.trend",
+        "usedKb.last.trend",
+        "percentOfDb.last.trend",
+        "partitionNumber.last",
+        "compressionType.last",
+        "usedMemoryMb.last.trend",
+        "reservedMemoryMb.last.trend",
+        "missingClusteredIndex.last",
+        "missingPk.last",
+        "ownerName.last",
+        "tableName.last",
+        "dbName.last",
+        "fileGroupName.last",
+        "indexId.last",
+        "freePct.last",
+        "usedPct.last"
+      ],
+      "filter": [
+        "tableKey"
+      ]
+    },
+    "disk": {
+      "fields": [
+        "diskKey.key.deleted",
+        "alarms.alarmCounters.alarms.alarmCountersByFilter.alarmsByFilter",
+        "path.last",
+        "dataUsedMb.last.trend",
+        "dataFreeMb.last.trend",
+        "logUsedMb.last.trend",
+        "logFreeMb.last.trend",
+        "sqlTotalMb.last.trend",
+        "nonSqlUsedMb.last.trend",
+        "windowsTotalMb.last.trend",
+        "windowsUsedMb.last.trend",
+        "windosFreeMb.last.trend",
+        "dataUsedPct.last.trend",
+        "dataFreePct.last.trend",
+        "logUsedPct.last.trend",
+        "logFreePct.last.trend",
+        "nonSqlUsedPct.last.trend",
+        "windowsFreePct.last.trend"
+      ],
+      "filter": [
+        "diskKey"
+      ]
+    },
+    "fileGroup": {
+      "fields": [
+        "fileGroupKey.key.deleted",
+        "dbName.last",
+        "fileGroupName.last",
+        "type.last",
+        "canGrow.last",
+        "disks.last",
+        "fileCount.last",
+        "totalMb.last.trend",
+        "usedMb.last.trend",
+        "freeMb.last.trend",
+        "usedPercent.last.trend",
+        "freePercent.last.trend",
+        "maxUsedPercent.last.trend",
+        "maxSize.last",
+        "dynamicGrowthRemaining.last"
+      ],
+      "filter": [
+        "fileGroupKey",
+        "dbName"
+      ]
+    },
+    "index": {
+      "fields": [
+        "indexKey.key.deleted",
+        "tableKey.last",
+        "name.last",
+        "indexName.last",
+        "type.last",
+        "reservedKb.last.trend",
+        "usedKb.last.trend",
+        "isTable.last",
+        "indexId.last",
+        "dbName.last",
+        "tableName.last",
+        "ownerName.last",
+        "reservedPages.last.trend",
+        "rows.last.trend",
+        "freeKb.last.trend",
+        "percentOfDb.last.trend",
+        "numKeys.last",
+        "partitionNumber.last",
+        "originalFillFactor.last",
+        "rowModeCounter.last",
+        "compressionType.last",
+        "usedMemoryMb.last.trend",
+        "reservedMemoryMb.last.trend",
+        "fileGroupName.last",
+        "freePct.last.trend",
+        "usedPct.last.trend",
+        "averageFragmentation.max.trendMax"
+      ],
+      "filter": [
+        "indexKey",
+        "tableKey",
+        "name",
+        "isTable"
+      ]
+    },
+    "tempDbObject": {
+      "fields": [
+        "tempDbObjectKey.key.deleted",
+        "ownerName.last",
+        "objectName.last",
+        "tableName.last",
+        "indexName.last",
+        "indexID.last",
+        "type.last",
+        "indexMb.last",
+        "usedMb.last",
+        "freeMb.last",
+        "rows.last",
+        "userScans.last",
+        "userSeeks.last",
+        "userLookups.last",
+        "userUpdates.last",
+        "systemScans.last",
+        "systemSeeks.last",
+        "systemLookups.last",
+        "systemUpdates.last",
+        "lastUserScan.last",
+        "lastUserSeek.last",
+        "lastUserLookup.last",
+        "lastUserUpdate.last",
+        "lastSystemScan.last",
+        "lastSystemSeek.last",
+        "lastSystemLookup.last",
+        "lasySystemUpdate.last"
+      ],
+      "filter": [
+        "tempDbObjectKey"
+      ]
+    },
+    "file": {
+      "fields": [
+        "fileKey.key.deleted",
+        "name.last",
+        "fileGroup.last",
+        "dbName.last",
+        "diskPath.last",
+        "path.last",
+        "disk.last",
+        "mountPoint.last",
+        "autoGrow.last",
+        "maxSizeMb.last.trend",
+        "growthIncrement.last",
+        "growthByPercent.last",
+        "growthIncrementValue.last",
+        "totalMb.last.trend",
+        "usedMb.last.trend",
+        "usedPercent.last.trend",
+        "freeMb.last.trend",
+        "freePercent.last.trend",
+        "growthRemaining.last.trend",
+        "growthRate.last.avg.trendAvg",
+        "timeToFull.last",
+        "fileType.last",
+        "ioRate.last.trend.avg.trendAvg",
+        "readsRate.last.trend.avg.trendAvg",
+        "writesRate.last.trend.avg.trendAvg",
+        "waitPerIo.last.trend.avg.trendAvg",
+        "totalDeltaKb.last.trend.sum.trendSum",
+        "readDeltaKb.last.trend.sum.trendSum",
+        "writeDeltaKb.last.trend.sum.trendSum",
+        "totalIoWaitMsDelta.last.trend.sum.trendSum",
+        "readIoWaitMsDelta.last.trend.sum.trendSum",
+        "writeIoWaitMsDelta.last.trend.sum.trendSum",
+        "totalWaitRate.last.trend.avg.trendAvg",
+        "readsWaitRate.last.trend.avg.trendAvg",
+        "writesWaitRate.last.trend.avg.trendAvg",
+        "isTempFile.last",
+        "internalObjectReservedMb.last",
+        "mixedReservedMb.last",
+        "userObjectReservedMb.last",
+        "versionStoreReservedMb.last"
+      ],
+      "filter": [
+        "fileKey",
+        "isTempFile"
+      ]
+    },
+    "partition": {
+      "fields": [
+        "partitionKey.key.deleted",
+        "indexKey.last",
+        "averageFragmentation.last",
+        "tableKey.last",
+        "partitionSizeMb.last",
+        "allocationUnitTypeDesc.last",
+        "partitionCompressionType.last",
+        "partitionNumber.last"
+      ],
+      "filter": [
+        "partitionKey",
+        "indexKey",
+        "tableKey"
+      ]
+    },
+    "service": {
+      "fields": [
+        "serviceKey.key.deleted",
+        "state.last",
+        "startTime.last",
+        "currentServerTime.last"
+      ],
+      "filter": [
+        "serviceKey"
+      ]
+    },
+    "serviceHistory": {
+      "fields": [
+        "serviceHistoryKey.key.deleted",
+        "service.trend.last",
+        "state.last",
+        "startTime.last",
+        "endTime.last"
+      ],
+      "filter": [
+        "serviceHistoryKey",
+        "service"
+      ]
+    },
+    "logShippingHistory": {
+      "fields": [
+        "logShippingHistoryKey.key.deleted",
+        "databaseKey.last",
+        "logTime.last",
+        "sessionId.last",
+        "message.last",
+        "sessionStatus.last"
+      ],
+      "filter": [
+        "logShippingHistoryKey",
+        "databaseKey"
+      ]
+    },
+    "logShippingSecondary": {
+      "fields": [
+        "logShippingSecondaryKey.key.deleted",
+        "databaseKey.last",
+        "primaryId.last",
+        "secondaryDatabase.last",
+        "secondaryServer.last"
+      ],
+      "filter": [
+        "databaseKey",
+        "primaryId"
+      ]
+    },
+    "job": {
+      "fields": [
+        "jobKey.key.deleted",
+        "alarms.alarmCounters.alarms.alarmCountersByFilter.alarmsByFilter",
+        "averageRunDuration.last.avg",
+        "change.last",
+        "currentRunDuration.last",
+        "lastRunDuration.last",
+        "retriesAttempted.last.sum",
+        "currentStatus.last",
+        "description.last",
+        "jobCategory.last",
+        "enabled.last",
+        "jobId.last",
+        "lastRunMessage.last",
+        "jobName.last",
+        "lastRunFinishTime.last",
+        "lastRunOutcome.last",
+        "lastRunTime.last",
+        "nextRunTime.last",
+        "lastStep.last",
+        "sessionId.last",
+        "stepName.last"
+      ],
+      "filter": [
+        "jobKey"
+      ]
+    },
+    "jobExecution": {
+      "fields": [
+        "jobExecutionKey.key.deleted",
+        "jobKey.last",
+        "jobName.last",
+        "jobMessage.last",
+        "status.last",
+        "duration.last",
+        "lastStep.last",
+        "startTime.last",
+        "stepName.last"
+      ],
+      "filter": [
+        "jobExecutionKey",
+        "jobKey",
+        "jobName"
+      ]
+    }
+  },
+  "test": {
+    "animal": {
+      "fields": [
+        "animalKey.key.deleted",
+        "type.last",
+        "name.last",
+        "dailyFoodCost.last",
+        "dailyDrugsCost.last",
+        "releaseDate.last",
+        "weeklyCost.last",
+        "daysUponRelease.last"
+      ],
+      "filter": [
+        "animalKey"
+      ]
+    }
+  },
+  "windows": {
+    "logicalDisk": {
+      "fields": [
+        "logicalDiskKey.key.deleted",
+        "alarms.alarmCounters.alarms.alarmCountersByFilter.alarmsByFilter",
+        "name.last",
+        "diskLoad.last.avg.trend.trendAvg",
+        "transferTime.last.avg.trend.trendAvg",
+        "diskIo.last.avg.trend.trendAvg",
+        "queueLength.last.avg.trend.trendAvg",
+        "diskReads.last.avg.trend.trendAvg",
+        "diskWrites.last.avg.trend.trendAvg",
+        "kbReadPerSec.last.avg.trend.trendAvg",
+        "kbWrittenPerSec.last.avg.trend.trendAvg",
+        "totalSize.last",
+        "freeSize.last",
+        "usedSize.last",
+        "label.last",
+        "fileSystem.last",
+        "compressed.last"
+      ],
+      "filter": [
+        "logicalDiskKey"
+      ]
+    },
+    "physicalDisk": {
+      "fields": [
+        "physicalDiskKey.key.deleted",
+        "alarms.alarmCounters.alarms.alarmCountersByFilter.alarmsByFilter",
+        "name.last",
+        "index.last",
+        "logicalDiskKeys.last",
+        "diskLoad.last.avg.trend.trendAvg",
+        "transferTime.last.avg.trend.trendAvg",
+        "diskIo.last.avg.trend.trendAvg",
+        "queueLength.last.avg.trend.trendAvg",
+        "diskReads.last.avg.trend.trendAvg",
+        "diskWrites.last.avg.trend.trendAvg",
+        "kbReadPerSec.last.avg.trend.trendAvg",
+        "kbWrittenPerSec.last.avg.trend.trendAvg",
+        "description.last",
+        "interfaceType.last",
+        "size.last",
+        "deviceType.last",
+        "model.last",
+        "partitions.last"
+      ],
+      "filter": [
+        "physicalDiskKey"
+      ]
+    },
+    "cpu": {
+      "fields": [
+        "cpuKey.key.deleted",
+        "interrupts.last.avg.trend.trendAvg",
+        "serverWorkQueues.last.avg.trend.trendAvg",
+        "transferredData.last.avg.trend.trendAvg"
+      ],
+      "filter": [
+        "cpuKey"
+      ]
+    },
+    "service": {
+      "fields": [
+        "serviceKey.key.deleted",
+        "requiredKeys.last",
+        "dependentKeys.last",
+        "acceptStop.last",
+        "serviceType.last",
+        "processId.last",
+        "service.last",
+        "displayName.last",
+        "startType.last",
+        "desktopInteract.last",
+        "description.last",
+        "startName.last",
+        "acceptPause.last",
+        "currentState.last",
+        "pathName.last"
+      ],
+      "filter": [
+        "serviceKey"
+      ]
+    },
+    "driver": {
+      "fields": [
+        "driverKey.key.deleted",
+        "displayName.last",
+        "currentState.last"
+      ],
+      "filter": [
+        "driverKey"
+      ]
+    },
+    "process": {
+      "fields": [
+        "processKey.key.deleted",
+        "instance.last",
+        "serviceKeys.last",
+        "serviceDisplayNames.last",
+        "commandLine.last",
+        "negativeWorkingSets.last",
+        "handles.last.avg.trend.trendAvg",
+        "workingSetDelta.last",
+        "peakPhysMemoryBytes.last.avg.trend.trendAvg",
+        "userModeTime.last",
+        "otherTransferCount.last",
+        "pId.last",
+        "sessionId.last",
+        "readTransferCount.last",
+        "parentId.last",
+        "virtualMemoryMb.last",
+        "otherOperationCount.last",
+        "ioReadBytesPerSec.last.avg.trend.trendAvg",
+        "kernelModeTime.last",
+        "pageFileBytes.last.avg.trend.trendAvg",
+        "poolNonPagedBytes.last.avg.trend.trendAvg",
+        "readOperationCount.last",
+        "privateBytes.last.avg.trend.trendAvg",
+        "ioDataOperationsPerSec.last.avg.trend.trendAvg",
+        "peakVirtualMemoryBytes.last.avg.trend.trendAvg",
+        "ioOtherOperationsPerSec.last.avg.trend.trendAvg",
+        "pctProcessor.last.avg.trend.trendAvg",
+        "virtualMemoryBytes.last.avg.trend.trendAvg",
+        "writeTransferCount.last",
+        "pageFileBytesPeak.last.avg.trend.trendAvg",
+        "poolPagedBytes.last.avg.trend.trendAvg",
+        "physMemoryBytes.last.avg.trend.trendAvg",
+        "threads.last.avg.trend.trendAvg",
+        "ioDataBytesPerSec.last.avg.trend.trendAvg",
+        "writeOperationCount.last",
+        "elapsedTime.last",
+        "priority.last",
+        "pctKernel.last.avg.trend.trendAvg",
+        "pageFaultsPerSec.last.avg.trend.trendAvg",
+        "ioOtherBytesPerSec.last.avg.trend.trendAvg",
+        "pctUser.last.avg.trend.trendAvg",
+        "privateBytesDelta.last",
+        "readsPerSec.last.avg.trend.trendAvg",
+        "pageFaults.last",
+        "writesPerSec.last.avg.trend.trendAvg",
+        "ioWriteBytesPerSec.last.avg.trend.trendAvg"
+      ],
+      "filter": [
+        "processKey"
+      ]
+    },
+    "share": {
+      "fields": [
+        "shareKey.key.deleted",
+        "localPath.last",
+        "comment.last",
+        "type.last",
+        "maxUsers.last"
+      ],
+      "filter": [
+        "shareKey"
+      ]
+    },
+    "shareSession": {
+      "fields": [
+        "shareSessionKey.key.deleted",
+        "computer.last",
+        "user.last",
+        "elapsedTime.last",
+        "connectionId.last",
+        "openFiles.last",
+        "userCount.last"
+      ],
+      "filter": [
+        "shareSessionKey"
+      ]
+    },
+    "pageFile": {
+      "fields": [
+        "pageFileKey.key.deleted",
+        "spaceTotalMb.last",
+        "spaceUsedMb.last",
+        "spaceFreeMb.last",
+        "pctUsed.last",
+        "pctPeakUsed.last"
+      ],
+      "filter": [
+        "pageFileKey"
+      ]
+    },
+    "session": {
+      "fields": [
+        "sessionKey.key.deleted",
+        "user.last",
+        "elapsedTime.last",
+        "idleTime.last",
+        "openFiles.last"
+      ],
+      "filter": [
+        "sessionKey"
+      ]
+    },
+    "nbt": {
+      "fields": [
+        "nbtKey.key.deleted",
+        "kbReceivedPerSec.last",
+        "kbSentPerSec.last",
+        "kbPerSec.last"
+      ],
+      "filter": [
+        "nbtKey"
+      ]
+    }
+  }
+}

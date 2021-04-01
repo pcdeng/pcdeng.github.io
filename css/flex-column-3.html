@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>三列，中间字符串过长自动截断</title>
+    <style type="text/css">
+        .ol {
+
+        }
+        .ol li {
+            display: flex;
+            align-items: center;
+        }
+        .ol li i {
+            display: block;
+            width: 10px;
+            height: 10px;
+            border-radius: 5px;
+            background-color: red;
+        }
+        .ol li div {
+            flex-basis: 100%;
+            overflow: hidden;
+            border: 1px solid blue;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+        }
+    </style>
+</head>
+<body>
+    <ol class="ol">
+        <li>
+            <i></i>
+            <div>Unlimited online developer training, creative and IT courses authored by industry experts. Learn the most in-demand tech skills from our extensive library.</div>
+            <i></i>
+        </li>
+    </ol>
+</body>
+</html>

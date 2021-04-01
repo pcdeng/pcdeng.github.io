@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>no connection prototype</title>
+  <style>
+    body {
+      background-color: rgb(42, 42, 42);
+    }
+    .flex-box {
+      display: flex;
+      height: 81px;
+    }
+    .box-container {
+      margin-right: 22px;
+    }
+    .row {
+      display: flex;
+    }
+    .row-1 .box {
+      height: 39px;
+    }
+    .box {
+      box-sizing: border-box;
+      display: block;
+      min-width: 18px;
+      min-height: 18px;
+      margin: 0 5px 3px 0;
+      border-radius: 2px;
+      background-color: rgb(132, 132, 132);
+    }
+    .box:last-child {
+      margin-right: 0;
+    }
+    .box-1-1, .box-2-1 {
+      width: 52px;
+      height: 39px;
+    }
+    .box-1-2, .box-2-2 {
+      width: 40px;
+      height: 36px;
+    }
+    .box-2-2 {
+      display: flex;
+      flex-wrap: wrap;
+    }
+    .box-2-2 .box {
+      width: 17px;
+      width: 18px;
+      margin-right: 3px;
+    }
+    .box-2-2 .box:nth-child(2n) {
+      margin-right: 0;
+    }
+    .texts h3 {
+      margin: 0;
+      padding: 0;
+      font-size: 32px;
+      font-weight: 400;
+      color: #ccc;
+    }
+    .texts p {
+      margin: 0;
+      padding: 5px 0;
+      font-size: 16px;
+      color: #ccc;
+    }
+    .texts a {
+      color: #0085c3;
+      text-decoration: none;
+    }
+    .texts a:hover {
+      text-decoration: underline;
+      font-size: 16px;
+      font-weight: 400;
+    }
+  </style>
+</head>
+<body>
+  <div class="flex-box">
+    <div class="box-container">
+      <div class="row row-1">
+        <span class="box box-1-1"></span>
+        <span class="box box-1-2"></span>
+      </div>
+      <div class="row row-2">
+        <span class="box box-2-1"></span>
+        <div class="box-2-2">
+          <span class="box"></span>
+          <span class="box"></span>
+          <span class="box"></span>
+          <span class="box"></span>
+        </div>
+      </div>
+    </div>
+    <div class="texts">
+      <h3>There is no monitoring data yet...</h3>
+      <p>You need to add some connections</p>
+      <a href="#">Learn more about adding connections</a>
+    </div>
+  </div>
+</body>
+</html>

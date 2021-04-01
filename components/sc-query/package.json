@@ -1,0 +1,26 @@
+{
+  "name": "sc-query",
+  "version": "1.0.0",
+  "description": "Parse json-schema to SCQuery",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "sc-query",
+    "json-schema"
+  ],
+  "author": "Payton <payton.deng@quest.com>",
+  "license": "MIT",
+  "dependencies": {
+    "@types/lodash": "^4.14.129",
+    "@types/node": "^12.0.2",
+    "axios": "^0.18.0",
+    "lodash": "^4.17.11",
+    "nodemon": "^1.19.1",
+    "ts-node": "^8.2.0"
+  },
+  "devDependencies": {
+    "typescript": "^3.4.5"
+  }
+}

@@ -1,0 +1,34 @@
+<!--
+  ~ Copyright 2018 Quest Software and/or its affiliates
+  ~ and other contributors as indicated by the @author tags.
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<div class="sc-dialog" (window:keydown)="onKeyDown($event)">
+  <div class="sc-dialog-header">
+    <h2 class="sc-title text-truncated">{{ title }}</h2>
+    <img class="btn-close" (click)="onClose()" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAMAAADXqc3KAAAAVFBMVEUAAACUlJSZmZmenp6VlZWZmZmdnZ2Xl5ebm5uYmJiampqZmZmampqZmZmZmZmampqZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZn///8lv0gOAAAAGnRSTlMAExQVGBkaGxwlJii1ub6/zs/Q0dLW19jZ2gFhaDYAAAABYktHRBsCYNSkAAAAgElEQVQoz8WRSRaAIAxDC6g4K87m/ge1Tgjo3qzyGtr+V4h+V1GK24qycIIGRp5OdqidQA2Yk90kM3pJfrJoIr2gV/4WTladrhhUuD+eMI6YojcZ93y83zlboBXvOnPyKCPD+sFpqR9dnBf1I8t5UHsnuTmZ2j1JXllOVWX/f+oGE3QG6jaPWsAAAAAASUVORK5CYII="
+    />
+  </div>
+
+  <div class="sc-dialog-content">
+    <ng-content></ng-content>
+  </div>
+
+  <ng-template #defaultDialogFooter>
+    <div class="sc-dialog-footer-left">
+      <ng-content select="[footer-left]"></ng-content>
+    </div>
+    <span class="btn btn-close" (click)="onClose()">Close</span>
+  </ng-template>
+
+  <div class="sc-dialog-footer">
+    <ng-container [ngTemplateOutlet]="footTemplate ? footTemplate : defaultDialogFooter"></ng-container>
+  </div>
+</div>
+

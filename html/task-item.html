@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+<meta charset="UTF-8">
+<title>HTML测试文档</title>
+<script src="test.js"></script>
+<style>
+  html {
+    height: 100%;
+  }
+  body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  .parent {
+    height: 500px;
+    border: 1px solid #222;  
+  }
+  .stable {
+    float: left;
+    height: 460px;
+    width: 200px;
+    border: 1px solid  #ccc;  
+    margin: 20px;  
+  }
+  .change {
+    height: 460px;
+    border: 1px solid #ff4400;  
+    margin: 20px 20px 20px 260px;  
+  }
+  header {
+    box-sizing: border-box;
+    height: 100%;
+    max-height: 600px;
+    border: 1px solid yellow;
+    margin: 10px 0;
+    padding: 50px 0;
+  }
+  .a {
+    box-sizing: border-box;
+    float: left;
+    height: 100%;
+    width: 50%;
+    border: 1px solid red;
+  }
+  .b {
+    box-sizing: border-box;
+    float: left;
+    width: 50%;
+    height: 100%;
+    border: 1px solid blue;
+  }
+  .clearfix {
+    clear: both;
+  }
+  .box {
+    width: 500px;
+    height: 250px;
+    background-color: #fff;
+    border: 1px solid red;
+  }
+  .box .arrow { 
+    width: 0px;   
+    height: 0px;   
+    border-top: 10px solid transparent;   
+    border-right: 10px solid;   
+    border-bottom: 10px solid transparent;   
+    position: absolute;
+    right: -10px;
+    border-right-color: #000;
+  }
+  .arrow_box {
+  position: relative;
+  background: #88b7d5;
+  border: 1px solid #e056f5;
+}
+.arrow_box:after, .arrow_box:before {
+  bottom: 100%;
+  left: 50%;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+}
+
+.arrow_box:after {
+  border-color: rgba(136, 183, 213, 0);
+  border-bottom-color: #88b7d5;
+  border-width: 10px;
+  margin-left: -10px;
+}
+.arrow_box:before {
+  border-color: rgba(224, 86, 245, 0);
+  border-bottom-color: #e056f5;
+  border-width: 11px;
+  margin-left: -11px;
+}
+/*  */
+.item {
+  display: flex;
+  align-items: center;
+  width: 400px;
+  margin: 4px 0;
+  border: 1px solid red;
+}
+.item .severity-icon {
+  width: 7px;
+  height: 7px;
+  border-radius: 3.5px;
+  background-color: red;
+  flex: 0 0 7px;
+}
+.item h4 {
+  display: flex;
+  align-items: center;
+  flex: 1 1 auto; /*关键点一*/
+  margin: 0 5px;
+  width: 80%; /*关键点二，这个值一定要比它实际占用的宽度小，如果设置为100%，就会超出item这个框*/
+  border: 1px solid blue;
+}
+.item h4 span {
+  overflow: hidden;
+  margin-right: 4px;
+  font-size: 12px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.item h4 i {
+  flex: 0 0 auto;
+  padding: 2px 4px;
+  font-size: 10px;
+  color: #fff;
+  font-weight: normal;
+  font-style: normal;
+  background-color: #1d1d1d;
+}
+.item .btn-remove {
+  flex: 0 0 16px;
+  padding: 0 4px;
+  cursor: pointer;
+  text-align: center;
+  font-style: normal;
+  vertical-align: middle;
+  background-color: gray;
+}
+.hide {
+  display: none;
+}
+.scope ::-webkit-input-placeholder{color:#f00;}
+.scope ::-moz-placeholder{color:#f00;}
+.scope :-moz-placeholder{color:#f00;}
+</style>
+</head>
+<body class="scope">
+  <input type="text" placeholder="测试测试" name="">
+  <div class="item">
+    <i class="severity-icon"></i>
+    <h4>
+      <span>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</span>
+      <i>Node.js Angular</i>
+    </h4>
+    <i class="btn-remove">&#10005;</i>
+  </div>
+
+  <div class="arrow_box hide">
+    fsdfsadfsdafasdfsadfadsfasdf
+  </div>
+  <header class="hide">
+    <div class="a">
+      左侧栏
+    </div>
+    <div class="b">
+      右侧栏
+      <select>
+        <option>4234324</option>
+        <option>4234324</option>
+        <option>4234324</option>
+        <option>4234324</option>
+        <option>4234324</option>
+      </select>
+    </div>
+  </header>
+  <div class="parent hide">
+    <div class="stable">
+      <input type="text" value="fsdfsdfsdfsadfsdafasdfsadfasdf" id="txt">
+    stable 固定宽度200px</div>
+    <div class="change">changeable 可变宽度</div>
+    <button id="btn">Sort</button>
+  </div>
+  <script type="text/javascript">
+
+    var dd = 4234234234;
+    console.log(dd.toString());
+    /* var a = {
+      names: ['Payton', 'Jacky'],
+      jobs: ['Web frontend developer', 'Java developer']
+    }
+    var b = '';
+    console.log('a type is:', typeof a);
+    console.log('b type is:', Object.prototype.toString.call(b));
+    var d = JSON.parse(JSON.stringify(a));
+
+    console.log(d.names == a.names); */
+
+
+
+
+
+   /*  var str = 'C:/pagefile.sys/files';
+    var encodedStr = encodeURIComponent(str);
+    console.log(encodedStr);
+
+    var a = "0";
+    var b = 0;
+    if (a == b) {
+      console.log(' a is equal b');
+    }
+    var img = new Image();
+    img.src = 'http://f.hiphotos.baidu.com/image/pic/item/503d269759ee3d6db032f61b48166d224e4ade6e.jpg';
+    img.onload = function() {
+      console.log('loaded');
+    }
+    var a = null;
+    var b = undefined;
+    if (a == b) {
+      console.log('a equal to b');
+    }
+    var arr = [{
+      id: 1,
+      name: 'Payton'
+    }, {
+      id: 2,
+      name: 'Su'
+    }];
+    const re = arr.find(item => item.id === 2);
+    if (re != null) {
+      console.debug('Found it:', re);
+    } else {
+      console.debug('Can not found it:', re);
+    }
+    var hasSpecialChar = /[::::]/g.test(': % ');
+    console.log(hasSpecialChar);
+    
+    var txt = document.getElementById('btn');
+    txt.addEventListener('click', function() {
+      //sort();
+    });
+
+    var connections = [{
+      name: 'Alarm:high, value:1',
+      value: 1,
+      status: 1
+    }, {
+      name: 'Alarm:low, value:10',
+      value: 10,
+      status: 3,
+    }, {
+      name: 'Alarm:medium, value:2',
+      value: 2,
+      status: 2
+    }, {
+      name: 'Alarm:low, value:1',
+      value: 1,
+      status: 3
+    }, {
+      name: 'Alarm:high, value:2',
+      value: 2,
+      status: 1
+    }];
+
+    // 先按status从大到小，如果相等，按value从大到小
+    var index = 0;
+    connections.sort((a, b) => {
+      if (a.status < b.status) {
+        return -1;
+      } else if (a.status > b.status) {
+        return 1;
+      } else {
+        if (a.value > b.value) {
+          return -1;
+        } else if (a.value < b.value) {
+          return 1;
+        } else {
+          return 0;
+        }
+      }
+      index = index + 1;
+    }); */
+  </script>
+</body>
+</html>
