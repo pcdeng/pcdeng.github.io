@@ -1,0 +1,167 @@
+{
+  "startTime": "2019-03-15T05:34:52.157Z",
+  "endTime": "2019-03-15T06:34:52.157Z",
+  "query": {
+    "sqlServer": {
+      "session": {
+        "fields": {
+          "sessionKey": [
+            "key"
+          ],
+          "spid": [
+            "last"
+          ],
+          "loginTime": [
+            "last"
+          ],
+          "sqlUser": [
+            "last"
+          ],
+          "dbName": [
+            "last"
+          ],
+          "status": [
+            "last"
+          ],
+          "blockedBy": [
+            "last"
+          ],
+          "lastCommand": [
+            "last"
+          ],
+          "requestElapsedTime": [
+            "last"
+          ],
+          "cpuRate": [
+            "last"
+          ],
+          "ioRate": [
+            "last"
+          ],
+          "requestGrantedMemory": [
+            "last"
+          ],
+          "lastWaitType": [
+            "last"
+          ],
+          "currentWaitTime": [
+            "last"
+          ],
+          "program": [
+            "last"
+          ],
+          "hostName": [
+            "last"
+          ],
+          "requestCpu": [
+            "last"
+          ],
+          "requestLogicalReads": [
+            "last"
+          ],
+          "requestPhysicalReads": [
+            "last"
+          ],
+          "requestWrites": [
+            "last"
+          ],
+          "lastWaitResource": [
+            "last"
+          ],
+          "lastBatchTime": [
+            "last"
+          ],
+          "timeSinceLastBatch": [
+            "last"
+          ],
+          "hostProcess": [
+            "last"
+          ],
+          "netAddress": [
+            "last"
+          ],
+          "netLibrary": [
+            "last"
+          ],
+          "requestId": [
+            "last"
+          ],
+          "planHandle": [
+            "last"
+          ],
+          "winDomain": [
+            "last"
+          ],
+          "winUser": [
+            "last"
+          ],
+          "sessionUpTime": [
+            "last"
+          ],
+          "totalCpu": [
+            "last"
+          ],
+          "totalMemoryUsage": [
+            "last"
+          ],
+          "totalIo": [
+            "last"
+          ],
+          "totalLogicalReads": [
+            "last"
+          ],
+          "totalPhysicalReads": [
+            "last"
+          ],
+          "openTransactionsCount": [
+            "last"
+          ],
+          "totalWrites": [
+            "last"
+          ],
+          "requestIo": [
+            "last"
+          ],
+          "sqlText": [
+            "last"
+          ],
+          "systemProcess": [
+            "last"
+          ],
+          "sqlHandle": [
+            "last"
+          ],
+          "queryHash": [
+            "last"
+          ],
+          "requestStartTime": [
+            "last"
+          ],
+          "resourcePool": [
+            "last"
+          ],
+          "statementStartOffset": [
+            "last"
+          ],
+          "statementEndOffset": [
+            "last"
+          ],
+          "active": [
+            "last"
+          ],
+          "currentAllocatedSize": [
+            "last"
+          ],
+          "waitingOn": [
+            "last"
+          ]
+        },
+        "filter": {
+          "useTemp": [
+            "true"
+          ]
+        }
+      }
+    }
+  }
+}

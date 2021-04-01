@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Canvas Demo</title>
+    <style>
+      canvas {
+        border: 1px solid red;
+      }
+    </style>
+  </head>
+  <body>
+    <canvas id="canvas" width="100" height="100"></canvas>
+    <script>
+      var canvas = document.getElementById("canvas"),
+        context = canvas.getContext("2d");
+
+      var options = {
+        tick_length: 12,
+        large_tick_length: 22,
+        tick_thickness: 1,
+        tick_group_length: 9,
+        ticks_groups_begin: 0,
+        total_degrees: 250,
+        total_tick: 101,
+        tick_color: "#666",
+        num_font_size: 18,
+        percent: 0,
+        center_font_size: 172,
+        tick_on_color: "#f1594e",
+        cur_score_circle_color: "#ff5e52",
+        center_font_color: "#ff5e52",
+        center_text_unit: "%",
+        animation_duration: 1000,
+        canvas: canvas,
+      };
+
+      var rotation_deg = ((360 / (360 - 1)) * Math.PI) / 180;
+
+      var starting_deg = 0; // 计算一下最初始的角度，也就开始的刻度线相对于水平线的角度
+      // 然后将整个画布旋转到初始角度。从左下角可是绘制
+      context.rotate(starting_deg * Math.PI);
+
+      var num_ticks = 180;
+
+      var percent = 10;
+
+      // 绘制刻度线，num_ticks 为总刻度线的条数。
+      for (var i = 1; i <= num_ticks; i++) {
+        //判断是刻度线是应该亮起来还是暗的
+        var is_on = ((i - 1) / num_ticks) * 100 < percent;
+        var tick_length = 100;
+
+        //获取不同刻度线的颜色
+        var color = "green";
+        //设置填充色
+        context.fillStyle = color;
+
+        // 绘制短刻度线
+        context.fillRect(
+          0,
+          1,
+          tick_length,
+          options.tick_thickness
+        );
+
+        //每画完一条，就旋转一下画布。旋转的角度 = 总的刻度角度 / (刻度条的个数 - 1) * Math.PI / 180
+        context.rotate(rotation_deg);
+      }
+      // 全部绘制完之后，把前一个旧的canvas清除掉
+      // context.clearRect(0, 0, canvas.width, canvas.height);
+      // 绘制新的图像
+      // context.drawImage(canvas, 0, 0);
+      // 每次绘制完成后要回到画布的原始的状态
+      // context.restore();
+    </script>
+  </body>
+</html>

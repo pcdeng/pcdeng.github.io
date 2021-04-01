@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="btn">Click me</button></button>
+    <script>
+        const debounce = function(func, wait = 300) {
+            let timer = 0;
+            return function(...args) { // args 是什么？
+                if (timer) {
+                    clearTimeout(timer);
+                }
+                timer = setTimeout(() => {
+                    func.apply(this, args); // args 是一个数组
+                }, wait);
+            }
+        };
+        const aEle = document.getElementById('btn');
+        aEle.addEventListener('click', debounce((f) => {
+            console.log(f);
+            console.log('invoke');
+        }));
+
+    </script>
+</body>
+</html>

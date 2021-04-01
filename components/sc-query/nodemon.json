@@ -1,0 +1,11 @@
+{
+  "verbose": true,
+  "ignore": [
+    "fields.json",
+    "node_modules"
+  ],
+  "execMap": {
+    "rb": "ruby",
+    "pde": "processing --sketch={{pwd}} --run"
+  }
+}

@@ -1,0 +1,61 @@
+html, body {
+  height: 100%;
+}
+body {
+  margin: 0;
+}
+.wrapper {
+  height: 100%;
+  display: -webkit-flex;
+  display: flex;
+  align-items: stretch;
+  flex-direction: column;
+  background-color: blue;
+}
+.header {
+  flex: 0 0 76px;
+  background-color: red;
+}
+.header nav {
+  width: 1200px;
+  height: 100%;
+  margin: 0 auto;
+  display: -webkit-flex;
+  display: flex;
+  align-items: stretch; /*交叉轴对齐方式*/
+  justify-content: center; /*主轴上对齐方式，可选值有flex-start, flex-end, center, space-between, space-around*/
+  background-color: green;
+}
+.header nav a {
+  border: 1px solid red;
+  padding: 0 5px;
+}
+.header nav a:hover {
+  background-color: #ccc;
+}
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  border: 1px solid blue;
+}
+.flex-box {
+  display: flex;
+  align-items: stretch;
+  height: 100%;
+}
+.widget {
+  background-color: #ccc;
+}
+.widget-left {
+  width: 50%;
+  background-color: red;
+}
+.widget-middle {
+  width: 25%;
+  margin: 0 10px;
+  background-color: blue
+}
+.widget-right {
+  width: 25%;
+  background-color: green;
+}

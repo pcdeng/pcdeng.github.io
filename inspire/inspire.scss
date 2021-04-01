@@ -1,0 +1,42 @@
+.page-inspire {
+  display: flex;
+  width: 80%;
+  max-width: 80%;
+  margin: 0 auto;
+  padding: 20px;
+
+  .inspire-list {
+    flex-grow: 1;
+    flex-shrink: 1;
+    padding: 10px 0;
+    max-height: calc(100vh - 70px);
+    overflow-y: auto;
+    margin-right: 10px;
+    border: 2px solid #d6d6d6;
+    border-radius: 10px;
+  }
+
+  .panel-inspire {
+    width: 350px;
+    max-width: 350px;
+    padding: 20px;
+    border: 2px solid #d6d6d6;
+    border-radius: 10px;
+  }
+
+  .inspire-form .form-control {
+    border-bottom: 1px solid #d6d6d6;
+  }
+
+  .inspire-form .item-input:last-child .form-control {
+    border-bottom: none;
+  }
+
+  .quote {
+    position: relative;
+    text-align: left;
+    padding: 5px 10px;
+    font-size: 1.3333em;
+    border-bottom: 1px dashed #09d3ac;
+  }
+}

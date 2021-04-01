@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>文字排版专项练习</title>
+	<style type="text/css">
+		.t {
+			min-width: 150px;
+			font-size: 12px;
+		}
+		.t p {
+      text-align: left;
+			border: 1px solid red;
+		}
+		.t p .name {
+      width: 80px;
+      float: left;
+			border: 1px solid green;
+		}
+		.t p .val {
+      display: block;
+      width: 100%;
+      margin-left: -90px;
+			border: 1px solid blue;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+		}
+	</style>
+</head>
+<body>
+	<div class="t">
+		<p>
+			<span class="name">Name</span>
+			<span class="val">fsdafasdfsdafasdfasdfasdfasdfasdasdf</span>
+		</p>
+		<p>
+			<span class="name">Cluster Host Name</span>
+			<span class="val">1111</span>
+		</p>
+
+	</div>
+
+</body>
+</html>
