@@ -1,32 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Date range picker test page</title>
-  <!-- Include Required Prerequisites -->
-  <script type="text/javascript" src="http://cdn.jsdelivr.net/jquery/1/jquery.min.js"></script>
-  <script type="text/javascript" src="http://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
-  <link rel="stylesheet" type="text/css" href="http://cdn.jsdelivr.net/bootstrap/3/css/bootstrap.css" />
-   
-  <!-- Include Date Range Picker -->
-  <script type="text/javascript" src="daterangepicker.js"></script>
-  <link rel="stylesheet" type="text/css" href="http://cdn.jsdelivr.net/bootstrap.daterangepicker/2/daterangepicker.css" />
-</head>
-<body>
-  <input name="daterange">
-  <script type="text/javascript">
-    $daterangepicker = $('input[name="daterange"]').daterangepicker({
-      singleDatePicker: true,
-      timePicker: true,
-      maxDate: moment(),
-      autoApply: true
-    }, function(date) {
-      console.log(date);
-    });
-    let daterangepickerInstance = $daterangepicker.data('daterangepicker');
-    daterangepickerInstance.container.find('.calendar').on('mousedown.daterangepicker', 'td.available', function() {
-      daterangepickerInstance.clickApply()
-    });
-  </script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Date range picker test page</title>
+    <!-- Include Required Prerequisites -->
+    <script type="text/javascript" src="http://cdn.jsdelivr.net/jquery/1/jquery.min.js"></script>
+    <script type="text/javascript" src="http://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="http://cdn.jsdelivr.net/bootstrap/3/css/bootstrap.css" />
+
+    <!-- Include Date Range Picker -->
+    <script type="text/javascript" src="daterangepicker.js"></script>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="http://cdn.jsdelivr.net/bootstrap.daterangepicker/2/daterangepicker.css"
+    />
+  </head>
+  <body>
+    <input name="daterange" />
+    <script type="text/javascript">
+      $daterangepicker = $('input[name="daterange"]').daterangepicker(
+        {
+          singleDatePicker: true,
+          timePicker: true,
+          maxDate: moment(),
+          autoApply: true,
+        },
+        function (date) {
+          console.log(date);
+        },
+      );
+      let daterangepickerInstance = $daterangepicker.data('daterangepicker');
+      daterangepickerInstance.container.find('.calendar').on('mousedown.daterangepicker', 'td.available', function () {
+        daterangepickerInstance.clickApply();
+      });
+    </script>
+  </body>
 </html>

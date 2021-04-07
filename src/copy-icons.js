@@ -22,14 +22,7 @@ const ActionIconsMapping = [
   'clean.svg',
 ];
 
-const ActionLogIconsMapping = [
-  'create.svg',
-  'doing.svg',
-  'done.svg',
-  'pause.svg',
-  'timeout.svg',
-  'staff_tag.svg',
-];
+const ActionLogIconsMapping = ['create.svg', 'doing.svg', 'done.svg', 'pause.svg', 'timeout.svg', 'staff_tag.svg'];
 
 const iconsPath = './src/assets/icon';
 const newIconsPath = 'icons';
@@ -42,7 +35,7 @@ stat(newIconsPath, (e, st) => {
   }
 });
 
-[...ActionIconsMapping, ...ActionLogIconsMapping].forEach(icon => {
+[...ActionIconsMapping, ...ActionLogIconsMapping].forEach((icon) => {
   const iconFile = `${iconsPath}/${icon}`;
   const readable = fs.createReadStream(iconFile);
   const writeable = fs.createWriteStream(`./${newIconsPath}/${icon}`);

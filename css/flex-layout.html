@@ -1,80 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Layout 布局</title>
-  <style>
-    * {
-      box-sizing: border-box;
-    }
-    html, body {
-      margin: 0;
-      padding: 0;
-      height: 100%;
-    }
-    .row {
-      display: flex;
-      padding: 10px;
-      height: 100%;
-      background-color: red;
-    }
-    .flex-box {
-      display: flex;
-    }
-    .flex-box-column {
-      flex-direction: column;
-    }
-    .widget {
-      background-color: green;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 22px;
-      color: #fff;
-      padding: 10px;
-      overflow-y: auto;
-    }
-    .left {
-      flex: 1 1 40%;
-      border-right: 10px solid #ccc;
-    }
-    .left .widget {
-      flex: 1 1 50%;
-      border-bottom: 10px solid #ccc;
-    }
-    .left .left-1 {
-      flex: 1 1 33.3333%;
-    }
-    .left .left-2 {
-      flex-basis: 66.6666%;
-    }
-    .left .widget:last-child {
-      border-bottom: none;
-    }
-    .right {
-      flex: 3 2 60%;
-    }
-    .right .widget {
-      flex: 1 1 33.3333%;
-      border-bottom: 10px solid #ccc;
-    }
-    .right .widget:last-child {
-      border-bottom: none;
-    }
-  </style>
-</head>
-<body>
-  <div class="row">
-    <div class="flex-box flex-box-column left">
-      <div class="widget left-1">
-        劳动创造光荣，成就梦想。在“五一国际劳动节”、“五四青年节”来临之际，浙江在线策划“劳动万岁”特别报道，在全省各行各业寻找出6位“最美丽”的劳动者，他们有人长期扎根一线坚守岗位，有人勇于创新攻克技术难题，有人无私奉献谱写亮丽青春，有人白手起家抒写创业传奇。无论职业如何，分工怎样，他们都有着共同的情怀，通过劳动追逐着自己的梦想。劳动创造光荣，成就梦想。在“五一国际劳动节”、“五四青年节”来临之际，浙江在线策划“劳动万岁”特别报道，在全省各行各业寻找出6位“最美丽”的劳动者，他们有人长期扎根一线坚守岗位，有人勇于创新攻克技术难题，有人无私奉献谱写亮丽青春，有人白手起家抒写创业传奇。无论职业如何，分工怎样，他们都有着共同的情怀，通过劳动追逐着自己的梦想。劳动创造光荣，成就梦想。在“五一国际劳动节”、“五四青年节”来临之际，浙江在线策划“劳动万岁”特别报道，在全省各行各业寻找出6位“最美丽”的劳动者，他们有人长期扎根一线坚守岗位，有人勇于创新攻克技术难题，有人无私奉献谱写亮丽青春，有人白手起家抒写创业传奇。无论职业如何，分工怎样，他们都有着共同的情怀，通过劳动追逐着自己的梦想。</div>
-      <div class="widget left-2">Left 2</div>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Layout 布局</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+      }
+      .row {
+        display: flex;
+        padding: 10px;
+        height: 100%;
+        background-color: red;
+      }
+      .flex-box {
+        display: flex;
+      }
+      .flex-box-column {
+        flex-direction: column;
+      }
+      .widget {
+        background-color: green;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 22px;
+        color: #fff;
+        padding: 10px;
+        overflow-y: auto;
+      }
+      .left {
+        flex: 1 1 40%;
+        border-right: 10px solid #ccc;
+      }
+      .left .widget {
+        flex: 1 1 50%;
+        border-bottom: 10px solid #ccc;
+      }
+      .left .left-1 {
+        flex: 1 1 33.3333%;
+      }
+      .left .left-2 {
+        flex-basis: 66.6666%;
+      }
+      .left .widget:last-child {
+        border-bottom: none;
+      }
+      .right {
+        flex: 3 2 60%;
+      }
+      .right .widget {
+        flex: 1 1 33.3333%;
+        border-bottom: 10px solid #ccc;
+      }
+      .right .widget:last-child {
+        border-bottom: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="row">
+      <div class="flex-box flex-box-column left">
+        <div class="widget left-1">
+          劳动创造光荣，成就梦想。在“五一国际劳动节”、“五四青年节”来临之际，浙江在线策划“劳动万岁”特别报道，在全省各行各业寻找出6位“最美丽”的劳动者，他们有人长期扎根一线坚守岗位，有人勇于创新攻克技术难题，有人无私奉献谱写亮丽青春，有人白手起家抒写创业传奇。无论职业如何，分工怎样，他们都有着共同的情怀，通过劳动追逐着自己的梦想。劳动创造光荣，成就梦想。在“五一国际劳动节”、“五四青年节”来临之际，浙江在线策划“劳动万岁”特别报道，在全省各行各业寻找出6位“最美丽”的劳动者，他们有人长期扎根一线坚守岗位，有人勇于创新攻克技术难题，有人无私奉献谱写亮丽青春，有人白手起家抒写创业传奇。无论职业如何，分工怎样，他们都有着共同的情怀，通过劳动追逐着自己的梦想。劳动创造光荣，成就梦想。在“五一国际劳动节”、“五四青年节”来临之际，浙江在线策划“劳动万岁”特别报道，在全省各行各业寻找出6位“最美丽”的劳动者，他们有人长期扎根一线坚守岗位，有人勇于创新攻克技术难题，有人无私奉献谱写亮丽青春，有人白手起家抒写创业传奇。无论职业如何，分工怎样，他们都有着共同的情怀，通过劳动追逐着自己的梦想。
+        </div>
+        <div class="widget left-2">Left 2</div>
+      </div>
+      <div class="flex-box flex-box-column right">
+        <div class="widget right-1">Right 1</div>
+        <div class="widget right-2">Right 2</div>
+        <div class="widget right-3">Right 3</div>
+      </div>
     </div>
-    <div class="flex-box flex-box-column right">
-      <div class="widget right-1">Right 1</div>
-      <div class="widget right-2">Right 2</div>
-      <div class="widget right-3">Right 3</div>
-    </div>
-  </div>
-</body>
+  </body>
 </html>

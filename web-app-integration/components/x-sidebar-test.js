@@ -2,10 +2,10 @@ import { moduleForComponent, test } from 'ember-qunit';
 import hbs from 'htmlbars-inline-precompile';
 
 moduleForComponent('x-sidebar', 'Integration | Component | x sidebar', {
-  integration: true
+  integration: true,
 });
 
-test('it renders', function(assert) {
+test('it renders', function (assert) {
   assert.expect(3);
 
   // Set any properties with this.set('myProperty', 'value');
@@ -14,13 +14,16 @@ test('it renders', function(assert) {
   this.render(hbs`{{x-sidebar}}`);
   assert.equal(this.$('.sidebar-brand').text().trim(), 'Connections');
 
-  let groups = [{
-    TechnologyName: 'ddd',
-    ConnectionType: 'first connection name'
-  }, {
-    TechnologyName: 'ccc',
-    ConnectionType: 'fff'
-  }];
+  let groups = [
+    {
+      TechnologyName: 'ddd',
+      ConnectionType: 'first connection name',
+    },
+    {
+      TechnologyName: 'ccc',
+      ConnectionType: 'fff',
+    },
+  ];
   this.set('groups', groups);
   // Template block usage:
   this.render(hbs`{{#x-sidebar groups=groups}}{{/x-sidebar}}`);

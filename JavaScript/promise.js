@@ -1,6 +1,6 @@
 /**
  * 定义个函数（类）
- * @param Function fn 
+ * @param Function fn
  */
 // function Promise(fn) {
 //     this.cbs = [];
@@ -30,52 +30,55 @@
 
 /**
  * 异步操作
- * @param {*} resolve 
+ * @param {*} resolve
  */
 function asyncProcess(resolve) {
-    console.log('开始执行异步操作');
-    setTimeout(() => {
-        console.log('异步操作完成');
-        resolve('done');
-    }, 1000);
+  console.log('开始执行异步操作');
+  setTimeout(() => {
+    console.log('异步操作完成');
+    resolve('done');
+  }, 1000);
 }
 
 /**
  * 成功回调
- * @param String value 
+ * @param String value
  */
 function onSuccess(value) {
-    console.log('异步完成的结果：', value);
+  console.log('异步完成的结果：', value);
 }
 
 // const p1 = new Promise(asyncProcess);
 // p1.then(onSuccess);
 
 function fun1() {
-    return new Promise((resolve, reject) => {
-        setTimeout(() => {
-            resolve('fun1 done');
-        }, 1000);
-    });
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      resolve('fun1 done');
+    }, 1000);
+  });
 }
 
 function fun2() {
-    return new Promise((resolve, reject) => {
-        setTimeout(() => {
-            resolve('fun2 done');
-        }, 1500);
-    });
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      resolve('fun2 done');
+    }, 1500);
+  });
 }
 
 Promise.all([fun1(), fun2()]).then(([result1, result2]) => {
-	console.log(result1, result2);
+  console.log(result1, result2);
 });
 
-
-window.addEventListener("unhandledrejection", event => {
+window.addEventListener(
+  'unhandledrejection',
+  (event) => {
     /* 你可以在这里添加一些代码，以便检查
        event.promise 中的 promise 和
        event.reason 中的 rejection 原因 */
 
     event.preventDefault();
-}, false);
+  },
+  false,
+);

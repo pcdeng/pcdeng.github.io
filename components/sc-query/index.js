@@ -18,7 +18,6 @@ function rotate(images, index) {
   return virtualImages.splice(index, 3);
 }
 
-
 // generateScQuery();
 
 // generateScQueryInterface('ServerDatabase', conf);
@@ -27,7 +26,7 @@ function generateScQueryInterface(className, conf) {
   console.log('conf', typeof conf.columns);
   const columns = conf.columns;
   const properties = [];
-  columns.forEach(column => {
+  columns.forEach((column) => {
     if (column.name) {
       const str = `${column.name}: ${column.isNumber ? 'number' : 'string'};`;
       properties.push(str);
@@ -45,34 +44,35 @@ function generateScQueryInterface(className, conf) {
 }
 
 function generateScQuery() {
-  http.get('https://af-monitoring-spot-dev-ncus.azurewebsites.net/api/v1/query-request-schema').then(r => {
-    const obj = r.data;
-    const properties = obj.properties.query.properties;
-    const o = {};
+  http
+    .get('https://af-monitoring-spot-dev-ncus.azurewebsites.net/api/v1/query-request-schema')
+    .then((r) => {
+      const obj = r.data;
+      const properties = obj.properties.query.properties;
+      const o = {};
 
-    for (let technology in properties) {
-      o[technology] = {};
-      const resources = properties[technology].properties;
-      for (let resource in resources) {
-        o[technology][resource] = {
-          fields: getFields(resources[resource].properties.fields),
-          filter: getFilters(resources[resource].properties.filter),
+      for (let technology in properties) {
+        o[technology] = {};
+        const resources = properties[technology].properties;
+        for (let resource in resources) {
+          o[technology][resource] = {
+            fields: getFields(resources[resource].properties.fields),
+            filter: getFilters(resources[resource].properties.filter),
+          };
         }
       }
-    }
-    console.log('result:', o);
-    fs.writeFile('./fields.json', JSON.stringify(o), {
-
-    }, (err, dd) => {
-      if (err) {
-        console.log('err:', err);
-        return;
-      }
-      console.log('write success');
+      console.log('result:', o);
+      fs.writeFile('./fields.json', JSON.stringify(o), {}, (err, dd) => {
+        if (err) {
+          console.log('err:', err);
+          return;
+        }
+        console.log('write success');
+      });
+    })
+    .catch((err) => {
+      console.log(err);
     });
-  }).catch(err => {
-    console.log(err);
-  });
 }
 
 function getFields(fields) {

@@ -10,9 +10,7 @@
         "guestStatus.last",
         "powerState.last"
       ],
-      "filter": [
-        "machineKey"
-      ]
+      "filter": ["machineKey"]
     }
   },
   "hyperV": {
@@ -44,9 +42,7 @@
         "memoryReservation.trend.last.max.min.sum.avg.trendMax.trendMin.trendSum.trendAvg",
         "memoryTargetMemoryBuffer.trend.last.max.min.sum.avg.trendMax.trendMin.trendSum.trendAvg"
       ],
-      "filter": [
-        "machineKey"
-      ]
+      "filter": ["machineKey"]
     }
   },
   "sqlServer": {
@@ -112,12 +108,7 @@
         "tempDbContentionPageId.last",
         "tempDbContentionResourceType.last"
       ],
-      "filter": [
-        "sessionKey",
-        "useTemp",
-        "active",
-        "systemProcess"
-      ]
+      "filter": ["sessionKey", "useTemp", "active", "systemProcess"]
     },
     "database": {
       "fields": [
@@ -220,9 +211,7 @@
         "logTruncationsRate.last.avg.trendAvg",
         "virtualLogFilesCount.last.trend"
       ],
-      "filter": [
-        "databaseKey"
-      ]
+      "filter": ["databaseKey"]
     },
     "clusterGroup": {
       "fields": [
@@ -233,21 +222,11 @@
         "preferredOwners.last",
         "severity.last"
       ],
-      "filter": [
-        "clusterGroupKey",
-        "clusterNodeName"
-      ]
+      "filter": ["clusterGroupKey", "clusterNodeName"]
     },
     "clusterNode": {
-      "fields": [
-        "clusterNodeKey.key.deleted",
-        "name.last",
-        "status.last",
-        "severity.last"
-      ],
-      "filter": [
-        "clusterNodeKey"
-      ]
+      "fields": ["clusterNodeKey.key.deleted", "name.last", "status.last", "severity.last"],
+      "filter": ["clusterNodeKey"]
     },
     "clusterResource": {
       "fields": [
@@ -257,10 +236,7 @@
         "clusterGroupKey.last",
         "clusterNodeName.last"
       ],
-      "filter": [
-        "clusterResourceKey",
-        "clusterGroupKey"
-      ]
+      "filter": ["clusterResourceKey", "clusterGroupKey"]
     },
     "table": {
       "fields": [
@@ -285,9 +261,7 @@
         "freePct.last",
         "usedPct.last"
       ],
-      "filter": [
-        "tableKey"
-      ]
+      "filter": ["tableKey"]
     },
     "disk": {
       "fields": [
@@ -310,9 +284,7 @@
         "nonSqlUsedPct.last.trend",
         "windowsFreePct.last.trend"
       ],
-      "filter": [
-        "diskKey"
-      ]
+      "filter": ["diskKey"]
     },
     "fileGroup": {
       "fields": [
@@ -332,10 +304,7 @@
         "maxSize.last",
         "dynamicGrowthRemaining.last"
       ],
-      "filter": [
-        "fileGroupKey",
-        "dbName"
-      ]
+      "filter": ["fileGroupKey", "dbName"]
     },
     "index": {
       "fields": [
@@ -367,12 +336,7 @@
         "usedPct.last.trend",
         "averageFragmentation.max.trendMax"
       ],
-      "filter": [
-        "indexKey",
-        "tableKey",
-        "name",
-        "isTable"
-      ]
+      "filter": ["indexKey", "tableKey", "name", "isTable"]
     },
     "tempDbObject": {
       "fields": [
@@ -404,9 +368,7 @@
         "lastSystemLookup.last",
         "lasySystemUpdate.last"
       ],
-      "filter": [
-        "tempDbObjectKey"
-      ]
+      "filter": ["tempDbObjectKey"]
     },
     "file": {
       "fields": [
@@ -451,10 +413,7 @@
         "userObjectReservedMb.last",
         "versionStoreReservedMb.last"
       ],
-      "filter": [
-        "fileKey",
-        "isTempFile"
-      ]
+      "filter": ["fileKey", "isTempFile"]
     },
     "partition": {
       "fields": [
@@ -467,35 +426,15 @@
         "partitionCompressionType.last",
         "partitionNumber.last"
       ],
-      "filter": [
-        "partitionKey",
-        "indexKey",
-        "tableKey"
-      ]
+      "filter": ["partitionKey", "indexKey", "tableKey"]
     },
     "service": {
-      "fields": [
-        "serviceKey.key.deleted",
-        "state.last",
-        "startTime.last",
-        "currentServerTime.last"
-      ],
-      "filter": [
-        "serviceKey"
-      ]
+      "fields": ["serviceKey.key.deleted", "state.last", "startTime.last", "currentServerTime.last"],
+      "filter": ["serviceKey"]
     },
     "serviceHistory": {
-      "fields": [
-        "serviceHistoryKey.key.deleted",
-        "service.trend.last",
-        "state.last",
-        "startTime.last",
-        "endTime.last"
-      ],
-      "filter": [
-        "serviceHistoryKey",
-        "service"
-      ]
+      "fields": ["serviceHistoryKey.key.deleted", "service.trend.last", "state.last", "startTime.last", "endTime.last"],
+      "filter": ["serviceHistoryKey", "service"]
     },
     "logShippingHistory": {
       "fields": [
@@ -506,10 +445,7 @@
         "message.last",
         "sessionStatus.last"
       ],
-      "filter": [
-        "logShippingHistoryKey",
-        "databaseKey"
-      ]
+      "filter": ["logShippingHistoryKey", "databaseKey"]
     },
     "logShippingSecondary": {
       "fields": [
@@ -519,10 +455,7 @@
         "secondaryDatabase.last",
         "secondaryServer.last"
       ],
-      "filter": [
-        "databaseKey",
-        "primaryId"
-      ]
+      "filter": ["databaseKey", "primaryId"]
     },
     "job": {
       "fields": [
@@ -548,9 +481,7 @@
         "sessionId.last",
         "stepName.last"
       ],
-      "filter": [
-        "jobKey"
-      ]
+      "filter": ["jobKey"]
     },
     "jobExecution": {
       "fields": [
@@ -564,11 +495,7 @@
         "startTime.last",
         "stepName.last"
       ],
-      "filter": [
-        "jobExecutionKey",
-        "jobKey",
-        "jobName"
-      ]
+      "filter": ["jobExecutionKey", "jobKey", "jobName"]
     }
   },
   "test": {
@@ -583,9 +510,7 @@
         "weeklyCost.last",
         "daysUponRelease.last"
       ],
-      "filter": [
-        "animalKey"
-      ]
+      "filter": ["animalKey"]
     }
   },
   "windows": {
@@ -609,9 +534,7 @@
         "fileSystem.last",
         "compressed.last"
       ],
-      "filter": [
-        "logicalDiskKey"
-      ]
+      "filter": ["logicalDiskKey"]
     },
     "physicalDisk": {
       "fields": [
@@ -635,9 +558,7 @@
         "model.last",
         "partitions.last"
       ],
-      "filter": [
-        "physicalDiskKey"
-      ]
+      "filter": ["physicalDiskKey"]
     },
     "cpu": {
       "fields": [
@@ -646,9 +567,7 @@
         "serverWorkQueues.last.avg.trend.trendAvg",
         "transferredData.last.avg.trend.trendAvg"
       ],
-      "filter": [
-        "cpuKey"
-      ]
+      "filter": ["cpuKey"]
     },
     "service": {
       "fields": [
@@ -668,19 +587,11 @@
         "currentState.last",
         "pathName.last"
       ],
-      "filter": [
-        "serviceKey"
-      ]
+      "filter": ["serviceKey"]
     },
     "driver": {
-      "fields": [
-        "driverKey.key.deleted",
-        "displayName.last",
-        "currentState.last"
-      ],
-      "filter": [
-        "driverKey"
-      ]
+      "fields": ["driverKey.key.deleted", "displayName.last", "currentState.last"],
+      "filter": ["driverKey"]
     },
     "process": {
       "fields": [
@@ -731,21 +642,11 @@
         "writesPerSec.last.avg.trend.trendAvg",
         "ioWriteBytesPerSec.last.avg.trend.trendAvg"
       ],
-      "filter": [
-        "processKey"
-      ]
+      "filter": ["processKey"]
     },
     "share": {
-      "fields": [
-        "shareKey.key.deleted",
-        "localPath.last",
-        "comment.last",
-        "type.last",
-        "maxUsers.last"
-      ],
-      "filter": [
-        "shareKey"
-      ]
+      "fields": ["shareKey.key.deleted", "localPath.last", "comment.last", "type.last", "maxUsers.last"],
+      "filter": ["shareKey"]
     },
     "shareSession": {
       "fields": [
@@ -757,9 +658,7 @@
         "openFiles.last",
         "userCount.last"
       ],
-      "filter": [
-        "shareSessionKey"
-      ]
+      "filter": ["shareSessionKey"]
     },
     "pageFile": {
       "fields": [
@@ -770,32 +669,15 @@
         "pctUsed.last",
         "pctPeakUsed.last"
       ],
-      "filter": [
-        "pageFileKey"
-      ]
+      "filter": ["pageFileKey"]
     },
     "session": {
-      "fields": [
-        "sessionKey.key.deleted",
-        "user.last",
-        "elapsedTime.last",
-        "idleTime.last",
-        "openFiles.last"
-      ],
-      "filter": [
-        "sessionKey"
-      ]
+      "fields": ["sessionKey.key.deleted", "user.last", "elapsedTime.last", "idleTime.last", "openFiles.last"],
+      "filter": ["sessionKey"]
     },
     "nbt": {
-      "fields": [
-        "nbtKey.key.deleted",
-        "kbReceivedPerSec.last",
-        "kbSentPerSec.last",
-        "kbPerSec.last"
-      ],
-      "filter": [
-        "nbtKey"
-      ]
+      "fields": ["nbtKey.key.deleted", "kbReceivedPerSec.last", "kbSentPerSec.last", "kbPerSec.last"],
+      "filter": ["nbtKey"]
     }
   }
 }

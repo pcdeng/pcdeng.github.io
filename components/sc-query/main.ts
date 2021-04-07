@@ -8,7 +8,7 @@ function generateScQueryInterface(className, conf) {
   console.log('conf', typeof conf.columns);
   const columns = conf.columns;
   const properties = [];
-  columns.forEach(column => {
+  columns.forEach((column) => {
     if (column.name) {
       const str = `${column.name}: ${column.isNumber ? 'number' : 'string'};`;
       properties.push(str);

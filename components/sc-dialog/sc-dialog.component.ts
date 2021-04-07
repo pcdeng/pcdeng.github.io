@@ -25,7 +25,7 @@ export class ScDialogComponent implements OnInit {
   constructor(private eleRef: ElementRef, private render: Renderer2) {}
 
   ngOnInit() {
-    this.render.listen(this.eleRef.nativeElement, 'transitionend', e => {
+    this.render.listen(this.eleRef.nativeElement, 'transitionend', (e) => {
       if (e.target === this.eleRef.nativeElement) {
         this.render.addClass(this.eleRef.nativeElement, 'hideit');
         this.destroy.emit();

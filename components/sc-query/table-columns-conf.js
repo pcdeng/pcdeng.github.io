@@ -1,5 +1,5 @@
 const conf = {
- version: 3,
+  version: 3,
   columns: [
     {
       name: 'dbName',
@@ -235,8 +235,8 @@ const conf = {
       isNumber: true,
     },
   ],
-}
+};
 
 module.exports = {
-  conf
+  conf,
 };

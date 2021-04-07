@@ -2,10 +2,10 @@ import { moduleForComponent, test } from 'ember-qunit';
 import hbs from 'htmlbars-inline-precompile';
 
 moduleForComponent('sql-server', 'Integration | Component | sql server', {
-  integration: true
+  integration: true,
 });
 
-test('it renders', function(assert) {
+test('it renders', function (assert) {
   assert.expect(2);
 
   // Set any properties with this.set('myProperty', 'value');
@@ -14,7 +14,7 @@ test('it renders', function(assert) {
   // Template block usage:
   let connection = {
     DiagnosticServerID: 122323,
-    ConnectionName: 'connection name'
+    ConnectionName: 'connection name',
   };
   this.set('connection', connection);
   this.render(hbs`{{#sql-server connection=connection}}{{/sql-server}}`);

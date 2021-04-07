@@ -11,14 +11,14 @@
 
 :host {
   position: fixed;
+  z-index: 1000;
   top: 0;
   left: 0;
-  z-index: 1000;
-  height: 100vh;
-  width: 100vw;
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 100vw;
+  height: 100vh;
   background-color: rgba(51, 51, 51, 0.7);
 
   &.hideit {
@@ -26,16 +26,16 @@
   }
 
   &.unvisible {
-    opacity: 0;
     transition: opacity 0.7s ease-in-out;
+    opacity: 0;
   }
 }
 
 .sc-dialog {
+  font-size: 12px;
   position: relative;
   padding: 10px 10px 10px 10px;
   color: #5e5e5e;
-  font-size: 12px;
   background-color: #ebebeb;
 }
 
@@ -49,31 +49,31 @@
   }
 
   .btn-close {
-    display: inline-block;
     position: absolute;
     top: 0;
     right: -20px;
+    display: inline-block;
     width: 20px;
     height: 20px;
-    border-radius: 3px;
     cursor: pointer;
+    border-radius: 3px;
 
     &:hover {
-      color: #000;
-      background-color: #ccc;
       transition: background-color 0.8s ease-in-out;
       transition: color 0.8s ease-in-out;
+      color: #000;
+      background-color: #ccc;
     }
   }
 }
 
 .sc-title {
-  max-width: 640px;
-  margin: 0 0 12px;
-  padding: 0;
   font-size: 24px;
   font-weight: 300;
   line-height: 1.4;
+  max-width: 640px;
+  margin: 0 0 12px;
+  padding: 0;
 }
 
 .sc-dialog-content {
@@ -91,13 +91,13 @@
   }
 
   .btn {
+    font-size: 14px;
     min-width: 100px;
     padding: 7px 20px;
-    color: #fff;
-    font-size: 14px;
-    text-align: center;
-    border-radius: 2px;
     cursor: pointer;
+    text-align: center;
+    color: #fff;
+    border-radius: 2px;
     background-color: #3b99e0;
   }
 }
