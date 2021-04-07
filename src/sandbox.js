@@ -1,7 +1,7 @@
 function Sandbox() {
   var args = Array.prototype.slice.call(arguments), // 浅复制数组
     callback = args.pop(); // 取出数组第一个元素
-  (modules = args[0] && typeof args[0] === "string" ? args : args[0]), i;
+  (modules = args[0] && typeof args[0] === 'string' ? args : args[0]), i;
 
   if (!(this instanceof Sandbox)) {
     return new Sandbox(modules, callback);
@@ -10,7 +10,7 @@ function Sandbox() {
   this.a = 1;
   this.b = 2;
 
-  if (!modules || modules === "*") {
+  if (!modules || modules === '*') {
     modules = [];
     for (i in Sandbox.modules) {
       if (Sandbox.modules.hasOwnProperty(i)) {
@@ -27,8 +27,8 @@ function Sandbox() {
 }
 
 Sandbox.prototype = {
-  name: "My Application",
-  version: "1.0",
+  name: 'My Application',
+  version: '1.0',
   getName: function () {
     return this.name;
   },

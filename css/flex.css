@@ -1,15 +1,16 @@
-html, body {
+html,
+body {
   height: 100%;
 }
 body {
   margin: 0;
 }
 .wrapper {
-  height: 100%;
   display: -webkit-flex;
   display: flex;
-  align-items: stretch;
   flex-direction: column;
+  align-items: stretch;
+  height: 100%;
   background-color: blue;
 }
 .header {
@@ -17,18 +18,18 @@ body {
   background-color: red;
 }
 .header nav {
+  display: -webkit-flex;
+  display: flex;
+  justify-content: center; /* 主轴上对齐方式，可选值有flex-start, flex-end, center, space-between, space-around */
+  align-items: stretch; /* 交叉轴对齐方式 */
   width: 1200px;
   height: 100%;
   margin: 0 auto;
-  display: -webkit-flex;
-  display: flex;
-  align-items: stretch; /*交叉轴对齐方式*/
-  justify-content: center; /*主轴上对齐方式，可选值有flex-start, flex-end, center, space-between, space-around*/
   background-color: green;
 }
 .header nav a {
-  border: 1px solid red;
   padding: 0 5px;
+  border: 1px solid red;
 }
 .header nav a:hover {
   background-color: #ccc;
@@ -53,7 +54,7 @@ body {
 .widget-middle {
   width: 25%;
   margin: 0 10px;
-  background-color: blue
+  background-color: blue;
 }
 .widget-right {
   width: 25%;

@@ -14,9 +14,9 @@ function getTenancySplashImageName(hostName = 'AMZ.staypls.com') {
     'LBA',
     'LSD',
     'LTL',
-  ].map(item => item.toLowerCase());
+  ].map((item) => item.toLowerCase());
 
-  const re = /^([a-z]+)\.staypls\.com$/ig;
+  const re = /^([a-z]+)\.staypls\.com$/gi;
   const result = re.exec(hostName);
   tenancyName = '';
   if (result) {

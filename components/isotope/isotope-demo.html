@@ -76,33 +76,33 @@
 
     <script src="./isotope.pkgd.js"></script>
     <script type="text/javascript">
-      const iso = new Isotope("#zones", {
-        itemSelector: ".item",
-        layoutMode: "fitRows",
+      const iso = new Isotope('#zones', {
+        itemSelector: '.item',
+        layoutMode: 'fitRows',
       });
 
-      const aBtn = document.getElementById("a");
-      aBtn.addEventListener("click", () => {
-        iso.arrange({ filter: ".floor-header, .line, .todo" });
+      const aBtn = document.getElementById('a');
+      aBtn.addEventListener('click', () => {
+        iso.arrange({ filter: '.floor-header, .line, .todo' });
       });
-      const bBtn = document.getElementById("b");
-      bBtn.addEventListener("click", () => {
-        iso.arrange({ filter: ".floor-header, .line, .doing" });
+      const bBtn = document.getElementById('b');
+      bBtn.addEventListener('click', () => {
+        iso.arrange({ filter: '.floor-header, .line, .doing' });
       });
-      const cBtn = document.getElementById("c");
-      cBtn.addEventListener("click", () => {
-        iso.arrange({ filter: ".floor-header, .line, .done" });
+      const cBtn = document.getElementById('c');
+      cBtn.addEventListener('click', () => {
+        iso.arrange({ filter: '.floor-header, .line, .done' });
       });
-      const resetBtn = document.getElementById("reset");
-      resetBtn.addEventListener("click", () => {
-        iso.arrange({ filter: "" });
+      const resetBtn = document.getElementById('reset');
+      resetBtn.addEventListener('click', () => {
+        iso.arrange({ filter: '' });
       });
-      const totalEle = document.getElementById("total");
+      const totalEle = document.getElementById('total');
 
       const items = iso.getFilteredItemElements();
       totalEle.innerText = getItems(items).length;
 
-      iso.on("arrangeComplete", onArrange);
+      iso.on('arrangeComplete', onArrange);
 
       function onArrange(filteredItems) {
         const items = getItems(filteredItems.map((item) => item.element));
@@ -113,10 +113,7 @@
       function getItems(filteredItems) {
         const items = filteredItems.filter((ele) => {
           if (ele) {
-            return !(
-              ele.className.includes("floor-header") ||
-              ele.className.includes("line")
-            );
+            return !(ele.className.includes('floor-header') || ele.className.includes('line'));
           }
           return false;
         });

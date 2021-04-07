@@ -1,86 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>HighStock</title>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <title>HighStock</title>
+  </head>
+  <body>
+    <div id="container" style="height: 400px; width: 600px; margin: 0 auto"></div>
 
-  <div id="container" style="height: 400px; width: 600px;margin: 0 auto;"></div>
+    <script src="highstock.src.js"></script>
+    <script type="text/javascript" src="data.js"></script>
+    <script>
+      var barHeight = 16;
+      var chart = Highcharts.stockChart(
+        'container',
+        {
+          chart: {
+            type: 'line',
+          },
+          navigator: {
+            series: {
+              type: 'line',
+              lineColor: 'transparent',
+              lineWidth: 20,
+              data: [
+                {
+                  x: 1313964000000,
+                  y: 10,
+                  color: 'red',
+                },
+                {
+                  x: 1314050400000,
+                  y: 10,
+                  color: 'blue',
+                },
+                {
+                  x: 1314136800000,
+                  y: 10,
+                  color: 'green',
+                },
+                {
+                  x: 1314523200000,
+                  y: 10,
+                  color: 'pink',
+                },
+                {
+                  x: 1314623200000,
+                  y: 10,
+                },
+              ],
+            },
+          },
 
-  <script src="highstock.src.js"></script>
-  <script type="text/javascript" src="data.js"></script>
-  <script>
-    var barHeight = 16;
-    var chart = Highcharts.stockChart('container', {
-      chart: {
-        type: 'line'
-      },
-      navigator: {
-        series: {
-          type: 'line',
-          lineColor: 'transparent',
-          lineWidth: 20,
-          data: [{
-            x: 1313964000000,
-            y: 10,
-            color: 'red'
-          }, {
-            x: 1314050400000,
-            y: 10,
-            color: 'blue'
-          }, {
-            x: 1314136800000,
-            y: 10,
-            color: 'green'
-          }, {
-            x: 1314523200000,
-            y: 10,
-            color: 'pink'
-          }, {
-            x: 1314623200000,
-            y: 10,
-          }]
-        }
-      },
+          rangeSelector: {
+            selected: 1,
+          },
 
-      rangeSelector: {
-        selected: 1
-      },
+          series: [
+            {
+              name: 'ADBE',
+              data: ADBE,
+            },
+          ],
+        },
+        function (chart) {
+          var nav = chart.navigator;
+          console.log(chart.seriesTypes);
+          var series = nav.series;
+          series.forEach((serie) => {
+            let points = serie.data;
+            points.forEach((point, index) => {
+              let nextX = index < points.length - 1 ? nav.xAxis.toPixels(points[index + 1].x, true) : 0;
+              let x = nav.xAxis.toPixels(point.x, true);
+              let width = nextX - x;
+              x = x + nav.left;
 
-      series: [{
-        name: 'ADBE',
-        data: ADBE
-      }]
-    }, function(chart) {
-      var nav = chart.navigator;
-      console.log(chart.seriesTypes);
-      var series = nav.series;
-      series.forEach(serie => {
-        let points = serie.data;
-        points.forEach((point, index) => {
-          let nextX = index < points.length - 1 ? nav.xAxis.toPixels(points[index + 1].x, true) : 0;
-          let x = nav.xAxis.toPixels(point.x, true);
-          let width = nextX - x;
-          x = x + nav.left;
+              chart.renderer
+                .rect(x, point.plotY + nav.top - barHeight / 2, width, barHeight)
+                .attr({
+                  fill: point.color,
+                  zIndex: 4,
+                })
+                .add();
+            });
+          });
+        },
+      );
 
-          chart.renderer.rect(x, point.plotY + nav.top - (barHeight / 2), width, barHeight)
-          .attr({
-            fill: point.color,
-            zIndex: 4
-          })
-          .add();
-        }); 
-      });
-    });
-
-    function getRandom(min, max) {
-      min = Math.ceil(min);
-      max = Math.floor(max);
-      return Math.floor(Math.random() * (max - min + 1)) + min;
-    }
-  </script>
-</body>
+      function getRandom(min, max) {
+        min = Math.ceil(min);
+        max = Math.floor(max);
+        return Math.floor(Math.random() * (max - min + 1)) + min;
+      }
+    </script>
+  </body>
 </html>
-
-

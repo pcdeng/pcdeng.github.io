@@ -4,9 +4,11 @@ import './inspire.scss';
 
 class List extends React.Component {
   render() {
-    const list = this.props.quotes.map((item, index) =>
-      <li className="quote" key={item.id}>{index+1}. {item.quote} ---{item.author}</li>
-    );
+    const list = this.props.quotes.map((item, index) => (
+      <li className="quote" key={item.id}>
+        {index + 1}. {item.quote} ---{item.author}
+      </li>
+    ));
     return <ul>{list}</ul>;
   }
 }
@@ -82,7 +84,7 @@ class Inspire extends React.Component {
   render() {
     let message;
     if (this.state.errMsg) {
-      message = <p className="errmsg">{ this.state.errMsg }</p>
+      message = <p className="errmsg">{this.state.errMsg}</p>;
     }
     return (
       <div className="page-inspire">
@@ -97,28 +99,32 @@ class Inspire extends React.Component {
               <div className="form-group">
                 <div className="item-input">
                   <input
-                      id="email"
-                      type="text"
-                      className="form-control"
-                      name="quote"
-                      onChange={this.handleChange}
-                      placeholder="请输入名言"
-                      value={this.state.quote}
-                      required />
+                    id="email"
+                    type="text"
+                    className="form-control"
+                    name="quote"
+                    onChange={this.handleChange}
+                    placeholder="请输入名言"
+                    value={this.state.quote}
+                    required
+                  />
                 </div>
                 <div className="item-input">
                   <input
-                      id="email"
-                      type="text"
-                      className="form-control"
-                      name="author"
-                      onChange={this.handleChange}
-                      placeholder="请输入作者"
-                      value={this.state.author}
-                      required />
+                    id="email"
+                    type="text"
+                    className="form-control"
+                    name="author"
+                    onChange={this.handleChange}
+                    placeholder="请输入作者"
+                    value={this.state.author}
+                    required
+                  />
                 </div>
                 <div className="item-input">
-                  <button type="submit" className="btn btn-save btn-primary">提交</button>
+                  <button type="submit" className="btn btn-save btn-primary">
+                    提交
+                  </button>
                 </div>
               </div>
             </form>

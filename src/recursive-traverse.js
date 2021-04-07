@@ -48,13 +48,13 @@ let tree = {
 };
 
 function recursiveTraverse(node, action) {
-    if (!node || !node.children) {
-        return;
-    }
-    action(node.value);
-    node.children.forEach(function(item, index) {
-        recursiveTraverse(item, action);
-    })
+  if (!node || !node.children) {
+    return;
+  }
+  action(node.value);
+  node.children.forEach(function (item, index) {
+    recursiveTraverse(item, action);
+  });
 }
 
 recursiveTraverse(tree, console.log);

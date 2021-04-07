@@ -1,7 +1,7 @@
-import { from, throwError, of, interval, defer } from 'rxjs';
-import { retry, catchError, retryWhen, flatMap, delay, mergeMap, takeWhile, scan, map, tap } from 'rxjs/operators';
+import { defer } from 'rxjs';
+import { retryWhen, delay, scan, tap } from 'rxjs/operators';
 
-function request(url: string, method: string = 'GET') {
+function request(url: string, method = 'GET') {
   console.log('request start.');
   return new Promise((resolve, reject) => {
     if (!url) {
@@ -11,10 +11,11 @@ function request(url: string, method: string = 'GET') {
       xhr.open(method, url);
       xhr.onprogress = () => {
         console.log('loading:', xhr.readyState);
-      }
-      xhr.onreadystatechange = val => {
+      };
+      xhr.onreadystatechange = (val) => {
         console.log(`onreadystatechanged, readyState is: ${xhr.readyState}`);
-        if (xhr.readyState === 4) { // request completed
+        if (xhr.readyState === 4) {
+          // request completed
           if (xhr.status >= 200 && xhr.status < 300) {
             resolve(xhr.responseText);
           } else {
@@ -28,28 +29,35 @@ function request(url: string, method: string = 'GET') {
 }
 
 const example = defer(() => request('https://jsonplaceholder.typicode.com/todoss/1')).pipe(
-  retryWhen(err => {
+  retryWhen((err) => {
     return err.pipe(
-      scan((acc, curr) => {
+      scan((acc) => {
         if (acc >= 3) {
           throw 'Tried 3 times to get refresh token, but failed.';
         }
         return acc + 1;
       }, 1),
       delay(1000),
-    )
+    );
   }),
   tap(
-    () => {},
-    err => {
+    () => {
+      console.log('done');
+    },
+    (err) => {
       console.log(err);
-    })
+    },
+  ),
 );
 
-example.subscribe((val) => {
-  console.log('next:', val);
-}, err => {
-  console.log('error is:', err);
-}, () => {
-  console.log('complete');
-});
+example.subscribe(
+  (val) => {
+    console.log('next:', val);
+  },
+  (err) => {
+    console.log('error is:', err);
+  },
+  () => {
+    console.log('complete');
+  },
+);

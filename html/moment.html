@@ -1,36 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Document</title>
-</head>
-<body>
-  
-  <script src="https://cdn.bootcss.com/moment.js/2.19.2/moment.js"></script>
-  
-  <input type="number" name="time" id="time" onChange="changed()" onBlur="changed()">
-  <div id="m"></div>
-  <script>
-    const myM = moment(1530021227895);
-    const m = moment(1530021227895).utc(true);
-    console.log(myM === m);
-    console.log('myM is:', myM.format('LLL'), 'value is:', myM.valueOf());
-    console.log('m is:', m.format('LLL'), 'value is:', m.valueOf());
+  <head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script src="https://cdn.bootcss.com/moment.js/2.19.2/moment.js"></script>
 
-    var startTime = moment().subtract(2, 'hour');
-    var endTime = moment();
+    <input type="number" name="time" id="time" onChange="changed()" onBlur="changed()" />
+    <div id="m"></div>
+    <script>
+      const myM = moment(1530021227895);
+      const m = moment(1530021227895).utc(true);
+      console.log(myM === m);
+      console.log('myM is:', myM.format('LLL'), 'value is:', myM.valueOf());
+      console.log('m is:', m.format('LLL'), 'value is:', m.valueOf());
 
-    var a = endTime.diff(startTime);
-    var dur = moment.duration(a);
-    // console.log(dur.humanize());
+      var startTime = moment().subtract(2, 'hour');
+      var endTime = moment();
 
-    function changed() {
-      let t = document.getElementById('time').value;
-      t = +t;
-      let m = document.getElementById('m');
-      let b = moment(t);
-      m.innerHTML = b.format('LLL');  
-    }
-  </script>
-</body>
+      var a = endTime.diff(startTime);
+      var dur = moment.duration(a);
+      // console.log(dur.humanize());
+
+      function changed() {
+        let t = document.getElementById('time').value;
+        t = +t;
+        let m = document.getElementById('m');
+        let b = moment(t);
+        m.innerHTML = b.format('LLL');
+      }
+    </script>
+  </body>
 </html>

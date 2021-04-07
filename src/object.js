@@ -1,14 +1,13 @@
 const obj = {
   a: 'a',
-  b: 'b'
-}
+  b: 'b',
+};
 
 const prototype = {
-  name: 'Payton'
+  name: 'Payton',
 };
 
 Object.setPrototypeOf(obj, prototype);
-
 
 for (let key in obj) {
   console.log(key);

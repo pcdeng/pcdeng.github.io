@@ -12,7 +12,10 @@
 <div class="sc-dialog" (window:keydown)="onKeyDown($event)">
   <div class="sc-dialog-header">
     <h2 class="sc-title text-truncated">{{ title }}</h2>
-    <img class="btn-close" (click)="onClose()" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAMAAADXqc3KAAAAVFBMVEUAAACUlJSZmZmenp6VlZWZmZmdnZ2Xl5ebm5uYmJiampqZmZmampqZmZmZmZmampqZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZn///8lv0gOAAAAGnRSTlMAExQVGBkaGxwlJii1ub6/zs/Q0dLW19jZ2gFhaDYAAAABYktHRBsCYNSkAAAAgElEQVQoz8WRSRaAIAxDC6g4K87m/ge1Tgjo3qzyGtr+V4h+V1GK24qycIIGRp5OdqidQA2Yk90kM3pJfrJoIr2gV/4WTladrhhUuD+eMI6YojcZ93y83zlboBXvOnPyKCPD+sFpqR9dnBf1I8t5UHsnuTmZ2j1JXllOVWX/f+oGE3QG6jaPWsAAAAAASUVORK5CYII="
+    <img
+      class="btn-close"
+      (click)="onClose()"
+      src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAMAAADXqc3KAAAAVFBMVEUAAACUlJSZmZmenp6VlZWZmZmdnZ2Xl5ebm5uYmJiampqZmZmampqZmZmZmZmampqZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZn///8lv0gOAAAAGnRSTlMAExQVGBkaGxwlJii1ub6/zs/Q0dLW19jZ2gFhaDYAAAABYktHRBsCYNSkAAAAgElEQVQoz8WRSRaAIAxDC6g4K87m/ge1Tgjo3qzyGtr+V4h+V1GK24qycIIGRp5OdqidQA2Yk90kM3pJfrJoIr2gV/4WTladrhhUuD+eMI6YojcZ93y83zlboBXvOnPyKCPD+sFpqR9dnBf1I8t5UHsnuTmZ2j1JXllOVWX/f+oGE3QG6jaPWsAAAAAASUVORK5CYII="
     />
   </div>
 
@@ -31,4 +34,3 @@
     <ng-container [ngTemplateOutlet]="footTemplate ? footTemplate : defaultDialogFooter"></ng-container>
   </div>
 </div>
-

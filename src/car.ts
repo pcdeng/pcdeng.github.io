@@ -1,3 +1,1 @@
-export class Car {
-  
-}
+export class Car {}

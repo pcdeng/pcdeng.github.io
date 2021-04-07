@@ -2,17 +2,18 @@ function makeIterator(arr = []) {
   let nextIndex = 0;
   return {
     next() {
-      return nextIndex < arr.length ? {
-        value: arr[nextIndex++], // 先取值再 +1
-        done: false,
-      } : {
-        value: undefined,
-        done: true,
-      }
-    }
-  }
+      return nextIndex < arr.length
+        ? {
+            value: arr[nextIndex++], // 先取值再 +1
+            done: false,
+          }
+        : {
+            value: undefined,
+            done: true,
+          };
+    },
+  };
 }
-
 
 class RangeIterator {
   constructor(start, stop) {
@@ -31,11 +32,12 @@ class RangeIterator {
       return {
         value: value,
         done: false,
-      }
+      };
     }
     return {
-      value: undefined, done: true
-    }
+      value: undefined,
+      done: true,
+    };
   }
 }
 
@@ -56,10 +58,10 @@ function Obj(value) {
   this.next = null;
 }
 
-Obj.prototype[Symbol.iterator] = function() {
+Obj.prototype[Symbol.iterator] = function () {
   var iterator = {
     next: next,
-  }
+  };
 
   var current = this;
 
@@ -70,15 +72,15 @@ Obj.prototype[Symbol.iterator] = function() {
       return {
         value: value,
         done: false,
-      }
+      };
     }
     return {
       done: true,
-    }
+    };
   }
 
   return iterator;
-}
+};
 
 const o1 = new Obj(1);
 const o2 = new Obj(2);

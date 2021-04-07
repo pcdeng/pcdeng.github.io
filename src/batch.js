@@ -17,7 +17,7 @@ function multiRequest(urls = [], maxNum = 4) {
       // 处理边界条件
       if (current >= len) {
         // 请求全部完成就将 promise 置为成功状态, 然后将 result 作为 promise 值返回
-        result.every(item => item) && resolve(result);
+        result.every((item) => item) && resolve(result);
         return;
       }
       const url = urls[current];
@@ -27,7 +27,7 @@ function multiRequest(urls = [], maxNum = 4) {
         cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
         credentials: 'same-origin', // include, same-origin, *omit
         headers: {
-          'content-type': 'application/json'
+          'content-type': 'application/json',
         },
         // method: 'POST', // *GET, POST, PUT, DELETE, etc.
         mode: 'cors', // no-cors, cors, *same-origin
@@ -36,7 +36,8 @@ function multiRequest(urls = [], maxNum = 4) {
       })
         .then((res) => {
           return res.json();
-        }).then(body => {
+        })
+        .then((body) => {
           // 保存请求结果
           result[current] = body;
           console.log(`完成 ${current}`, new Date().toLocaleString());
@@ -59,9 +60,12 @@ function multiRequest(urls = [], maxNum = 4) {
 
 function testMultiRequest() {
   const urls = new Array(100).fill('https://api.github.com/users/pcdeng/repos');
-  multiRequest(urls).then(d => {
-    console.log(d);
-  }, err => {
-    console.error('error:', err);
-  });
+  multiRequest(urls).then(
+    (d) => {
+      console.log(d);
+    },
+    (err) => {
+      console.error('error:', err);
+    },
+  );
 }

@@ -1,7 +1,7 @@
 import { Car } from './common';
 
 class MyClass {
-  name = "car";
+  name = 'car';
   car: Car = new Car();
 }
 
