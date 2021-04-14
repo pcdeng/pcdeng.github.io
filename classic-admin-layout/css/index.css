@@ -29,6 +29,21 @@ li {
   background-color: #ccc;
 }
 
+.list {
+}
+
+.list-item {
+  height: 35px;
+  line-height: 35px;
+  padding: 0 10px;
+}
+
+.list-item a {
+  display: block;
+  text-decoration: none;
+  color: #000;
+}
+
 .left-content {
   flex-grow: 1;
 }
@@ -64,5 +79,4 @@ li {
 
 .right-side {
   flex-grow: 1;
-  border: 1px solid blue;
 }
