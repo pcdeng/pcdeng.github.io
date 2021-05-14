@@ -91,15 +91,42 @@ loader.load('models/multi.glb', function (gltf) {
 
   let canvas = document.getElementById('appCanvas');
   let app = new App(canvas, model, gltf.animations);
-  app.mixer.play('Samba');
+  app.mixer.play('CatWalk');
 
   const clips = ['CatWalk', 'Samba', 'Belly'];
-  const btn = document.querySelector('.switch-btn');
-  btn.addEventListener('click', () => {
-    let clipIndex = clips.indexOf(app.mixer.clip);
-    clipIndex = (clipIndex + 1) % clips.length;
-    app.mixer.play(clips[clipIndex]);
+  const prevBtn = document.querySelector('.prev');
+  prevBtn.addEventListener('click', () => {
+    play('prev');
   });
+
+  const nextBtn = document.querySelector('.next');
+  nextBtn.addEventListener('click', () => {
+    play('next');
+  });
+
+  function play(direction) {
+    let clip = app.mixer.clip;
+    if (direction === 'next') {
+      clip = getClip((clipIndex, len) => {
+        return clipIndex = (clipIndex + 1) % len;
+      });
+    } else if (direction === 'prev') {
+      clip = getClip((index, len) => {
+        index = (index - 1) % len;
+        if (index < 0) {
+          index = len - 1;
+        }
+        return index;
+      });
+    }
+    app.mixer.play(clip);
+  }
+
+  function getClip(fn) {
+    let clipIndex = clips.indexOf(app.mixer.clip);
+    clipIndex = fn(clipIndex, clips.length);
+    return clips[clipIndex];
+  }
 }, undefined, (err) => {
   console.error(err);
 });
