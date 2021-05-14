@@ -35,3 +35,7 @@ body {
   color: #fff;
   cursor: pointer;
 }
+
+.prev {
+  margin-right: 5px;
+}
