@@ -4,6 +4,7 @@
   "main": "index.js",
   "license": "MIT",
   "dependencies": {
+    "roughjs": "^4.4.1",
     "three": "^0.128.0"
   }
 }
