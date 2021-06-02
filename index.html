@@ -6,6 +6,10 @@
     <meta name="description" content="Payton 写的例子全集" />
     <title>Payton 写的例子全集</title>
     <style>
+      html {
+        margin: 0;
+        padding: 0;
+      }
       body {
         max-width: 768px;
         margin: 10px auto;
@@ -26,10 +30,77 @@
       .demo .name {
         color: #000;
       }
+
+      .projects {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+      }
+
+      .project {
+        width: calc((100% - 10px) / 3);
+        height: 150px;
+        border-radius: 5px;
+        box-sizing: border-box;
+        padding: 5px;
+        margin-bottom: 5px;
+        background-color: #6284FF;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        position: relative;
+      }
+
+      .project .name {
+        font-size: 18px;
+        line-height: 1;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        align-items: center;
+        flex-grow: 1;
+        justify-content: center;
+        color: #fff;
+      }
+
+      .project .desc {
+        flex-grow: 0;
+        flex-shrink: 0;
+      }
+
+      .project .link {
+        text-decoration: none;
+        text-align: right;
+        position: absolute;
+        right: 5px;
+        bottom: 5px;
+      }
+
+      .project .link:hover {
+        text-decoration: underline;
+      }
     </style>
   </head>
   <body>
-    <button id="btn">点我</button>
-    <script src="./src/event-loop.js"></script>
+    <div class="projects">
+      <div class="project">
+        <h5 class="name">threejs 加载模型</h5>
+        <p class="desc">
+          <a class="link" href="./visualization/webgl.html">Demo</a>
+        </p>
+      </div>
+      <div class="project">
+        <h5 class="name">Canvas</h5>
+        <p class="desc">
+          <a class="link" href="./visualization/canvas.html">Demo</a>
+        </p>
+      </div>
+      <div class="project">
+        <h5 class="name">modal</h5>
+        <p class="desc">
+          <a class="link" href="./visualization/modal.html">Demo</a>
+        </p>
+      </div>
+    </div>
   </body>
 </html>
