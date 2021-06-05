@@ -1,13 +1,13 @@
 module.exports = {
   env: {
     browser: true,
-    node: false
+    node: false,
   },
   parser: '@typescript-eslint/parser',
   extends: [
-    "eslint:recommended",
+    'eslint:recommended',
     'plugin:@typescript-eslint/recommended',
-    'prettier'
+    'prettier',
   ],
   parserOptions: {
     project: './tsconfig.json',
@@ -16,7 +16,5 @@ module.exports = {
     sourceType: 'module',
     createDefaultProgram: true,
   },
-  rules: {
-
-  }
-}
+  rules: {},
+};

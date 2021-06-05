@@ -69,7 +69,7 @@ class AnimationMixer {
   }
 
   play(clip) {
-    let animation = this.animations.find(a => a.name === clip);
+    let animation = this.animations.find((a) => a.name === clip);
     if (animation) {
       this.mixer.stopAllAction();
       this.mixer.clipAction(animation).play();
@@ -84,49 +84,54 @@ class AnimationMixer {
 }
 
 let loader = new THREE.GLTFLoader();
-loader.load('https://pcdeng.github.io/visualization/models/multi.glb', function (gltf) {
-  let model = gltf.scene;
-  model.scale.set(10, 10, 10);
-  model.position.y = -6;
+loader.load(
+  'https://pcdeng.github.io/visualization/models/multi.glb',
+  function (gltf) {
+    let model = gltf.scene;
+    model.scale.set(10, 10, 10);
+    model.position.y = -6;
 
-  let canvas = document.getElementById('appCanvas');
-  let app = new App(canvas, model, gltf.animations);
-  app.mixer.play('CatWalk');
+    let canvas = document.getElementById('appCanvas');
+    let app = new App(canvas, model, gltf.animations);
+    app.mixer.play('CatWalk');
 
-  const clips = ['CatWalk', 'Samba', 'Belly'];
-  const prevBtn = document.querySelector('.prev');
-  prevBtn.addEventListener('click', () => {
-    play('prev');
-  });
+    const clips = ['CatWalk', 'Samba', 'Belly'];
+    const prevBtn = document.querySelector('.prev');
+    prevBtn.addEventListener('click', () => {
+      play('prev');
+    });
 
-  const nextBtn = document.querySelector('.next');
-  nextBtn.addEventListener('click', () => {
-    play('next');
-  });
+    const nextBtn = document.querySelector('.next');
+    nextBtn.addEventListener('click', () => {
+      play('next');
+    });
 
-  function play(direction) {
-    let clip = app.mixer.clip;
-    if (direction === 'next') {
-      clip = getClip((clipIndex, len) => {
-        return clipIndex = (clipIndex + 1) % len;
-      });
-    } else if (direction === 'prev') {
-      clip = getClip((index, len) => {
-        index = (index - 1) % len;
-        if (index < 0) {
-          index = len - 1;
-        }
-        return index;
-      });
+    function play(direction) {
+      let clip = app.mixer.clip;
+      if (direction === 'next') {
+        clip = getClip((clipIndex, len) => {
+          return (clipIndex = (clipIndex + 1) % len);
+        });
+      } else if (direction === 'prev') {
+        clip = getClip((index, len) => {
+          index = (index - 1) % len;
+          if (index < 0) {
+            index = len - 1;
+          }
+          return index;
+        });
+      }
+      app.mixer.play(clip);
     }
-    app.mixer.play(clip);
-  }
 
-  function getClip(fn) {
-    let clipIndex = clips.indexOf(app.mixer.clip);
-    clipIndex = fn(clipIndex, clips.length);
-    return clips[clipIndex];
-  }
-}, undefined, (err) => {
-  console.error(err);
-});
+    function getClip(fn) {
+      let clipIndex = clips.indexOf(app.mixer.clip);
+      clipIndex = fn(clipIndex, clips.length);
+      return clips[clipIndex];
+    }
+  },
+  undefined,
+  (err) => {
+    console.error(err);
+  },
+);

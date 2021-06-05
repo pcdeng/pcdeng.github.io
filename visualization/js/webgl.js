@@ -1,5 +1,5 @@
 // 一、创建 WebGL 上下文
-const stage = document.getElementById("stage");
+const stage = document.getElementById('stage');
 const gl = stage.getContext('webgl');
 
 // 二、创建 WebGL 程序
@@ -40,11 +40,7 @@ gl.linkProgram(program);
 gl.useProgram(program);
 
 // 三、将数据存入缓冲区
-const points = new Float32Array([
-  -1, -1,
-  0, 1,
-  1, -1,
-]);
+const points = new Float32Array([-1, -1, 0, 1, 1, -1]);
 const bufferId = gl.createBuffer();
 gl.bindBuffer(gl.ARRAY_BUFFER, bufferId);
 gl.bufferData(gl.ARRAY_BUFFER, points, gl.STATIC_DRAW);

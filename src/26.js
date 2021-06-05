@@ -14,7 +14,7 @@ function toNumber(str) {
   for (let i = len - 1; i >= 0; i--) {
     const letter = str[len - i - 1];
     const value = letter.charCodeAt(0) - 96;
-    total += (value)* Math.pow(26, i);
+    total += value * Math.pow(26, i);
     console.log(`letter is ${letter}, ${value} * 26^${i}`);
   }
   console.log(`str is ${str}, num is ${total}`);
