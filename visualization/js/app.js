@@ -84,7 +84,7 @@ class AnimationMixer {
 }
 
 let loader = new THREE.GLTFLoader();
-loader.load('models/multi.glb', function (gltf) {
+loader.load('https://pcdeng.github.io/visualization/models/multi.glb', function (gltf) {
   let model = gltf.scene;
   model.scale.set(10, 10, 10);
   model.position.y = -6;
