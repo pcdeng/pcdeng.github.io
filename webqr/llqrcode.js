@@ -7,7 +7,7 @@ _aa._ab = function (f, e) {
     var a = Math.floor(e[g]);
     var h = Math.floor(e[g + 1]);
     if (a < -1 || a > d || h < -1 || h > b) {
-      throw "Error._ab ";
+      throw 'Error._ab ';
     }
     c = false;
     if (a == -1) {
@@ -34,7 +34,7 @@ _aa._ab = function (f, e) {
     var a = Math.floor(e[g]);
     var h = Math.floor(e[g + 1]);
     if (a < -1 || a > d || h < -1 || h > b) {
-      throw "Error._ab ";
+      throw 'Error._ab ';
     }
     c = false;
     if (a == -1) {
@@ -77,7 +77,7 @@ _aa._af = function (b, d, a) {
         }
       }
     } catch (c) {
-      throw "Error._ab";
+      throw 'Error._ab';
     }
   }
   return k;
@@ -89,10 +89,10 @@ _aa._ah = function (h, o, l, k, q, p, b, a, f, e, n, m, s, r, d, c, j, i) {
 function _a1(b, a) {
   this.count = b;
   this._fc = a;
-  this.__defineGetter__("Count", function () {
+  this.__defineGetter__('Count', function () {
     return this.count;
   });
-  this.__defineGetter__("_dm", function () {
+  this.__defineGetter__('_dm', function () {
     return this._fc;
   });
 }
@@ -103,13 +103,13 @@ function _a2(a, c, b) {
   } else {
     this._do = new Array(c);
   }
-  this.__defineGetter__("_bo", function () {
+  this.__defineGetter__('_bo', function () {
     return this._bm;
   });
-  this.__defineGetter__("_dn", function () {
+  this.__defineGetter__('_dn', function () {
     return this._bm * this._fo;
   });
-  this.__defineGetter__("_fo", function () {
+  this.__defineGetter__('_fo', function () {
     var e = 0;
     for (var d = 0; d < this._do.length; d++) {
       e += this._do[d].length;
@@ -132,16 +132,16 @@ function _a3(k, l, h, g, f, e) {
     j += c.Count * (c._dm + b);
   }
   this._br = j;
-  this.__defineGetter__("_fd", function () {
+  this.__defineGetter__('_fd', function () {
     return this._bs;
   });
-  this.__defineGetter__("_as", function () {
+  this.__defineGetter__('_as', function () {
     return this._ar;
   });
-  this.__defineGetter__("_dp", function () {
+  this.__defineGetter__('_dp', function () {
     return this._br;
   });
-  this.__defineGetter__("_cr", function () {
+  this.__defineGetter__('_cr', function () {
     return 17 + 4 * this._bs;
   });
   this._aq = function () {
@@ -206,23 +206,23 @@ _a3._bv = new Array(
   152622,
   158308,
   161089,
-  167017
+  167017,
 );
 _a3.VERSIONS = _ay();
 _a3._av = function (a) {
   if (a < 1 || a > 40) {
-    throw "bad arguments";
+    throw 'bad arguments';
   }
   return _a3.VERSIONS[a - 1];
 };
 _a3._at = function (b) {
   if (b % 4 != 1) {
-    throw "Error _at";
+    throw 'Error _at';
   }
   try {
     return _a3._av((b - 17) >> 2);
   } catch (a) {
-    throw "Error _av";
+    throw 'Error _av';
   }
 };
 _a3._aw = function (d) {
@@ -252,7 +252,7 @@ function _ay() {
       new _a2(7, new _a1(1, 19)),
       new _a2(10, new _a1(1, 16)),
       new _a2(13, new _a1(1, 13)),
-      new _a2(17, new _a1(1, 9))
+      new _a2(17, new _a1(1, 9)),
     ),
     new _a3(
       2,
@@ -260,7 +260,7 @@ function _ay() {
       new _a2(10, new _a1(1, 34)),
       new _a2(16, new _a1(1, 28)),
       new _a2(22, new _a1(1, 22)),
-      new _a2(28, new _a1(1, 16))
+      new _a2(28, new _a1(1, 16)),
     ),
     new _a3(
       3,
@@ -268,7 +268,7 @@ function _ay() {
       new _a2(15, new _a1(1, 55)),
       new _a2(26, new _a1(1, 44)),
       new _a2(18, new _a1(2, 17)),
-      new _a2(22, new _a1(2, 13))
+      new _a2(22, new _a1(2, 13)),
     ),
     new _a3(
       4,
@@ -276,7 +276,7 @@ function _ay() {
       new _a2(20, new _a1(1, 80)),
       new _a2(18, new _a1(2, 32)),
       new _a2(26, new _a1(2, 24)),
-      new _a2(16, new _a1(4, 9))
+      new _a2(16, new _a1(4, 9)),
     ),
     new _a3(
       5,
@@ -284,7 +284,7 @@ function _ay() {
       new _a2(26, new _a1(1, 108)),
       new _a2(24, new _a1(2, 43)),
       new _a2(18, new _a1(2, 15), new _a1(2, 16)),
-      new _a2(22, new _a1(2, 11), new _a1(2, 12))
+      new _a2(22, new _a1(2, 11), new _a1(2, 12)),
     ),
     new _a3(
       6,
@@ -292,7 +292,7 @@ function _ay() {
       new _a2(18, new _a1(2, 68)),
       new _a2(16, new _a1(4, 27)),
       new _a2(24, new _a1(4, 19)),
-      new _a2(28, new _a1(4, 15))
+      new _a2(28, new _a1(4, 15)),
     ),
     new _a3(
       7,
@@ -300,7 +300,7 @@ function _ay() {
       new _a2(20, new _a1(2, 78)),
       new _a2(18, new _a1(4, 31)),
       new _a2(18, new _a1(2, 14), new _a1(4, 15)),
-      new _a2(26, new _a1(4, 13), new _a1(1, 14))
+      new _a2(26, new _a1(4, 13), new _a1(1, 14)),
     ),
     new _a3(
       8,
@@ -308,7 +308,7 @@ function _ay() {
       new _a2(24, new _a1(2, 97)),
       new _a2(22, new _a1(2, 38), new _a1(2, 39)),
       new _a2(22, new _a1(4, 18), new _a1(2, 19)),
-      new _a2(26, new _a1(4, 14), new _a1(2, 15))
+      new _a2(26, new _a1(4, 14), new _a1(2, 15)),
     ),
     new _a3(
       9,
@@ -316,7 +316,7 @@ function _ay() {
       new _a2(30, new _a1(2, 116)),
       new _a2(22, new _a1(3, 36), new _a1(2, 37)),
       new _a2(20, new _a1(4, 16), new _a1(4, 17)),
-      new _a2(24, new _a1(4, 12), new _a1(4, 13))
+      new _a2(24, new _a1(4, 12), new _a1(4, 13)),
     ),
     new _a3(
       10,
@@ -324,7 +324,7 @@ function _ay() {
       new _a2(18, new _a1(2, 68), new _a1(2, 69)),
       new _a2(26, new _a1(4, 43), new _a1(1, 44)),
       new _a2(24, new _a1(6, 19), new _a1(2, 20)),
-      new _a2(28, new _a1(6, 15), new _a1(2, 16))
+      new _a2(28, new _a1(6, 15), new _a1(2, 16)),
     ),
     new _a3(
       11,
@@ -332,7 +332,7 @@ function _ay() {
       new _a2(20, new _a1(4, 81)),
       new _a2(30, new _a1(1, 50), new _a1(4, 51)),
       new _a2(28, new _a1(4, 22), new _a1(4, 23)),
-      new _a2(24, new _a1(3, 12), new _a1(8, 13))
+      new _a2(24, new _a1(3, 12), new _a1(8, 13)),
     ),
     new _a3(
       12,
@@ -340,7 +340,7 @@ function _ay() {
       new _a2(24, new _a1(2, 92), new _a1(2, 93)),
       new _a2(22, new _a1(6, 36), new _a1(2, 37)),
       new _a2(26, new _a1(4, 20), new _a1(6, 21)),
-      new _a2(28, new _a1(7, 14), new _a1(4, 15))
+      new _a2(28, new _a1(7, 14), new _a1(4, 15)),
     ),
     new _a3(
       13,
@@ -348,7 +348,7 @@ function _ay() {
       new _a2(26, new _a1(4, 107)),
       new _a2(22, new _a1(8, 37), new _a1(1, 38)),
       new _a2(24, new _a1(8, 20), new _a1(4, 21)),
-      new _a2(22, new _a1(12, 11), new _a1(4, 12))
+      new _a2(22, new _a1(12, 11), new _a1(4, 12)),
     ),
     new _a3(
       14,
@@ -356,7 +356,7 @@ function _ay() {
       new _a2(30, new _a1(3, 115), new _a1(1, 116)),
       new _a2(24, new _a1(4, 40), new _a1(5, 41)),
       new _a2(20, new _a1(11, 16), new _a1(5, 17)),
-      new _a2(24, new _a1(11, 12), new _a1(5, 13))
+      new _a2(24, new _a1(11, 12), new _a1(5, 13)),
     ),
     new _a3(
       15,
@@ -364,7 +364,7 @@ function _ay() {
       new _a2(22, new _a1(5, 87), new _a1(1, 88)),
       new _a2(24, new _a1(5, 41), new _a1(5, 42)),
       new _a2(30, new _a1(5, 24), new _a1(7, 25)),
-      new _a2(24, new _a1(11, 12), new _a1(7, 13))
+      new _a2(24, new _a1(11, 12), new _a1(7, 13)),
     ),
     new _a3(
       16,
@@ -372,7 +372,7 @@ function _ay() {
       new _a2(24, new _a1(5, 98), new _a1(1, 99)),
       new _a2(28, new _a1(7, 45), new _a1(3, 46)),
       new _a2(24, new _a1(15, 19), new _a1(2, 20)),
-      new _a2(30, new _a1(3, 15), new _a1(13, 16))
+      new _a2(30, new _a1(3, 15), new _a1(13, 16)),
     ),
     new _a3(
       17,
@@ -380,7 +380,7 @@ function _ay() {
       new _a2(28, new _a1(1, 107), new _a1(5, 108)),
       new _a2(28, new _a1(10, 46), new _a1(1, 47)),
       new _a2(28, new _a1(1, 22), new _a1(15, 23)),
-      new _a2(28, new _a1(2, 14), new _a1(17, 15))
+      new _a2(28, new _a1(2, 14), new _a1(17, 15)),
     ),
     new _a3(
       18,
@@ -388,7 +388,7 @@ function _ay() {
       new _a2(30, new _a1(5, 120), new _a1(1, 121)),
       new _a2(26, new _a1(9, 43), new _a1(4, 44)),
       new _a2(28, new _a1(17, 22), new _a1(1, 23)),
-      new _a2(28, new _a1(2, 14), new _a1(19, 15))
+      new _a2(28, new _a1(2, 14), new _a1(19, 15)),
     ),
     new _a3(
       19,
@@ -396,7 +396,7 @@ function _ay() {
       new _a2(28, new _a1(3, 113), new _a1(4, 114)),
       new _a2(26, new _a1(3, 44), new _a1(11, 45)),
       new _a2(26, new _a1(17, 21), new _a1(4, 22)),
-      new _a2(26, new _a1(9, 13), new _a1(16, 14))
+      new _a2(26, new _a1(9, 13), new _a1(16, 14)),
     ),
     new _a3(
       20,
@@ -404,7 +404,7 @@ function _ay() {
       new _a2(28, new _a1(3, 107), new _a1(5, 108)),
       new _a2(26, new _a1(3, 41), new _a1(13, 42)),
       new _a2(30, new _a1(15, 24), new _a1(5, 25)),
-      new _a2(28, new _a1(15, 15), new _a1(10, 16))
+      new _a2(28, new _a1(15, 15), new _a1(10, 16)),
     ),
     new _a3(
       21,
@@ -412,7 +412,7 @@ function _ay() {
       new _a2(28, new _a1(4, 116), new _a1(4, 117)),
       new _a2(26, new _a1(17, 42)),
       new _a2(28, new _a1(17, 22), new _a1(6, 23)),
-      new _a2(30, new _a1(19, 16), new _a1(6, 17))
+      new _a2(30, new _a1(19, 16), new _a1(6, 17)),
     ),
     new _a3(
       22,
@@ -420,7 +420,7 @@ function _ay() {
       new _a2(28, new _a1(2, 111), new _a1(7, 112)),
       new _a2(28, new _a1(17, 46)),
       new _a2(30, new _a1(7, 24), new _a1(16, 25)),
-      new _a2(24, new _a1(34, 13))
+      new _a2(24, new _a1(34, 13)),
     ),
     new _a3(
       23,
@@ -428,7 +428,7 @@ function _ay() {
       new _a2(30, new _a1(4, 121), new _a1(5, 122)),
       new _a2(28, new _a1(4, 47), new _a1(14, 48)),
       new _a2(30, new _a1(11, 24), new _a1(14, 25)),
-      new _a2(30, new _a1(16, 15), new _a1(14, 16))
+      new _a2(30, new _a1(16, 15), new _a1(14, 16)),
     ),
     new _a3(
       24,
@@ -436,7 +436,7 @@ function _ay() {
       new _a2(30, new _a1(6, 117), new _a1(4, 118)),
       new _a2(28, new _a1(6, 45), new _a1(14, 46)),
       new _a2(30, new _a1(11, 24), new _a1(16, 25)),
-      new _a2(30, new _a1(30, 16), new _a1(2, 17))
+      new _a2(30, new _a1(30, 16), new _a1(2, 17)),
     ),
     new _a3(
       25,
@@ -444,7 +444,7 @@ function _ay() {
       new _a2(26, new _a1(8, 106), new _a1(4, 107)),
       new _a2(28, new _a1(8, 47), new _a1(13, 48)),
       new _a2(30, new _a1(7, 24), new _a1(22, 25)),
-      new _a2(30, new _a1(22, 15), new _a1(13, 16))
+      new _a2(30, new _a1(22, 15), new _a1(13, 16)),
     ),
     new _a3(
       26,
@@ -452,7 +452,7 @@ function _ay() {
       new _a2(28, new _a1(10, 114), new _a1(2, 115)),
       new _a2(28, new _a1(19, 46), new _a1(4, 47)),
       new _a2(28, new _a1(28, 22), new _a1(6, 23)),
-      new _a2(30, new _a1(33, 16), new _a1(4, 17))
+      new _a2(30, new _a1(33, 16), new _a1(4, 17)),
     ),
     new _a3(
       27,
@@ -460,7 +460,7 @@ function _ay() {
       new _a2(30, new _a1(8, 122), new _a1(4, 123)),
       new _a2(28, new _a1(22, 45), new _a1(3, 46)),
       new _a2(30, new _a1(8, 23), new _a1(26, 24)),
-      new _a2(30, new _a1(12, 15), new _a1(28, 16))
+      new _a2(30, new _a1(12, 15), new _a1(28, 16)),
     ),
     new _a3(
       28,
@@ -468,7 +468,7 @@ function _ay() {
       new _a2(30, new _a1(3, 117), new _a1(10, 118)),
       new _a2(28, new _a1(3, 45), new _a1(23, 46)),
       new _a2(30, new _a1(4, 24), new _a1(31, 25)),
-      new _a2(30, new _a1(11, 15), new _a1(31, 16))
+      new _a2(30, new _a1(11, 15), new _a1(31, 16)),
     ),
     new _a3(
       29,
@@ -476,7 +476,7 @@ function _ay() {
       new _a2(30, new _a1(7, 116), new _a1(7, 117)),
       new _a2(28, new _a1(21, 45), new _a1(7, 46)),
       new _a2(30, new _a1(1, 23), new _a1(37, 24)),
-      new _a2(30, new _a1(19, 15), new _a1(26, 16))
+      new _a2(30, new _a1(19, 15), new _a1(26, 16)),
     ),
     new _a3(
       30,
@@ -484,7 +484,7 @@ function _ay() {
       new _a2(30, new _a1(5, 115), new _a1(10, 116)),
       new _a2(28, new _a1(19, 47), new _a1(10, 48)),
       new _a2(30, new _a1(15, 24), new _a1(25, 25)),
-      new _a2(30, new _a1(23, 15), new _a1(25, 16))
+      new _a2(30, new _a1(23, 15), new _a1(25, 16)),
     ),
     new _a3(
       31,
@@ -492,7 +492,7 @@ function _ay() {
       new _a2(30, new _a1(13, 115), new _a1(3, 116)),
       new _a2(28, new _a1(2, 46), new _a1(29, 47)),
       new _a2(30, new _a1(42, 24), new _a1(1, 25)),
-      new _a2(30, new _a1(23, 15), new _a1(28, 16))
+      new _a2(30, new _a1(23, 15), new _a1(28, 16)),
     ),
     new _a3(
       32,
@@ -500,7 +500,7 @@ function _ay() {
       new _a2(30, new _a1(17, 115)),
       new _a2(28, new _a1(10, 46), new _a1(23, 47)),
       new _a2(30, new _a1(10, 24), new _a1(35, 25)),
-      new _a2(30, new _a1(19, 15), new _a1(35, 16))
+      new _a2(30, new _a1(19, 15), new _a1(35, 16)),
     ),
     new _a3(
       33,
@@ -508,7 +508,7 @@ function _ay() {
       new _a2(30, new _a1(17, 115), new _a1(1, 116)),
       new _a2(28, new _a1(14, 46), new _a1(21, 47)),
       new _a2(30, new _a1(29, 24), new _a1(19, 25)),
-      new _a2(30, new _a1(11, 15), new _a1(46, 16))
+      new _a2(30, new _a1(11, 15), new _a1(46, 16)),
     ),
     new _a3(
       34,
@@ -516,7 +516,7 @@ function _ay() {
       new _a2(30, new _a1(13, 115), new _a1(6, 116)),
       new _a2(28, new _a1(14, 46), new _a1(23, 47)),
       new _a2(30, new _a1(44, 24), new _a1(7, 25)),
-      new _a2(30, new _a1(59, 16), new _a1(1, 17))
+      new _a2(30, new _a1(59, 16), new _a1(1, 17)),
     ),
     new _a3(
       35,
@@ -524,7 +524,7 @@ function _ay() {
       new _a2(30, new _a1(12, 121), new _a1(7, 122)),
       new _a2(28, new _a1(12, 47), new _a1(26, 48)),
       new _a2(30, new _a1(39, 24), new _a1(14, 25)),
-      new _a2(30, new _a1(22, 15), new _a1(41, 16))
+      new _a2(30, new _a1(22, 15), new _a1(41, 16)),
     ),
     new _a3(
       36,
@@ -532,7 +532,7 @@ function _ay() {
       new _a2(30, new _a1(6, 121), new _a1(14, 122)),
       new _a2(28, new _a1(6, 47), new _a1(34, 48)),
       new _a2(30, new _a1(46, 24), new _a1(10, 25)),
-      new _a2(30, new _a1(2, 15), new _a1(64, 16))
+      new _a2(30, new _a1(2, 15), new _a1(64, 16)),
     ),
     new _a3(
       37,
@@ -540,7 +540,7 @@ function _ay() {
       new _a2(30, new _a1(17, 122), new _a1(4, 123)),
       new _a2(28, new _a1(29, 46), new _a1(14, 47)),
       new _a2(30, new _a1(49, 24), new _a1(10, 25)),
-      new _a2(30, new _a1(24, 15), new _a1(46, 16))
+      new _a2(30, new _a1(24, 15), new _a1(46, 16)),
     ),
     new _a3(
       38,
@@ -548,7 +548,7 @@ function _ay() {
       new _a2(30, new _a1(4, 122), new _a1(18, 123)),
       new _a2(28, new _a1(13, 46), new _a1(32, 47)),
       new _a2(30, new _a1(48, 24), new _a1(14, 25)),
-      new _a2(30, new _a1(42, 15), new _a1(32, 16))
+      new _a2(30, new _a1(42, 15), new _a1(32, 16)),
     ),
     new _a3(
       39,
@@ -556,7 +556,7 @@ function _ay() {
       new _a2(30, new _a1(20, 117), new _a1(4, 118)),
       new _a2(28, new _a1(40, 47), new _a1(7, 48)),
       new _a2(30, new _a1(43, 24), new _a1(22, 25)),
-      new _a2(30, new _a1(10, 15), new _a1(67, 16))
+      new _a2(30, new _a1(10, 15), new _a1(67, 16)),
     ),
     new _a3(
       40,
@@ -564,8 +564,8 @@ function _ay() {
       new _a2(30, new _a1(19, 118), new _a1(6, 119)),
       new _a2(28, new _a1(18, 47), new _a1(31, 48)),
       new _a2(30, new _a1(34, 24), new _a1(34, 25)),
-      new _a2(30, new _a1(20, 15), new _a1(61, 16))
-    )
+      new _a2(30, new _a1(20, 15), new _a1(61, 16)),
+    ),
   );
 }
 function _ae(i, f, c, h, e, b, g, d, a) {
@@ -617,7 +617,7 @@ function _ae(i, f, c, h, e, b, g, d, a) {
       this.a12 * this.a31 - this.a11 * this.a32,
       this.a12 * this.a23 - this.a13 * this.a22,
       this.a13 * this.a21 - this.a11 * this.a23,
-      this.a11 * this.a22 - this.a12 * this.a21
+      this.a11 * this.a22 - this.a12 * this.a21,
     );
   };
   this.times = function (j) {
@@ -630,7 +630,7 @@ function _ae(i, f, c, h, e, b, g, d, a) {
       this.a12 * j.a31 + this.a22 * j.a32 + this.a32 * j.a33,
       this.a13 * j.a11 + this.a23 * j.a12 + this.a33 * j.a13,
       this.a13 * j.a21 + this.a23 * j.a22 + this.a33 * j.a23,
-      this.a13 * j.a31 + this.a23 * j.a32 + this.a33 * j.a33
+      this.a13 * j.a31 + this.a23 * j.a32 + this.a33 * j.a33,
     );
   };
 }
@@ -652,17 +652,7 @@ _ae._bf = function (d, p, c, m, b, k, a, j) {
     var e = q * h - o * i;
     var n = (l * h - o * f) / e;
     var g = (q * f - l * i) / e;
-    return new _ae(
-      c - d + n * c,
-      a - d + g * a,
-      d,
-      m - p + n * m,
-      j - p + g * j,
-      p,
-      n,
-      g,
-      1
-    );
+    return new _ae(c - d + n * c, a - d + g * a, d, m - p + n * m, j - p + g * j, p, n, g, 1);
   }
 };
 _ae._be = function (f, h, d, g, b, e, a, c) {
@@ -750,18 +740,8 @@ function Detector(a) {
     return b - 1;
   };
   this._bj = function (c, d) {
-    var b = this._bh(
-      Math.floor(c.X),
-      Math.floor(c.Y),
-      Math.floor(d.X),
-      Math.floor(d.Y)
-    );
-    var e = this._bh(
-      Math.floor(d.X),
-      Math.floor(d.Y),
-      Math.floor(c.X),
-      Math.floor(c.Y)
-    );
+    var b = this._bh(Math.floor(c.X), Math.floor(c.Y), Math.floor(d.X), Math.floor(d.Y));
+    var e = this._bh(Math.floor(d.X), Math.floor(d.Y), Math.floor(c.X), Math.floor(c.Y));
     if (isNaN(b)) {
       return e / 7;
     }
@@ -790,7 +770,7 @@ function Detector(a) {
         h--;
         break;
       case 3:
-        throw "Error";
+        throw 'Error';
     }
     return h;
   };
@@ -799,7 +779,7 @@ function Detector(a) {
     var h = Math.max(0, f - k);
     var i = Math.min(qrcode.width - 1, f + k);
     if (i - h < g * 3) {
-      throw "Error";
+      throw 'Error';
     }
     var b = Math.max(0, d - k);
     var c = Math.min(qrcode.height - 1, d + k);
@@ -821,24 +801,7 @@ function Detector(a) {
       f = h.Y - l.Y + k.Y;
       e = c = j;
     }
-    var d = _ae._ag(
-      3.5,
-      3.5,
-      j,
-      3.5,
-      e,
-      c,
-      3.5,
-      j,
-      l.X,
-      l.Y,
-      h.X,
-      h.Y,
-      i,
-      f,
-      k.X,
-      k.Y
-    );
+    var d = _ae._ag(3.5, 3.5, j, 3.5, e, c, 3.5, j, l.X, l.Y, h.X, h.Y, i, f, k.X, k.Y);
     return d;
   };
   this._bz = function (e, b, d) {
@@ -851,7 +814,7 @@ function Detector(a) {
     var n = q._gp;
     var d = this._bk(j, h, n);
     if (d < 1) {
-      throw "Error";
+      throw 'Error';
     }
     var r = this._bx(j, h, n, d);
     var b = _a3._at(r);
@@ -916,16 +879,16 @@ var _cb = new Array(
   new Array(9396, 28),
   new Array(8579, 29),
   new Array(11994, 30),
-  new Array(11245, 31)
+  new Array(11245, 31),
 );
 var _ch = new Array(0, 1, 1, 2, 1, 2, 2, 3, 1, 2, 2, 3, 2, 3, 3, 4);
 function _ax(a) {
   this._cf = _cg.forBits((a >> 3) & 3);
   this._fe = a & 7;
-  this.__defineGetter__("_cg", function () {
+  this.__defineGetter__('_cg', function () {
     return this._cf;
   });
-  this.__defineGetter__("_dx", function () {
+  this.__defineGetter__('_dx', function () {
     return this._fe;
   });
   this.GetHashCode = function () {
@@ -980,10 +943,10 @@ function _cg(a, c, b) {
   this._ff = a;
   this.bits = c;
   this.name = b;
-  this.__defineGetter__("Bits", function () {
+  this.__defineGetter__('Bits', function () {
     return this.bits;
   });
-  this.__defineGetter__("Name", function () {
+  this.__defineGetter__('Name', function () {
     return this.name;
   });
   this.ordinal = function () {
@@ -992,21 +955,21 @@ function _cg(a, c, b) {
 }
 _cg.forBits = function (a) {
   if (a < 0 || a >= FOR_BITS.length) {
-    throw "bad arguments";
+    throw 'bad arguments';
   }
   return FOR_BITS[a];
 };
-var L = new _cg(0, 1, "L");
-var M = new _cg(1, 0, "M");
-var Q = new _cg(2, 3, "Q");
-var H = new _cg(3, 2, "H");
+var L = new _cg(0, 1, 'L');
+var M = new _cg(1, 0, 'M');
+var Q = new _cg(2, 3, 'Q');
+var H = new _cg(3, 2, 'H');
 var FOR_BITS = new Array(M, L, H, Q);
 function _ac(d, a) {
   if (!a) {
     a = d;
   }
   if (d < 1 || a < 1) {
-    throw "Both dimensions must be greater than 0";
+    throw 'Both dimensions must be greater than 0';
   }
   this.width = d;
   this.height = a;
@@ -1019,13 +982,13 @@ function _ac(d, a) {
   for (var b = 0; b < this.bits.length; b++) {
     this.bits[b] = 0;
   }
-  this.__defineGetter__("Width", function () {
+  this.__defineGetter__('Width', function () {
     return this.width;
   });
-  this.__defineGetter__("Height", function () {
+  this.__defineGetter__('Height', function () {
     return this.height;
   });
-  this.__defineGetter__("Dimension", function () {
+  this.__defineGetter__('Dimension', function () {
     if (this.width != this.height) {
       throw "Can't call getDimension() on a non-square matrix";
     }
@@ -1051,15 +1014,15 @@ function _ac(d, a) {
   };
   this._bq = function (g, j, f, m) {
     if (j < 0 || g < 0) {
-      throw "Left and top must be nonnegative";
+      throw 'Left and top must be nonnegative';
     }
     if (m < 1 || f < 1) {
-      throw "Height and width must be at least 1";
+      throw 'Height and width must be at least 1';
     }
     var l = g + f;
     var e = j + m;
     if (e > this.height || l > this.width) {
-      throw "The region must fit inside the matrix";
+      throw 'The region must fit inside the matrix';
     }
     for (var i = j; i < e; i++) {
       var h = i * this.rowSize;
@@ -1072,16 +1035,16 @@ function _ac(d, a) {
 function _dl(a, b) {
   this._dv = a;
   this._dw = b;
-  this.__defineGetter__("_du", function () {
+  this.__defineGetter__('_du', function () {
     return this._dv;
   });
-  this.__defineGetter__("Codewords", function () {
+  this.__defineGetter__('Codewords', function () {
     return this._dw;
   });
 }
 _dl._gn = function (c, h, r) {
   if (c.length != h._dp) {
-    throw "bad arguments";
+    throw 'bad arguments';
   }
   var k = h._bu(r);
   var e = 0;
@@ -1131,7 +1094,7 @@ _dl._gn = function (c, h, r) {
 function _cl(a) {
   var b = a.Dimension;
   if (b < 21 || (b & 3) != 1) {
-    throw "Error _cl";
+    throw 'Error _cl';
   }
   this._au = a;
   this._cp = null;
@@ -1170,7 +1133,7 @@ function _cl(a) {
     if (this._co != null) {
       return this._co;
     }
-    throw "Error _cm";
+    throw 'Error _cm';
   };
   this._cq = function () {
     if (this._cp != null) {
@@ -1202,7 +1165,7 @@ function _cl(a) {
     if (this._cp != null && this._cp._cr == h) {
       return this._cp;
     }
-    throw "Error _cq";
+    throw 'Error _cq';
   };
   this._gk = function () {
     var q = this._cm();
@@ -1240,7 +1203,7 @@ function _cl(a) {
       n ^= true;
     }
     if (m != o._dp) {
-      throw "Error _gk";
+      throw 'Error _gk';
     }
     return r;
   };
@@ -1248,7 +1211,7 @@ function _cl(a) {
 var _dx = {};
 _dx._gl = function (a) {
   if (a < 0 || a > 7) {
-    throw "bad arguments";
+    throw 'bad arguments';
   }
   return _dx._dy[a];
 };
@@ -1366,16 +1329,7 @@ function _fn() {
     return ((((b + a) & 1) + ((b * a) % 3)) & 1) == 0;
   };
 }
-_dx._dy = new Array(
-  new _fg(),
-  new _fh(),
-  new _fi(),
-  new _fj(),
-  new _fk(),
-  new _fl(),
-  new _fm(),
-  new _fn()
-);
+_dx._dy = new Array(new _fg(), new _fh(), new _fi(), new _fj(), new _fk(), new _fl(), new _fm(), new _fn());
 function _db(a) {
   this._fa = a;
   this.decode = function (j, f) {
@@ -1405,7 +1359,7 @@ function _db(a) {
     for (var g = 0; g < k.length; g++) {
       var h = j.length - 1 - this._fa.log(k[g]);
       if (h < 0) {
-        throw "ReedSolomonException Bad error location";
+        throw 'ReedSolomonException Bad error location';
       }
       j[h] = _az._bd(j[h], e[g]);
     }
@@ -1430,7 +1384,7 @@ function _db(a) {
       o = j;
       e = i;
       if (B.Zero) {
-        throw "r_{i-1} was zero";
+        throw 'r_{i-1} was zero';
       }
       k = x;
       var m = this._fa.Zero;
@@ -1447,7 +1401,7 @@ function _db(a) {
     }
     var u = i._ex(0);
     if (u == 0) {
-      throw "ReedSolomonException sigmaTilde(0) was zero";
+      throw 'ReedSolomonException sigmaTilde(0) was zero';
     }
     var d = this._fa.inverse(u);
     var n = i.multiply2(d);
@@ -1468,7 +1422,7 @@ function _db(a) {
       }
     }
     if (d != g) {
-      throw "Error locator degree does not match number of roots";
+      throw 'Error locator degree does not match number of roots';
     }
     return b;
   };
@@ -1493,7 +1447,7 @@ function _db(a) {
 }
 function _bp(f, e) {
   if (e == null || e.length == 0) {
-    throw "bad arguments";
+    throw 'bad arguments';
   }
   this._fa = f;
   var c = e.length;
@@ -1516,13 +1470,13 @@ function _bp(f, e) {
   } else {
     this._dd = e;
   }
-  this.__defineGetter__("Zero", function () {
+  this.__defineGetter__('Zero', function () {
     return this._dd[0] == 0;
   });
-  this.__defineGetter__("_ec", function () {
+  this.__defineGetter__('_ec', function () {
     return this._dd.length - 1;
   });
-  this.__defineGetter__("Coefficients", function () {
+  this.__defineGetter__('Coefficients', function () {
     return this._dd;
   });
   this._ex = function (g) {
@@ -1548,7 +1502,7 @@ function _bp(f, e) {
   };
   this._bd = function (g) {
     if (this._fa != g._fa) {
-      throw "GF256Polys do not have same _az _fa";
+      throw 'GF256Polys do not have same _az _fa';
     }
     if (this.Zero) {
       return g;
@@ -1575,7 +1529,7 @@ function _bp(f, e) {
   };
   this.multiply1 = function (o) {
     if (this._fa != o._fa) {
-      throw "GF256Polys do not have same _az _fa";
+      throw 'GF256Polys do not have same _az _fa';
     }
     if (this.Zero || o.Zero) {
       return this._fa.Zero;
@@ -1609,7 +1563,7 @@ function _bp(f, e) {
   };
   this._dc = function (l, g) {
     if (l < 0) {
-      throw "bad arguments";
+      throw 'bad arguments';
     }
     if (g == 0) {
       return this._fa.Zero;
@@ -1626,10 +1580,10 @@ function _bp(f, e) {
   };
   this.divide = function (l) {
     if (this._fa != l._fa) {
-      throw "GF256Polys do not have same _az _fa";
+      throw 'GF256Polys do not have same _az _fa';
     }
     if (l.Zero) {
-      throw "Divide by 0";
+      throw 'Divide by 0';
     }
     var j = this._fa.Zero;
     var o = this;
@@ -1666,15 +1620,15 @@ function _az(b) {
   var c = new Array(1);
   c[0] = 1;
   this.one = new _bp(this, new Array(c));
-  this.__defineGetter__("Zero", function () {
+  this.__defineGetter__('Zero', function () {
     return this.zero;
   });
-  this.__defineGetter__("One", function () {
+  this.__defineGetter__('One', function () {
     return this.one;
   });
   this._ba = function (j, f) {
     if (j < 0) {
-      throw "bad arguments";
+      throw 'bad arguments';
     }
     if (f == 0) {
       return this.zero;
@@ -1691,13 +1645,13 @@ function _az(b) {
   };
   this.log = function (f) {
     if (f == 0) {
-      throw "bad arguments";
+      throw 'bad arguments';
     }
     return this._gi[f];
   };
   this.inverse = function (f) {
     if (f == 0) {
-      throw "System.ArithmeticException";
+      throw 'System.ArithmeticException';
     }
     return this._gh[255 - this._gi[f]];
   };
@@ -1787,9 +1741,9 @@ qrcode.vidSuccess = function (a) {
     }
   }
   qrcode.gUM = true;
-  qrcode.canvas_qr2 = document.createElement("canvas");
-  qrcode.canvas_qr2.id = "qr-canvas";
-  qrcode.qrcontext2 = qrcode.canvas_qr2.getContext("2d");
+  qrcode.canvas_qr2 = document.createElement('canvas');
+  qrcode.canvas_qr2.id = 'qr-canvas';
+  qrcode.qrcontext2 = qrcode.canvas_qr2.getContext('2d');
   qrcode.canvas_qr2.width = qrcode.video.videoWidth;
   qrcode.canvas_qr2.height = qrcode.video.videoHeight;
   setTimeout(qrcode.captureToCanvas, 500);
@@ -1829,9 +1783,9 @@ qrcode.setWebcam = function (c) {
     try {
       navigator.mediaDevices.enumerateDevices().then(function (e) {
         e.forEach(function (f) {
-          console.log("deb1");
-          if (f.kind === "videoinput") {
-            if (f.label.toLowerCase().search("back") > -1) {
+          console.log('deb1');
+          if (f.kind === 'videoinput') {
+            if (f.label.toLowerCase().search('back') > -1) {
               a = [
                 {
                   sourceId: f.deviceId,
@@ -1839,14 +1793,14 @@ qrcode.setWebcam = function (c) {
               ];
             }
           }
-          console.log(f.kind + ": " + f.label + " id = " + f.deviceId);
+          console.log(f.kind + ': ' + f.label + ' id = ' + f.deviceId);
         });
       });
     } catch (b) {
       console.log(b);
     }
   } else {
-    console.log("no navigator.mediaDevices.enumerateDevices");
+    console.log('no navigator.mediaDevices.enumerateDevices');
   }
   if (d.getUserMedia) {
     d.getUserMedia(
@@ -1855,7 +1809,7 @@ qrcode.setWebcam = function (c) {
         audio: false,
       },
       qrcode.vidSuccess,
-      qrcode.vidError
+      qrcode.vidError,
     );
   } else {
     if (d.webkitGetUserMedia) {
@@ -1866,7 +1820,7 @@ qrcode.setWebcam = function (c) {
           audio: false,
         },
         qrcode.vidSuccess,
-        qrcode.vidError
+        qrcode.vidError,
       );
     } else {
       if (d.mozGetUserMedia) {
@@ -1877,7 +1831,7 @@ qrcode.setWebcam = function (c) {
             audio: false,
           },
           qrcode.vidSuccess,
-          qrcode.vidError
+          qrcode.vidError,
         );
       }
     }
@@ -1889,8 +1843,8 @@ qrcode.decode = function (d) {
       var b = qrcode.canvas_qr2;
       var a = qrcode.qrcontext2;
     } else {
-      var b = document.getElementById("qr-canvas");
-      var a = b.getContext("2d");
+      var b = document.getElementById('qr-canvas');
+      var a = b.getContext('2d');
     }
     qrcode.width = b.width;
     qrcode.height = b.height;
@@ -1902,16 +1856,16 @@ qrcode.decode = function (d) {
     return qrcode.result;
   } else {
     var c = new Image();
-    c.crossOrigin = "Anonymous";
+    c.crossOrigin = 'Anonymous';
     c.onload = function () {
-      var g = document.getElementById("out-canvas");
+      var g = document.getElementById('out-canvas');
       if (g != null) {
-        var j = g.getContext("2d");
+        var j = g.getContext('2d');
         j.clearRect(0, 0, 320, 240);
         j.drawImage(c, 0, 0, 320, 240);
       }
-      var i = document.createElement("canvas");
-      var h = i.getContext("2d");
+      var i = document.createElement('canvas');
+      var h = i.getContext('2d');
       var f = c.height;
       var l = c.width;
       if (c.width * c.height > qrcode.maxImgSize) {
@@ -1928,7 +1882,7 @@ qrcode.decode = function (d) {
         qrcode.imagedata = h.getImageData(0, 0, i.width, i.height);
       } catch (m) {
         qrcode.result =
-          "Cross domain image reading not supported in your browser! Save it to your computer then drag and drop the file!";
+          'Cross domain image reading not supported in your browser! Save it to your computer then drag and drop the file!';
         if (qrcode.callback != null) {
           qrcode.callback(qrcode.result);
         }
@@ -1938,7 +1892,7 @@ qrcode.decode = function (d) {
         qrcode.result = qrcode.process(h);
       } catch (m) {
         console.log(m);
-        qrcode.result = "error decoding QR Code";
+        qrcode.result = 'error decoding QR Code';
       }
       if (qrcode.callback != null) {
         qrcode.callback(qrcode.result);
@@ -1946,7 +1900,7 @@ qrcode.decode = function (d) {
     };
     c.onerror = function () {
       if (qrcode.callback != null) {
-        qrcode.callback("Failed to load the image");
+        qrcode.callback('Failed to load the image');
       }
     };
     c.src = d;
@@ -1957,14 +1911,14 @@ qrcode.isUrl = function (a) {
   return b.test(a);
 };
 qrcode.decode_url = function (b) {
-  var d = "";
+  var d = '';
   try {
     d = escape(b);
   } catch (c) {
     console.log(c);
     d = b;
   }
-  var a = "";
+  var a = '';
   try {
     a = decodeURIComponent(d);
   } catch (c) {
@@ -2009,7 +1963,7 @@ qrcode.process = function (q) {
   }
   var k = Decoder.decode(p.bits);
   var g = k.DataByte;
-  var l = "";
+  var l = '';
   for (var f = 0; f < g.length; f++) {
     for (var e = 0; e < g[f].length; e++) {
       l += String.fromCharCode(g[f][e]);
@@ -2022,17 +1976,13 @@ qrcode.process = function (q) {
 };
 qrcode.getPixel = function (b, d) {
   if (qrcode.width < b) {
-    throw "point error";
+    throw 'point error';
   }
   if (qrcode.height < d) {
-    throw "point error";
+    throw 'point error';
   }
   var a = b * 4 + d * qrcode.width * 4;
-  var c =
-    (qrcode.imagedata.data[a] * 33 +
-      qrcode.imagedata.data[a + 1] * 34 +
-      qrcode.imagedata.data[a + 2] * 33) /
-    100;
+  var c = (qrcode.imagedata.data[a] * 33 + qrcode.imagedata.data[a + 1] * 34 + qrcode.imagedata.data[a + 2] * 33) / 100;
   return c;
 };
 qrcode.binarize = function (d) {
@@ -2168,16 +2118,16 @@ function _cz(c, a, b) {
   this.y = a;
   this.count = 1;
   this._aj = b;
-  this.__defineGetter__("_ei", function () {
+  this.__defineGetter__('_ei', function () {
     return this._aj;
   });
-  this.__defineGetter__("Count", function () {
+  this.__defineGetter__('Count', function () {
     return this.count;
   });
-  this.__defineGetter__("X", function () {
+  this.__defineGetter__('X', function () {
     return this.x;
   });
-  this.__defineGetter__("Y", function () {
+  this.__defineGetter__('Y', function () {
     return this.y;
   });
   this._ek = function () {
@@ -2195,13 +2145,13 @@ function _es(a) {
   this._go = a[0];
   this._gu = a[1];
   this._gr = a[2];
-  this.__defineGetter__("_gp", function () {
+  this.__defineGetter__('_gp', function () {
     return this._go;
   });
-  this.__defineGetter__("_gq", function () {
+  this.__defineGetter__('_gq', function () {
     return this._gu;
   });
-  this.__defineGetter__("_gs", function () {
+  this.__defineGetter__('_gs', function () {
     return this._gr;
   });
 }
@@ -2211,7 +2161,7 @@ function _cc() {
   this._ge = false;
   this._al = new Array(0, 0, 0, 0, 0);
   this._am = null;
-  this.__defineGetter__("_da", function () {
+  this.__defineGetter__('_da', function () {
     this._al[0] = 0;
     this._al[1] = 0;
     this._al[2] = 0;
@@ -2385,7 +2335,7 @@ function _cc() {
   this._ee = function () {
     var h = this._cv.length;
     if (h < 3) {
-      throw "Couldn't find enough finder patterns (found " + h + ")";
+      throw "Couldn't find enough finder patterns (found " + h + ')';
     }
     if (h > 3) {
       var b = 0;
@@ -2560,16 +2510,16 @@ function _ai(c, a, b) {
   this.y = a;
   this.count = 1;
   this._aj = b;
-  this.__defineGetter__("_ei", function () {
+  this.__defineGetter__('_ei', function () {
     return this._aj;
   });
-  this.__defineGetter__("Count", function () {
+  this.__defineGetter__('Count', function () {
     return this.count;
   });
-  this.__defineGetter__("X", function () {
+  this.__defineGetter__('X', function () {
     return Math.floor(this.x);
   });
-  this.__defineGetter__("Y", function () {
+  this.__defineGetter__('Y', function () {
     return Math.floor(this.y);
   });
   this._ek = function () {
@@ -2817,53 +2767,53 @@ function QRCodeDataBlockReader(c, a, b) {
   this.getRomanAndFigureString = function (h) {
     var f = h;
     var g = 0;
-    var j = "";
+    var j = '';
     var d = new Array(
-      "0",
-      "1",
-      "2",
-      "3",
-      "4",
-      "5",
-      "6",
-      "7",
-      "8",
-      "9",
-      "A",
-      "B",
-      "C",
-      "D",
-      "E",
-      "F",
-      "G",
-      "H",
-      "I",
-      "J",
-      "K",
-      "L",
-      "M",
-      "N",
-      "O",
-      "P",
-      "Q",
-      "R",
-      "S",
-      "T",
-      "U",
-      "V",
-      "W",
-      "X",
-      "Y",
-      "Z",
-      " ",
-      "$",
-      "%",
-      "*",
-      "+",
-      "-",
-      ".",
-      "/",
-      ":"
+      '0',
+      '1',
+      '2',
+      '3',
+      '4',
+      '5',
+      '6',
+      '7',
+      '8',
+      '9',
+      'A',
+      'B',
+      'C',
+      'D',
+      'E',
+      'F',
+      'G',
+      'H',
+      'I',
+      'J',
+      'K',
+      'L',
+      'M',
+      'N',
+      'O',
+      'P',
+      'Q',
+      'R',
+      'S',
+      'T',
+      'U',
+      'V',
+      'W',
+      'X',
+      'Y',
+      'Z',
+      ' ',
+      '$',
+      '%',
+      '*',
+      '+',
+      '-',
+      '.',
+      '/',
+      ':',
     );
     do {
       if (f > 1) {
@@ -2886,22 +2836,22 @@ function QRCodeDataBlockReader(c, a, b) {
   this.getFigureString = function (f) {
     var d = f;
     var e = 0;
-    var g = "";
+    var g = '';
     do {
       if (d >= 3) {
         e = this._gd(10);
         if (e < 100) {
-          g += "0";
+          g += '0';
         }
         if (e < 10) {
-          g += "0";
+          g += '0';
         }
         d -= 3;
       } else {
         if (d == 2) {
           e = this._gd(7);
           if (e < 10) {
-            g += "0";
+            g += '0';
           }
           d -= 2;
         } else {
@@ -2929,7 +2879,7 @@ function QRCodeDataBlockReader(c, a, b) {
   this.getKanjiString = function (j) {
     var g = j;
     var i = 0;
-    var h = "";
+    var h = '';
     do {
       i = this._gd(13);
       var e = i % 192;
@@ -2962,7 +2912,7 @@ function QRCodeDataBlockReader(c, a, b) {
     }
     return f;
   };
-  this.__defineGetter__("DataByte", function () {
+  this.__defineGetter__('DataByte', function () {
     var h = new Array();
     var e = 1;
     var f = 2;
@@ -2975,26 +2925,18 @@ function QRCodeDataBlockReader(c, a, b) {
         if (h.length > 0) {
           break;
         } else {
-          throw "Empty data block";
+          throw 'Empty data block';
         }
       }
       if (l != e && l != f && l != d && l != p && l != n) {
-        throw (
-          "Invalid mode: " +
-          l +
-          " in (block:" +
-          this._ed +
-          " bit:" +
-          this._cw +
-          ")"
-        );
+        throw 'Invalid mode: ' + l + ' in (block:' + this._ed + ' bit:' + this._cw + ')';
       }
       if (l == n) {
         var o = this.parseECIValue();
       } else {
         var g = this.getDataLength(l);
         if (g < 1) {
-          throw "Invalid data length: " + g;
+          throw 'Invalid data length: ' + g;
         }
         switch (l) {
           case e:

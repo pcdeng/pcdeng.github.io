@@ -11,7 +11,6 @@ const debounce = function (func, wait = 300) {
   };
 };
 
-
 const aEle = document.getElementById('btn');
 aEle.addEventListener(
   'click',

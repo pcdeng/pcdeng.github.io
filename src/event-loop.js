@@ -11,7 +11,6 @@
 
 // req.send();
 
-
 //主线程直接执行
 console.log('1');
 
@@ -25,10 +24,9 @@ setTimeout(function () {
     console.log('4');
     resolve();
   }).then(function () {
-    console.log('5')
-  })
-})
-
+    console.log('5');
+  });
+});
 
 //微事件1
 // process.nextTick(function () {
@@ -40,9 +38,8 @@ new Promise(function (resolve) {
   resolve();
 }).then(function () {
   //微事件2
-  console.log('8')
-})
-
+  console.log('8');
+});
 
 //丢到宏事件队列中
 setTimeout(function () {
@@ -54,8 +51,8 @@ setTimeout(function () {
     console.log('11');
     resolve();
   }).then(function () {
-    console.log('12')
-  })
+    console.log('12');
+  });
 });
 
 // 第一轮，输出 1，执行栈清空，执行异步任务。

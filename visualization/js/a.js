@@ -1,33 +1,38 @@
 const data = {
   data: {
-    name: "中国",
+    name: '中国',
   },
-  children: [{
-    data: {
-      name: "广东",
+  children: [
+    {
+      data: {
+        name: '广东',
+      },
+      children: [
+        {
+          data: {
+            name: '广州',
+          },
+          value: 69,
+          x: 200,
+          y: 400,
+          r: 200,
+        },
+        {
+          data: {
+            name: '深圳',
+          },
+          value: 69,
+          x: 600,
+          y: 400,
+          r: 200,
+        },
+      ],
+      value: 69,
+      x: 400,
+      y: 400,
+      r: 400,
     },
-    children: [{
-      data: {
-        name: '广州'
-      },
-      value: 69,
-      x: 200,
-      y: 400,
-      r: 200,
-    }, {
-      data: {
-        name: '深圳'
-      },
-      value: 69,
-      x: 600,
-      y: 400,
-      r: 200,
-    }],
-    value: 69,
-    x: 400,
-    y: 400,
-    r: 400,
-  }],
+  ],
   value: 69,
   x: 400,
   y: 400,
@@ -71,8 +76,4 @@ const fragment = `
     }
 `;
 
-const points = new Float32Array([
-  -1, -1,
-  0, 1,
-  1, -1,
-]);
+const points = new Float32Array([-1, -1, 0, 1, 1, -1]);
