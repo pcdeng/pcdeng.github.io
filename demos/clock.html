@@ -28,11 +28,11 @@
         radius: 132,
       };
 
-      const TICK_PASSED_STYLE = 'rgba(255, 255, 255, 0.4)';
-      const TICK_STROKE_STYLE = '#fff';
+      const TICK_PASSED_STYLE = 'rgb(255, 255, 255)';
+      const TICK_STROKE_STYLE = 'green';
       const TICK_WIDTH = 20;
 
-      let percent = 50;
+      let percent = 0;
 
       // 绘制环外圈圆
       function drawRingOuterCircle() {
@@ -69,7 +69,25 @@
         context.strokeStyle = count < percent ? TICK_PASSED_STYLE : TICK_STROKE_STYLE;
         context.stroke();
       }
-      drawTicks();
+
+      let timerId = setInterval(() => {
+        context.clearRect(0, 0, canvas.width, canvas.height);
+        percent += 1;
+
+        if (percent === 101) {
+          context.font = 'bold 18px sans-serif';
+          context.textAlign = 'center';
+          var gradient = context.createLinearGradient(0, 0, canvas.width, 0);
+          gradient.addColorStop('0', 'magenta');
+          gradient.addColorStop('0.5', 'blue');
+          gradient.addColorStop('1.0', 'red');
+          // 用渐变填色
+          context.fillStyle = gradient;
+          context.fillText('倒计时结束', canvas.width / 2, canvas.height / 2);
+          clearInterval(timerId);
+        }
+        drawTicks();
+      }, 200);
     </script>
   </body>
 </html>
