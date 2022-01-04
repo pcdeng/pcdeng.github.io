@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Flex</title>
+    <style>
+      html,
+      body {
+        height: 100%;
+      }
+      body {
+        margin: 0;
+      }
+      .wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        height: 100%;
+        background-color: #d6d6d6;
+      }
+      .header {
+        flex: 0 0 70px;
+        background-color: #666;
+      }
+      .header nav {
+        display: flex;
+        justify-content: center;
+        align-items: stretch;
+        width: 1200px;
+        height: 100%;
+        margin: 0 auto;
+      }
+      .header nav a {
+        padding: 0 5px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .header nav a:hover {
+        background-color: #ccc;
+      }
+
+      .container {
+        flex-grow: 1;
+        flex-shrink: 1;
+        display: flex;
+      }
+      .container__left {
+        flex-basis: 150px;
+        background-color: #7bd;
+      }
+      .container__right {
+        flex-basis: 100px;
+        background-color: #f6c;
+      }
+      .content {
+        flex-grow: 1;
+        flex-shrink: 1;
+        background-color: #d6d6d6;
+      }
+
+      .flex-box {
+        display: flex;
+        align-items: stretch;
+        height: 100%;
+      }
+
+      .widget {
+        background-color: #ccc;
+      }
+      .widget-left {
+        width: 50%;
+        background-color: red;
+      }
+      .widget-middle {
+        width: 25%;
+        margin: 0 10px;
+        background-color: #d6d6d6;
+      }
+      .widget-right {
+        width: 25%;
+        background-color: green;
+      }
+
+      .footer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 40px;
+        color: #fff;
+        background-color: #666;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <nav>
+          <a href="./assets/圣杯布局.png">设计图</a>
+          <a href="#">主菜单2</a>
+          <a href="#">主菜单3</a>
+          <a href="#">主菜单4</a>
+          <a href="#">主菜单5</a>
+        </nav>
+      </header>
+
+      <div class="container">
+        <aside class="container__left">
+          <ul>
+            <li><a href="#">菜单1</a></li>
+            <li><a href="#">菜单2</a></li>
+            <li><a href="#">菜单3</a></li>
+          </ul>
+        </aside>
+
+        <div class="content"></div>
+
+        <aside class="container__right">
+          <ul>
+            <li><a href="#">菜单1</a></li>
+            <li><a href="#">菜单2</a></li>
+            <li><a href="#">菜单3</a></li>
+          </ul>
+        </aside>
+      </div>
+
+      <footer class="footer">#footer</footer>
+    </div>
+  </body>
+</html>
