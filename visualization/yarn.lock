@@ -29,7 +29,7 @@ roughjs@^4.4.1:
     points-on-curve "^0.2.0"
     points-on-path "^0.2.1"
 
-three@^0.128.0:
-  version "0.128.0"
-  resolved "https://registry.nlark.com/three/download/three-0.128.0.tgz?cache=0&sync_timestamp=1619177927305&other_urls=https%3A%2F%2Fregistry.nlark.com%2Fthree%2Fdownload%2Fthree-0.128.0.tgz#884dacca6a330e45600a09ec5439283f50b76aa6"
-  integrity sha1-iE2symozDkVgCgnsVDkoP1C3aqY=
+three@^0.137.0:
+  version "0.137.0"
+  resolved "https://registry.yarnpkg.com/three/-/three-0.137.0.tgz#0ebd6ba66637a332c31f234bcdd35aeec071a6e3"
+  integrity sha512-rzSDhia6cU35UCy6y+zEEws6vSgytfHqFMSaBvUcySgzwvDO6vETyswtSNi/+aVqJw8WLMwyT1mlQQ1T/dxxOA==
