@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Page</title>
+    <style>
+      html {
+        min-height: 100vh;
+      }
+      .page {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        min-height: 100vh;
+        flex-direction: column;
+      }
+
+      .page__body {
+        flex-grow: 1;
+      }
+
+      .box {
+        height: 100px;
+        width: 100px;
+        background-color: red;
+        margin: 0 5px 5px 0;
+      }
+
+      .page__foot {
+        flex-grow: 0;
+        flex-shrink: 0;
+        text-align: center;
+        color: #fff;
+        border: 1px solid #ccc;
+        background-color: blue;
+      }
+    </style>
+  </head>
+  <body class="page">
+    <div class="page__body">
+      <div class="box"></div>
+      <div class="box"></div>
+    </div>
+    <div class="page__foot">Footer</div>
+    <script>
+      // fetch(
+      //   "https://test-kangyang-face.obs.cn-south-1.myhuaweicloud.com/3a28c84468314f6f90089b5d2968c0ae?AccessKeyId=79FVTEVGIK5BJYKNPXPA&Expires=1945068937&x-image-process=image%2Fresize%2Cw_200%2Ch_200%2Fauto-orient%2C1%2Fquality%2Cq_90%2Fformat%2Cjpg&Signature=h9MxBDbxwwEOkYPZXw1V7rqKgt4%3D",
+      //   {
+      //     mode: "no-cors", // no-cors, cors, *same-origin
+      //   }
+      // ).then((result) => {
+      //   console.log(result);
+      // });
+
+      var myHeaders = new Headers();
+
+      var myInit = {
+        method: "GET",
+        headers: myHeaders,
+        mode: "cors",
+        cache: "default",
+      };
+
+      var myRequest = new Request(
+        "https://test-kangyang-face.obs.cn-south-1.myhuaweicloud.com/3a28c84468314f6f90089b5d2968c0ae?AccessKeyId=79FVTEVGIK5BJYKNPXPA&Expires=1945068937&x-image-process=image%2Fresize%2Cw_200%2Ch_200%2Fauto-orient%2C1%2Fquality%2Cq_90%2Fformat%2Cjpg&Signature=h9MxBDbxwwEOkYPZXw1V7rqKgt4%3D",
+        myInit
+      );
+
+      var myImage = new Image();
+      fetch(myRequest)
+        .then(function (response) {
+          return response.blob();
+        })
+        .then(function (myBlob) {
+          console.log(myBlob);
+          // var objectURL = URL.createObjectURL(myBlob);
+          // myImage.src = objectURL;
+          // document.body.appendChild(myImage);
+          // downLoadExcel(myBlob, "adddd.jpg");
+        });
+
+      function downLoadExcel(file, downloadName) {
+        const link = document.createElement("a");
+        let blob = new Blob([file], { type: "image/jpeg" });
+        link.style.display = "none";
+        link.href = URL.createObjectURL(blob);
+        link.download = downloadName || date.format(new Date(), "MM月DD日"); // 下载的文件名
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,30 @@
+<!doctype html><html lang="en"><head><meta charset="UTF-8"/><title>停车场寻车</title><style>html,
+      body {
+        margin: 0;
+        padding: 0;
+      }
+      .actions {
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      button {
+        margin-right: 5px;
+      }
+      button:last-child {
+        margin-right: 0;
+      }
+      .active {
+        background-color: green;
+        color: black;
+      }
+
+      .no_active {
+        background-color: orange;
+        color: black;
+        cursor: pointer;
+      }
+      canvas {
+        box-sizing: border-box;
+      }</style><script defer="defer" src="parking.js"></script></head><body id="body"><div class="actions"><button id="btn_step1" disabled="disabled" class="active" title="画节点模式：点击红框内任意位置就会在该位置生成一个节点！">画车位</button> <button id="btn_step2" class="no_active" title="画路径模式： 前后点击任意两个节点，则会在这两个节点间生成一个连线，并产生一个随机的路径距离！">画线</button> <button id="btn_step3" class="no_active" title="计算最短路径模式： 前后点击任意两个节点，则会计算最短路径并用红线标出最短路径！">求最短距离</button></div></body></html>

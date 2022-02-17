@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>下雪</title>
+    <style>
+      .body {
+        margin: 0;
+        padding: 0;
+        background-color: #000;
+        background-image: url(./assets/images/th.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+        position: relative;
+        height: 100vh;
+        width: 100vw;
+        overflow: hidden;
+      }
+
+      .snow {
+        background-image: url(./assets/images/snow.png);
+        background-repeat: repeat;
+        background-size: auto;
+        background-position: 0 0;
+        width: 100vw;
+        height: 100vh;
+        position: absolute;
+        left: 0;
+        top: -100vh;
+      }
+
+      .snow1 {
+        animation: 10s linear 0s infinite snow-1;
+        z-index: 1;
+      }
+
+      .snow2 {
+        animation: 20s linear 0s infinite snow-2;
+        z-index: 2;
+        top: -200vh;
+      }
+
+      .snow3 {
+        animation: 10s linear 10s infinite snow-1;
+        z-index: 3;
+        top: -100vh;
+      }
+
+      .snow4 {
+        animation: 20s linear 20s infinite snow-2;
+        z-index: 4;
+        top: -200vh;
+      }
+
+      @keyframes snow-1 {
+        0% {
+          top: -100vh;
+        }
+
+        100% {
+          top: 0;
+        }
+      }
+
+      @keyframes snow-2 {
+        0% {
+          top: -200vh;
+        }
+
+        100% {
+          top: 0;
+        }
+      }
+    </style>
+  </head>
+  <body class="body">
+    <div class="snow snow1"></div>
+    <div class="snow snow2"></div>
+    <div class="snow snow3"></div>
+    <div class="snow snow4"></div>
+  </body>
+</html>

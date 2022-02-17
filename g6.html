@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Tutorial Demo</title>
+    <style>
+      #mountNode canvas {
+        border: 1px solid #ccc;
+        margin: 0 auto;
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="mountNode"></div>
+    <script src="https://gw.alipayobjects.com/os/antv/pkg/_antv.g6-3.7.1/dist/g6.min.js"></script>
+
+    <script>
+      // 定义数据源
+      const data = {
+        // 点集
+        nodes: [
+          {
+            id: "node1",
+            label: "张三",
+            size: 40,
+          },
+          {
+            id: "node2",
+            label: "李四",
+            size: 40,
+          },
+          {
+            id: "node3",
+            label: "王五",
+            size: 40,
+          },
+          {
+            id: "node4",
+            label: "赵六",
+            size: 40,
+          },
+          {
+            id: "node5",
+            label: "孙七",
+            size: 40,
+          },
+        ],
+        // 边集
+        edges: [
+          {
+            source: "node1",
+            target: "node2",
+          },
+          {
+            source: "node2",
+            target: "node3",
+          },
+          {
+            source: "node2",
+            target: "node4",
+          },
+          {
+            source: "node4",
+            target: "node5",
+          },
+        ],
+      };
+
+      // 创建 G6 图实例
+      const graph = new G6.TreeGraph({
+        container: "mountNode",
+        width: 800,
+        height: 500,
+        layout: {
+          // type: "dendrogram",
+          // preventOverlap: true,
+          // linkDistance: 100,
+          type: "dendrogram", // 布局类型
+          direction: "LR", // 自左至右布局，可选的有 H / V / LR / RL / TB / BT
+          nodeSep: 50, // 节点之间间距
+          rankSep: 100, // 每个层级之间的间距
+        },
+        animate: true,
+        modes: {
+          default: ["drag-canvas", "zoom-canvas", "drag-node"],
+        },
+      });
+      // 读取数据
+      graph.data(data);
+      // 渲染图
+      graph.render();
+    </script>
+  </body>
+</html>
