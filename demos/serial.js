@@ -1,0 +1,1 @@
+const isSupportSerial="serial"in navigator;if(console.log(isSupportSerial),!isSupportSerial)throw new Error("浏览器不支持 serial");const getById=e=>document.querySelector(`#${e}`),btn=getById("btn"),handleClick=async()=>{const e=await navigator.serial.requestPort();console.log(e.getInfo())};btn.addEventListener("click",handleClick);
