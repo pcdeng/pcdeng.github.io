@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>歌词滚动效果</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        background-color: #000;
+        color: #666;
+        text-align: center;
+      }
+
+      audio {
+        width: 450px;
+        margin: 30px 0;
+      }
+
+      .container {
+        height: 420px;
+        overflow: hidden;
+        border: 2px solid #fff;
+      }
+
+      .container ul {
+        border: 2px solid #fff;
+        transition: 0.6s;
+        list-style: none;
+      }
+
+      .container li {
+        height: 30px;
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        /* border: 1px solid #fff; */
+        line-height: 30px;
+        transition: 0.2s;
+      }
+
+      .container li.active {
+        color: #fff;
+        transform: scale(1.2);
+      }
+    </style>
+  </head>
+  <body>
+    <audio src="./assets/music.mp3" controls></audio>
+    <div class="container">
+      <ul class="lrc-list"></ul>
+    </div>
+    <script src="./assets/lrc.js"></script>
+    <script src="./lrc.js"></script>
+  </body>
+</html>

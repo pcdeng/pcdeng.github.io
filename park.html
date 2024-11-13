@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>停车场</title>
+    <style>
+      svg {
+        border: 1px solid #ccc;
+      }
+    </style>
+  </head>
+  <body>
+    <svg id="parking" width="1000" height="300"></svg>
+    <script src="./lib/snap.svg-min.js"></script>
+    <script>
+      const stage = Snap('#parking');
+      const width = 1000;
+      const height = 300;
+
+      for (let i = 0; i < width / 40; i++) {
+        const box = stage.paper.rect(i * 40, 0, 30, 50).attr({
+          fill: '#f00',
+        });
+        const text = stage.paper.text(i * 40 + 5, 25, 'a' + i).attr({
+          fill: '#fff',
+        });
+        const seat = stage.paper.g(box, text);
+      }
+
+      for (let i = 0; i < width / 40; i++) {
+        const box = stage.paper.rect(i * 40, height - 50, 30, 50).attr({
+          fill: '#f00',
+        });
+        const text = stage.paper.text(i * 40 + 5, height - 30, 'b' + i).attr({
+          fill: '#fff',
+        });
+        const seat = stage.paper.g(box, text);
+      }
+
+      const path = stage.paper.path('M0 0L1000 300');
+      path.attr({
+        fill: '#000',
+        stroke: '#000',
+      });
+
+      const box = stage.paper.rect(0, 50, 30, 50).attr({
+        fill: '#f00',
+      });
+
+      box.animate({ x: 970 }, 1000);
+    </script>
+  </body>
+</html>

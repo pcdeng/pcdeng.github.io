@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SVG 条码</title>
+  </head>
+  <body>
+    <script src="/lib/JsBarcode.all.min.js"></script>
+    <button id="btn">生成</button>
+
+    <script>
+      const $btn = document.getElementById('btn');
+      $btn.addEventListener('click', () => {
+        const svgNS = 'http://www.w3.org/2000/svg';
+        const svgEl = document.createElementNS(svgNS, 'svg');
+        JsBarcode(svgEl, 'aBflsdafkfaskdlfkls', {
+          width: 64.83544303797468,
+          height: 2971.6425,
+          format: 'CODE128',
+          displayValue: true,
+          fontOptions: '',
+          font: 'Arial',
+          textAlign: 'center',
+          textPosition: 'bottom',
+          textMargin: 2,
+          fontSize: 79.3575,
+          background: '',
+          lineColor: '#000000',
+          margin: 0,
+          marginTop: 0,
+          marginBottom: 20,
+          marginLeft: 0,
+          marginRight: 0,
+        });
+
+        const svgString = new XMLSerializer().serializeToString(svgEl);
+
+        // 在不将其添加到DOM的情况下查看SVG
+        var data = 'data:image/svg+xml;base64,' + btoa(new XMLSerializer().serializeToString(svgEl));
+
+        let img = new Image();
+
+        img.src = data;
+
+        img.onload = () => {
+          console.log(img);
+
+          document.body.appendChild(img);
+        };
+        // const buf = Buffer.from(svgString);
+        // const svgBase64Str = buf.toString("base64");
+        // const imgSrc = `data:image/svg+xml;base64,${svgBase64Str}`;
+        // console.log(imgSrc);
+      });
+    </script>
+  </body>
+</html>

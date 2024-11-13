@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Fabric.js + JsBarcode 示例</title>
+    <script src="/lib/fabric.js"></script>
+    <script src="/lib/JsBarcode.all.min.js"></script>
+    <style>
+      .container {
+        /* width: 500px;
+        height: 500px; */
+        border: 1px solid #ccc;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <canvas id="mainBorad"></canvas>
+
+      <button id="btn">生成</button>
+    </div>
+
+    <script>
+      const mm2inch = (mm) => {
+        return mm / 25.4;
+      };
+
+      const mm2dot = (mm, dpi = 96) => {
+        // const pt = Math.round(mm * (dpi / 25.4));
+        // console.log(`dpi ${dpi}, ${mm}mm -> ${pt}dot`);
+        // return pt;
+
+        const pt = Math.round(mm2inch(mm) * dpi);
+        console.log(`dpi ${dpi}, ${mm}mm -> ${pt}dot`);
+        return pt;
+      };
+
+      const mm2px = (mm, dpi = 96) => {
+        let px = Math.round(mm2inch(mm) * dpi);
+        console.log(`dpi ${dpi}, ${mm}mm -> ${px}px`);
+        return px;
+      };
+
+      const w = 70; // 宽度 70mm
+      const h = 30; // 高度 30mm
+      const wInDot = mm2dot(w);
+      const hInDot = mm2dot(h);
+      const wInPx = mm2px(w);
+      const hInPx = mm2px(h);
+
+      const containerEl = document.querySelector('.container');
+      const boardEl = document.querySelector('#mainBorad');
+
+      containerEl.style = `width: ${wInDot}px; height: ${hInDot}px`;
+
+      const canvas = new fabric.Canvas(boardEl, {
+        width: wInDot,
+        height: hInDot,
+        backgroundColor: '#fff',
+      });
+
+      // fabric.Image.fromURL("assets/a.jpeg", function (img, isError) {
+      //   img.set({
+      //     width: canvas.width,
+      //     height: canvas.height,
+      //     originX: "left",
+      //     originY: "top",
+      //   });
+      //   canvas.setBackgroundImage(img, canvas.renderAll.bind(canvas));
+      // });
+
+      const wRate = wInDot / wInPx;
+      const hRate = hInDot / hInPx;
+      console.log(`w rate ${wRate}, h rate ${hRate}`);
+
+      const genBarcode = () => {
+        return new Promise((resolve, rejct) => {
+          const svgNS = 'http://www.w3.org/2000/svg';
+          const svgEl = document.createElementNS(svgNS, 'svg');
+          JsBarcode(svgEl, 'aBflsdafkfaskdlfkls', {
+            width: 64.83544303797468,
+            height: 2971.6425,
+            format: 'CODE128',
+            displayValue: true,
+            fontOptions: '',
+            font: 'Arial',
+            textAlign: 'center',
+            textPosition: 'bottom',
+            textMargin: 2,
+            fontSize: 79.3575,
+            background: '',
+            lineColor: '#000000',
+            margin: 0,
+            marginTop: 0,
+            marginBottom: 20,
+            marginLeft: 0,
+            marginRight: 0,
+          });
+
+          const svgString = new XMLSerializer().serializeToString(svgEl);
+
+          // 在不将其添加到DOM的情况下查看SVG
+          var data = 'data:image/svg+xml;base64,' + btoa(new XMLSerializer().serializeToString(svgEl));
+
+          let img = new Image();
+
+          img.src = data;
+
+          img.onload = () => {
+            console.log(img);
+
+            resolve(img);
+
+            // document.body.appendChild(img)
+          };
+
+          img.onerror = (err) => {
+            console.error('err', err);
+            reject(err);
+          };
+          // const buf = Buffer.from(svgString);
+          // const svgBase64Str = buf.toString("base64");
+          // const imgSrc = `data:image/svg+xml;base64,${svgBase64Str}`;
+          // console.log(imgSrc);
+        });
+      };
+
+      const center = canvas.getCenter();
+      canvas.zoomToPoint(
+        {
+          // 关键点
+          x: center.left,
+          y: center.top,
+        },
+        wRate, // 传入修改后的缩放级别
+      );
+      const x = center.left - canvas.width / 2;
+      const y = center.top - canvas.height / 2;
+      canvas.viewportTransform[4] = x;
+      canvas.viewportTransform[5] = y;
+
+      const box = new fabric.Rect({
+        left: 0,
+        top: 0,
+        width: mm2px(10),
+        height: mm2px(10),
+      });
+      canvas.add(box);
+
+      const $btn = document.getElementById('btn');
+      $btn.addEventListener('click', () => {
+        genBarcode().then((imgEl) => {
+          const img = new fabric.Image(imgEl, {
+            id: 'bg',
+            hasControls: false,
+            selectable: false,
+            hoverCursor: 'default',
+          });
+          canvas.add(img);
+        });
+      });
+    </script>
+  </body>
+</html>

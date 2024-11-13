@@ -1,0 +1,1 @@
+const rc=rough.canvas(document.getElementById("stage")),ctx=rc.ctx;ctx.translate(256,256),ctx.scale(1,-1);const hillOpts={roughness:2.8,stokeWidth:2,fill:"blue"};rc.path("M-180 0 L-80 100 L 20 0",hillOpts),rc.path("M -20 0 L 80 100 L 180 0",hillOpts),rc.circle(0,150,105,{stroke:"red",strokeWidth:4,fill:"rgba(255, 255, 0, 0.4)",fillStyle:"solid"});

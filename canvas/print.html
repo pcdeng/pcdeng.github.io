@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Print demo</title>
+    <style>
+      html,
+      body {
+        margin: 0;
+        padding: 10px;
+      }
+      .board {
+        display: inline-block;
+        border: 1px dashed #ccc;
+      }
+      .actions {
+        margin-top: 10px;
+        margin-bottom: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="actions">
+      <input id="width" type="number" value="3" placeholder="宽度（inch）" />
+      <input id="height" type="number" value="1.25" placeholder="高度（inch）" />
+      <button id="print">打印该页面</button>
+    </div>
+    <div class="board">
+      <canvas id="board"></canvas>
+    </div>
+    <script src="/lib/fabric.js"></script>
+    <script src="./print.js"></script>
+  </body>
+</html>

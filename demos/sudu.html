@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>数独</title>
+    <link rel="stylesheet" href="sudu.css" />
+  </head>
+  <body>
+    <div id="sudoku">
+      <div id="box11">
+        <div contenteditable="true" id="cell11"></div>
+        <div contenteditable="true" id="cell21"></div>
+        <div contenteditable="true" id="cell31"></div>
+        <div contenteditable="true" id="cell12"></div>
+        <div contenteditable="true" id="cell22"></div>
+        <div contenteditable="true" id="cell32"></div>
+        <div contenteditable="true" id="cell13"></div>
+        <div contenteditable="true" id="cell23"></div>
+        <div contenteditable="true" id="cell33"></div>
+      </div>
+      <div id="box12">
+        <div contenteditable="true" id="cell41"></div>
+        <div contenteditable="true" id="cell51"></div>
+        <div contenteditable="true" id="cell61"></div>
+        <div contenteditable="true" id="cell42"></div>
+        <div contenteditable="true" id="cell52"></div>
+        <div contenteditable="true" id="cell62"></div>
+        <div contenteditable="true" id="cell43"></div>
+        <div contenteditable="true" id="cell53"></div>
+        <div contenteditable="true" id="cell63"></div>
+      </div>
+      <div id="box13">
+        <div contenteditable="true" id="cell71"></div>
+        <div contenteditable="true" id="cell81"></div>
+        <div contenteditable="true" id="cell91"></div>
+        <div contenteditable="true" id="cell72"></div>
+        <div contenteditable="true" id="cell82"></div>
+        <div contenteditable="true" id="cell92"></div>
+        <div contenteditable="true" id="cell73"></div>
+        <div contenteditable="true" id="cell83"></div>
+        <div contenteditable="true" id="cell93"></div>
+      </div>
+      <div id="box21">
+        <div contenteditable="true" id="cell14"></div>
+        <div contenteditable="true" id="cell24"></div>
+        <div contenteditable="true" id="cell34"></div>
+        <div contenteditable="true" id="cell15"></div>
+        <div contenteditable="true" id="cell25"></div>
+        <div contenteditable="true" id="cell35"></div>
+        <div contenteditable="true" id="cell16"></div>
+        <div contenteditable="true" id="cell26"></div>
+        <div contenteditable="true" id="cell36"></div>
+      </div>
+      <div id="box22">
+        <div contenteditable="true" id="cell44"></div>
+        <div contenteditable="true" id="cell54"></div>
+        <div contenteditable="true" id="cell64"></div>
+        <div contenteditable="true" id="cell45"></div>
+        <div contenteditable="true" id="cell55"></div>
+        <div contenteditable="true" id="cell65"></div>
+        <div contenteditable="true" id="cell46"></div>
+        <div contenteditable="true" id="cell56"></div>
+        <div contenteditable="true" id="cell66"></div>
+      </div>
+      <div id="box23">
+        <div contenteditable="true" id="cell74"></div>
+        <div contenteditable="true" id="cell84"></div>
+        <div contenteditable="true" id="cell94"></div>
+        <div contenteditable="true" id="cell75"></div>
+        <div contenteditable="true" id="cell85"></div>
+        <div contenteditable="true" id="cell95"></div>
+        <div contenteditable="true" id="cell76"></div>
+        <div contenteditable="true" id="cell86"></div>
+        <div contenteditable="true" id="cell96"></div>
+      </div>
+      <div id="box31">
+        <div contenteditable="true" id="cell17"></div>
+        <div contenteditable="true" id="cell27"></div>
+        <div contenteditable="true" id="cell37"></div>
+        <div contenteditable="true" id="cell18"></div>
+        <div contenteditable="true" id="cell28"></div>
+        <div contenteditable="true" id="cell38"></div>
+        <div contenteditable="true" id="cell19"></div>
+        <div contenteditable="true" id="cell29"></div>
+        <div contenteditable="true" id="cell39"></div>
+      </div>
+      <div id="box32">
+        <div contenteditable="true" id="cell47"></div>
+        <div contenteditable="true" id="cell57"></div>
+        <div contenteditable="true" id="cell67"></div>
+        <div contenteditable="true" id="cell48"></div>
+        <div contenteditable="true" id="cell58"></div>
+        <div contenteditable="true" id="cell68"></div>
+        <div contenteditable="true" id="cell49"></div>
+        <div contenteditable="true" id="cell59"></div>
+        <div contenteditable="true" id="cell69"></div>
+      </div>
+      <div id="box33">
+        <div contenteditable="true" id="cell77"></div>
+        <div contenteditable="true" id="cell87"></div>
+        <div contenteditable="true" id="cell97"></div>
+        <div contenteditable="true" id="cell78"></div>
+        <div contenteditable="true" id="cell88"></div>
+        <div contenteditable="true" id="cell98"></div>
+        <div contenteditable="true" id="cell79"></div>
+        <div contenteditable="true" id="cell89"></div>
+        <div contenteditable="true" id="cell99"></div>
+      </div>
+    </div>
+
+    <div id="slove"></div>
+    <div id="reset"></div>
+
+    <script src="./sudu.js"></script>
+  </body>
+</html>

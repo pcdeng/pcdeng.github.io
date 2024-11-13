@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <title>Full screen</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        background-color: #c00700;
+      }
+
+      .sc-modal {
+        position: fixed;
+        z-index: 1000;
+        height: 100vh;
+        width: 100vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: rgba(51, 51, 51, 0.7);
+      }
+
+      .sc-dialog {
+        padding: 15px 40px;
+        font-family: Open Sans;
+        color: #5e5e5e;
+        font-size: 12px;
+        background-color: #ebebeb;
+      }
+
+      .sc-dialog-header {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .sc-title {
+        margin: 0;
+        padding: 0;
+        font-size: 24px;
+        max-width: 650px;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        text-decoration: none solid rgb(94, 94, 94);
+      }
+
+      .sc-dialog-header .btn-close {
+        position: absolute;
+        top: 0;
+        right: -20px;
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        font-size: 14px;
+        color: #999;
+        line-height: 20px;
+        text-align: center;
+        font-style: normal;
+        border-radius: 3px;
+        font-weight: bold;
+        cursor: pointer;
+      }
+      .sc-dialog-header .btn-close:hover {
+        color: #000;
+        background-color: #ccc;
+        transition: background-color 0.8s ease-in-out;
+        transition: color 0.8s ease-in-out;
+      }
+
+      .intro {
+        margin-bottom: 5px;
+        text-decoration: none solid rgb(94, 94, 94);
+      }
+
+      .player {
+        width: 640px;
+        height: 360px;
+      }
+
+      .sc-dialog-footer {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 28px;
+      }
+
+      .sc-form-group {
+        display: flex;
+        align-items: center;
+      }
+
+      .sc-form-group label {
+        cursor: pointer;
+      }
+
+      .btn {
+        box-sizing: border-box;
+        min-width: 100px;
+        padding: 7px 20px;
+        color: #fff;
+        font-size: 14px;
+        text-align: center;
+        border-radius: 2px;
+        cursor: pointer;
+        background-color: #3b99e0;
+      }
+
+      .hide {
+        opacity: 0;
+        transition: opacity 0.7s ease-in-out;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="sc-modal" id="scModal">
+      <div class="sc-dialog">
+        <div class="sc-dialog-header">
+          <h2 class="sc-title">Title is here</h2>
+          <img
+            class="btn-close"
+            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAMAAADXqc3KAAAAVFBMVEUAAACUlJSZmZmenp6VlZWZmZmdnZ2Xl5ebm5uYmJiampqZmZmampqZmZmZmZmampqZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZn///8lv0gOAAAAGnRSTlMAExQVGBkaGxwlJii1ub6/zs/Q0dLW19jZ2gFhaDYAAAABYktHRBsCYNSkAAAAgElEQVQoz8WRSRaAIAxDC6g4K87m/ge1Tgjo3qzyGtr+V4h+V1GK24qycIIGRp5OdqidQA2Yk90kM3pJfrJoIr2gV/4WTladrhhUuD+eMI6YojcZ93y83zlboBXvOnPyKCPD+sFpqR9dnBf1I8t5UHsnuTmZ2j1JXllOVWX/f+oGE3QG6jaPWsAAAAAASUVORK5CYII="
+          />
+        </div>
+
+        <div class="sc-dialog-content">
+          <p class="intro">Description is here...</p>
+          <div id="player" class="player">
+            <iframe
+              src="https://bjetxgzv.cdn.bspapp.com/VKCEYUGU-uni-app-doc/a876efc0-4f35-11eb-97b7-0dc4655d6e68.mp4"
+              title="uni-app"
+              allowtransparency="true"
+              frameborder="0"
+              scrolling="no"
+              class="wistia_embed"
+              name="wistia_embed"
+              allowfullscreen
+              mozallowfullscreen
+              webkitallowfullscreen
+              oallowfullscreen
+              msallowfullscreen
+              width="100%"
+              height="100%"
+            ></iframe>
+          </div>
+        </div>
+
+        <div class="sc-dialog-footer">
+          <div class="sc-form-group">
+            <input type="checkbox" name="donotshow" id="donotshow" />
+            <label for="donotshow">Don't show this message again.</label>
+          </div>
+          <span class="btn btn-close">Close</span>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      const closeBtns = document.querySelectorAll('.btn-close');
+      const modal = document.querySelector('#scModal');
+      closeBtns.forEach((btn) => {
+        btn.onclick = (event) => {
+          modal.setAttribute('class', modal.getAttribute('class') + ' hide');
+        };
+      });
+
+      modal.addEventListener('transitionend', (e) => {
+        if (e.target.id === 'scModal') {
+          modal.style.display = 'none';
+        }
+      });
+    </script>
+  </body>
+</html>

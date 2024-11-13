@@ -1,0 +1,32 @@
+#sudoku {
+  padding: 2px;
+  height: 516px;
+  width: 516px;
+  margin-right: auto;
+  margin-left: auto;
+  border: 3px solid #555;
+  margin-bottom: 15px;
+}
+
+#sudoku div {
+  position: static;
+  padding: 1px;
+  margin: 2px;
+  float: left;
+  height: 162px;
+  width: 162px;
+  border: 2px solid #1f4062;
+}
+
+#sudoku div div {
+  position: static;
+  padding: 0px;
+  margin: 1px;
+  border: 1px solid #aaa;
+  height: 50px;
+  width: 50px;
+  float: left;
+  line-height: 50px;
+  text-align: center;
+  overflow: hidden;
+}

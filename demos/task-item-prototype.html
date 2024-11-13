@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="UTF-8" />
+    <title>任务条原型</title>
+    <style>
+      .item {
+        display: flex;
+        align-items: center;
+        width: 500px;
+        margin: 4px 0;
+        border: 1px solid red;
+      }
+      .item .severity-icon {
+        width: 7px;
+        height: 7px;
+        border-radius: 3.5px;
+        background-color: red;
+        flex: 0 0 7px;
+      }
+      .item h4 {
+        display: flex;
+        align-items: center;
+        flex: 1 1 auto; /*关键点一*/
+        margin: 0 5px;
+        width: 80%; /*关键点二，这个值一定要比它实际占用的宽度小，如果设置为100%，就会超出item这个框*/
+        border: 1px solid blue;
+      }
+      .item h4 span {
+        overflow: hidden;
+        margin-right: 4px;
+        font-size: 12px;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+      }
+      .item h4 i {
+        flex: 0 0 auto;
+        padding: 2px 4px;
+        font-size: 10px;
+        color: #fff;
+        font-weight: normal;
+        font-style: normal;
+        background-color: #1d1d1d;
+      }
+      .item .btn-remove {
+        flex: 0 0 16px;
+        padding: 0 4px;
+        cursor: pointer;
+        text-align: center;
+        font-style: normal;
+        vertical-align: middle;
+        background-color: gray;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="item">
+      <i class="severity-icon"></i>
+      <h4>
+        <span
+          >Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Lorem ipsum dolor sit amet, consectetuer adipiscing
+          elit.</span
+        >
+        <i>Node.js</i>
+      </h4>
+      <i class="btn-remove">✕</i>
+    </div>
+  </body>
+</html>
