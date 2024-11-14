@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Canvas 练习</title>
+    <style>
+      .board {
+        border: 1px solid #ccc;
+      }
+    </style>
+  </head>
+
+  <body>
+    <canvas id="board" class="board"></canvas>
+    <script>
+      const canvas = document.getElementById("board");
+      const ctx = canvas.getContext("2d");
+      canvas.width = 300;
+      canvas.height = 400;
+
+      // 设置不同的 lineJoin 样式
+      ctx.lineWidth = 10;
+      ctx.beginPath();
+      ctx.moveTo(50, 50);
+      ctx.lineTo(100, 100);
+      ctx.lineTo(50, 150);
+      ctx.strokeStyle = "blue";
+
+      ctx.lineJoin = "miter";
+      ctx.stroke();
+
+      ctx.beginPath();
+      ctx.moveTo(120, 50);
+      ctx.lineTo(170, 100);
+      ctx.lineTo(120, 150);
+      ctx.lineJoin = "round";
+      ctx.strokeStyle = "green";
+      ctx.stroke();
+
+      ctx.beginPath();
+      ctx.moveTo(190, 50);
+      ctx.lineTo(240, 100);
+      ctx.lineTo(190, 150);
+      ctx.lineJoin = "bevel";
+      ctx.strokeStyle = "red";
+      ctx.stroke();
+
+      // // 设置线条的颜色
+      // ctx.strokeStyle = "black";
+
+      // // 设置线条的宽度
+      // ctx.lineWidth = 10;
+      // ctx.lineCap = 'butt'
+
+      // // 开始绘制路径
+      // ctx.beginPath();
+
+      // // 从 (50, 50) 坐标开始
+      // ctx.moveTo(0, 200);
+
+      // // 绘制到 (300, 300) 坐标
+      // ctx.lineTo(150, 200);
+
+      // // 绘制路径
+      // ctx.stroke();
+      // const image = new Image();
+      // image.onload = function () {
+      //   canvas.width = image.width;
+      //   canvas.height = image.height;
+      //   console.log(image.width, image.height)
+      //   ctx.drawImage(image, 0, 0, canvas.width, canvas.height);
+      //   const imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
+      //   console.log(imageData);
+      // };
+
+      // image.src =
+      //   "https://cdn.shopifycdn.net/s/files/1/0504/5931/2316/files/Archer_Idle_1.png?v=1640657443";
+      // image.crossOrigin = "Anonymous";
+    </script>
+  </body>
+</html>

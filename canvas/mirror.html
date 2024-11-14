@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Canvas 水平镜像</title>
+    <style>
+      canvas {
+        border: 1px solid red;
+      }
+    </style>
+  </head>
+  <body>
+    <canvas id="board"></canvas>
+    <script>
+      const canvas = document.getElementById('board');
+      const ctx = canvas.getContext('2d');
+
+      // 在 canvas 上绘制内容
+      ctx.fillStyle = 'blue';
+      ctx.fillText('双击编辑文本', 10, 10);
+
+      // 创建临时 canvas，复制原始内容
+      const tempCanvas = document.createElement('canvas');
+      const tempCtx = tempCanvas.getContext('2d');
+      tempCanvas.width = canvas.width;
+      tempCanvas.height = canvas.height;
+      tempCtx.drawImage(canvas, 0, 0);
+
+      // 清空原 canvas
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+      // 水平翻转并绘制回原 canvas
+      ctx.save();
+      ctx.scale(-1, 1);
+      ctx.drawImage(tempCanvas, -canvas.width, 0);
+      ctx.restore();
+    </script>
+  </body>
+</html>

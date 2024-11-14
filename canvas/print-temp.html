@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+    <link href="print.css" media="print" rel="stylesheet" />
+    <style>
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="board" id="board"></div>
+    <script>
+      function receiveMessage(event) {
+        const {
+          data: { wdith, height, items },
+        } = event;
+
+        const board = document.getElementById("board");
+        const parser = new DOMParser();
+
+        for (let i = 0; i < items.length; i++) {
+          const svgStr = items[i];
+          const doc = parser.parseFromString(svgStr, "image/svg+xml");
+          const svgEle = doc.querySelector("svg");
+          svgEle.setAttribute("width", "100%");
+          svgEle.setAttribute("height", "100%");
+          svgEle.setAttribute("class", "board-item");
+          svgEle.setAttribute(
+            "style",
+            `--width: ${wdith}in; --height: ${height}in`
+          );
+          board.appendChild(svgEle);
+        }
+
+        window.print();
+      }
+      window.addEventListener("message", receiveMessage);
+    </script>
+  </body>
+</html>

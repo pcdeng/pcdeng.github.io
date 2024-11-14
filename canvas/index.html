@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Canvas</title>
+    <style>
+      #source,
+      #preview {
+        border: 1px solid #d4d4d4;
+      }
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      .view-box {
+        width: 1303px;
+        height: 734px;
+        background: linear-gradient(90deg, #333333, #111111, #333333);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .view-content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .arrow {
+        padding: 20px;
+        font-size: 40px;
+        color: #ffffff;
+      }
+
+      .img {
+        max-height: 660px;
+        display: inline-block;
+        border: 1px solid #fff;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <button onclick="handleClear()">去除</button>
+      <div class="view-box">
+        <div class="view-content">
+          <img class="img" src="logo.bmp" alt="" />
+
+          <div class="arrow">
+            <svg
+              t="1640838036592"
+              class="icon"
+              viewBox="0 0 1024 1024"
+              version="1.1"
+              xmlns="http://www.w3.org/2000/svg"
+              p-id="4100"
+              width="128"
+              height="128"
+            >
+              <path
+                d="M916.70478 440.270049L531.68078 217.987122c-21.079415-12.188098-47.953171-13.08722-70.631024 0s-35.365463 36.764098-35.365463 61.140293v97.304975H127.37561c-34.766049 0-62.938537 28.172488-62.938537 62.938537v145.258146c0 34.766049 28.172488 62.938537 62.938537 62.938537h298.308683v90.411707c0 26.673951 13.886439 52.748488 38.662244 67.034537 24.775805 14.385951 54.247024 13.386927 77.524292 0l374.833951-216.388683c25.674927-14.685659 42.858146-42.458537 42.858147-74.227512 0-31.469268-17.18322-59.242146-42.858147-74.12761z"
+                p-id="4101"
+                fill="#ffffff"
+              ></path>
+            </svg>
+          </div>
+
+          <img class="img" id="img" src="" alt="" width="300" />
+        </div>
+      </div>
+    </div>
+
+    <script src="main.js"></script>
+    <!-- <script src="clear-white-space.js"></script> -->
+  </body>
+</html>

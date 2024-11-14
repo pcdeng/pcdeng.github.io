@@ -1,0 +1,1 @@
+const getById=e=>document.getElementById(e);

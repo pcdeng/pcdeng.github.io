@@ -1,0 +1,1 @@
+const getDevice=async()=>{(await navigator.hid.requestDevice({filters:[]})).forEach((e=>{console.log(e),e.opened||(e.open(),e.oninputreport=e=>{console.log(e)})}))},init=async()=>{document.getElementById("connectBtn").addEventListener("click",getDevice)};init();

@@ -1,0 +1,1 @@
+document.addEventListener("DOMContentLoaded",(()=>{new Recorder({container:document.querySelector("#locker")})}));

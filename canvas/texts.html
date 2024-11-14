@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>文字效果</title>
+    <style>
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+      }
+      canvas {
+        display: block;
+        width: 100vw;
+        height: 100vh;
+        background-color: #000;
+      }
+    </style>
+  </head>
+  <body>
+    <canvas></canvas>
+    <script>
+      const cvs = document.querySelector("canvas");
+      const ctx = cvs.getContext("2d");
+
+      const init = () => {
+        cvs.width = window.innerWidth * window.devicePixelRatio;
+        cvs.height = window.innerHeight * window.devicePixelRatio;
+      };
+
+      init();
+
+      const fontSize = 10 * window.devicePixelRatio;
+      ctx.font = `${fontSize}px "Roboto Mono"`;
+      const columnCount = Math.floor(cvs.width / fontSize);
+      const charIndexs = new Array(columnCount).fill(0);
+
+      const getRandomChar = () => {
+        const str = "0123456789abcdefghijklmnopqrstuvwyxz";
+        return str[Math.floor(Math.random() * str.length)];
+      };
+
+      const draw = () => {
+        ctx.fillStyle = "rgba(0,0,0,0.1)";
+        ctx.fillRect(0, 0, cvs.width, cvs.height);
+        ctx.fillStyle = "#6be445";
+        ctx.textBaseline = "top";
+        for (let i = 0; i < columnCount; i++) {
+          let x = i * fontSize;
+          let y = charIndexs[i] * fontSize;
+          ctx.fillText(getRandomChar(), x, y);
+          if (y > cvs.height && Math.random() > 0.99) {
+            charIndexs[i] = 0;
+          } else {
+            charIndexs[i]++;
+          }
+        }
+
+        window.requestAnimationFrame(draw);
+      };
+
+      draw();
+
+      requestAnimationFrame(draw)
+    </script>
+  </body>
+</html>

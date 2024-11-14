@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #myCanvas {
+        border: 1px solid red;
+      }
+    </style>
+  </head>
+  <body>
+    <canvas id="myCanvas"></canvas>
+    <button id="leftBtn">左转</button>
+    <button id="rightBtn">右转</button>
+    <script>
+      // const canvas = document.getElementById("myCanvas");
+      // const ctx = canvas.getContext("2d");
+      // const w = canvas.width;
+      // const h = canvas.height;
+
+      // // 绘制内容
+      // ctx.fillStyle = "red";
+      // ctx.fillRect( w / 4, 0, w / 2, h / 2);
+
+      // // // 保存当前 canvas 状态
+      // // ctx.save();
+
+      // // // 交换宽高值
+      // //canvas.width = h;
+      // //canvas.height = w;
+
+      // ctx.translate(canvas.width / 2, canvas.height / 2);
+
+      // // 将画布旋转 90 度
+      // ctx.rotate(Math.PI / 2);
+
+      // ctx.translate(-canvas.width / 2, -canvas.height / 2);
+
+      // // 绘制内容
+      // ctx.fillStyle = "red";
+      // ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+      // // 恢复之前保存的 canvas 状态
+      // ctx.restore();
+
+      function CanvasImg(data) {
+        this._getCanvas();
+
+        this.image = new Image();
+        this.image.src = data;
+
+        //如果你不加croossOrigin这个头，在canvas.toDataURL('image/jpg')时会报这个canvas被污染的错误
+        //如果你这张图片被页面缓存过了，即使你加了crossOrigin的请求头也会报错
+        this.image.setAttribute("crossOrigin", "Anonymous");
+        this.image.onload = () => {
+          document.body.appendChild(this.image);
+        };
+        this.image.onerror = function () {
+          console.log("Error: image error!");
+        };
+      }
+      CanvasImg.prototype = {
+        goRotate: function (direction) {
+          this._rotate(direction);
+          this.image.src = this.canvas.toDataURL("image/jpg");
+        },
+        _rotate: function (dir) {
+          var width = this.image.width;
+          var height = this.image.height;
+          var img = this.image;
+
+          var canvas = this.canvas;
+          var degree = ((dir == "right" ? 1 : 3) * 90 * Math.PI) / 180;
+          var ctx = canvas.getContext("2d");
+          canvas.width = height;
+          canvas.height = width;
+          ctx.rotate(degree);
+          if (dir == "right") {
+            ctx.drawImage(img, 0, -height);
+          } else {
+            ctx.drawImage(img, -width, 0);
+          }
+        },
+        _getCanvas: function (width, height) {
+          this.canvas = document.createElement("canvas");
+          this.canvas.style.display = "none";
+          document.body.appendChild(this.canvas);
+        },
+      };
+
+      let src = "./logo.bmp";
+
+      let canvasImg = new CanvasImg(src);
+      const $ = (id) => document.getElementById(id);
+
+      $("leftBtn").addEventListener("click", function () {
+        //向左旋转
+        canvasImg.goRotate();
+      });
+      $("rightBtn").addEventListener("click", function () {
+        //向右旋转
+        canvasImg.goRotate("right");
+      });
+    </script>
+  </body>
+</html>

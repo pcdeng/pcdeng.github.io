@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Circle</title>
+    <style>
+      canvas {
+        background-color: #ccc;
+      }
+    </style>
+  </head>
+  <body>
+    <canvas id="board" width="500" height="500"></canvas>
+    <script>
+      const toRadian = (deg) => (Math.PI / 180) * deg;
+      const canvas = document.querySelector("canvas");
+      const ctx = canvas.getContext("2d");
+      ctx.fillStyle = "red";
+      // ctx.save() // 暂存状态
+      // ctx.translate(-0.5 * 100, -0.5 * 100);
+      // ctx.beginPath();
+      // ctx.rect(0.5 * canvas.width, 0.5 * canvas.height, 100, 100);
+      // ctx.fill();
+      // ctx.restore(); // 恢复状态
+
+      // ctx.beginPath();
+      // ctx.rect(0.5 * canvas.width, 0.5 * canvas.height, 100, 100);
+      // ctx.fill();
+
+      // ctx.fillStyle = 'rbg(200, 0, 0)'
+      // ctx.fillRect(10, 10, 55, 50);
+      // ctx.fillStyle = 'rgba(0, 0, 200, 0.5)'
+      // ctx.fillRect(30, 30, 55, 50);
+
+      // ctx.beginPath();
+      // ctx.arc(75, 75, 50, 0, Math.PI * 2, true); // 绘制
+      // ctx.moveTo(110, 75);
+      // ctx.arc(75, 75, 35, 0, Math.PI, false); // 口 (顺时针)
+      // ctx.moveTo(65, 65);
+      // ctx.arc(60, 65, 5, 0, Math.PI * 2, true); // 左眼
+      // ctx.moveTo(95, 65);
+      // ctx.arc(90, 65, 5, 0, Math.PI * 2, true); // 右眼
+      // ctx.stroke();
+
+      // ctx.beginPath();
+      // ctx.moveTo(25, 25);
+      // ctx.lineTo(105, 25);
+      // ctx.lineTo(25, 105);
+      // ctx.fill();
+
+      // // 描边三角形
+      // ctx.beginPath();
+      // ctx.moveTo(125, 125);
+      // ctx.lineTo(125, 45);
+      // ctx.lineTo(45, 125);
+      // ctx.closePath();
+      ctx.strokeStyle = "blue";
+      ctx.lineWidth = 4;
+      // ctx.stroke();
+
+      // var p = new Path2D("M10 10 h 80 v 80 h -80 Z");
+      ctx.arc(
+        canvas.width / 2,
+        canvas.height / 2,
+        canvas.height / 2 - 10,
+        0,
+        toRadian(360)
+      );
+      ctx.stroke();
+    </script>
+  </body>
+</html>
