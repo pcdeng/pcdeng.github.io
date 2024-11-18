@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>姓氏排序示例</title>
+    <style>
+      .container {
+        width: 600px;
+        margin: 0 auto;
+      }
+      .names,
+      .separator {
+        min-width: 230px;
+      }
+      #result {
+        margin-top: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <input placeholder="请输入姓氏" class="names" />
+      <input placeholder="请输入分隔符。为空则用 、来分割" class="separator" />
+      <button class="sort">排序</button>
+      <div id="result"></div>
+    </div>
+    <script>
+      const doms = {
+        names: document.querySelector(".names"),
+        separator: document.querySelector(".separator"),
+        result: document.querySelector("#result"),
+        sort: document.querySelector(".sort"),
+      };
+
+      function sort(arr) {
+        const { names: namesDom, separator: separatorDom, result } = doms;
+        if (!namesDom.value) {
+          return;
+        }
+        let separator = separatorDom.value ?? "，";
+        let names = namesDom.value.split(separator);
+        const sortedNames = names.sort((nameA, nameB) => {
+          const a = nameA;
+          const b = nameB;
+          return a.localeCompare(b);
+        });
+        result.textContent = sortedNames.join(separator);
+      }
+
+      doms.sort.addEventListener("click", sort);
+    </script>
+  </body>
+</html>
