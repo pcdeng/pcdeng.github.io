@@ -1,1 +1,1 @@
-const getById=e=>document.getElementById(e);
+let getById=e=>document.getElementById(e);
