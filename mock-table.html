@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>模拟表格</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      html,
+      body {
+        width: 100%;
+        height: 100%;
+      }
+
+      .table {
+        width: 500px;
+        display: flex;
+        border: 1px solid gray;
+        overflow: hidden;
+      }
+
+      .tr {
+        border: 1px solid #ccc;
+        max-width: 100%;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+      .td {
+      }
+      .td1 {
+        flex-grow: 1;
+        flex-shrink: 1;
+        max-width: 30%;
+        border: 1px solid red;
+      }
+      .td2 {
+        flex-basis: 20%;
+        max-width: 20%;
+        flex-grow: 0;
+        flex-shrink: 0;
+        border: 1px solid green;
+      }
+
+      .td3 {
+        flex-grow: 1;
+        flex-shrink: 1;
+        border: 1px solid blue;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="table">
+      <div class="td td1">
+        <div class="tr tr1">排名</div>
+        <div class="tr tr2">1</div>
+        <div class="tr tr3">2</div>
+        <div class="tr tr4">3</div>
+        <div class="tr tr4">1234567891234567896336634</div>
+      </div>
+      <div class="td td2">
+        <div class="tr tr1">昵称</div>
+        <div class="tr tr2">张三</div>
+        <div class="tr tr3">李四</div>
+        <div class="tr tr4">小李飞刀他爸的朋友的妈妈</div>
+        <div class="tr tr4">小李飞刀</div>
+      </div>
+      <div class="td td3">
+        <div class="tr tr1">集赞数</div>
+        <div class="tr tr2">1</div>
+        <div class="tr tr3">100000000000999999</div>
+        <div class="tr tr4">999999</div>
+        <div class="tr tr5">12345678966558888558858588</div>
+      </div>
+    </div>
+  </body>
+</html>
